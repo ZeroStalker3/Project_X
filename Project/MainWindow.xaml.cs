@@ -29,5 +29,10 @@ namespace Project
             PageNext.frmObj = FrmMain;
             FrmMain.Navigate(new PageAuth());
         }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            PageNext.frmObj.Navigate(new PageAuth());
+        }
     }
 }

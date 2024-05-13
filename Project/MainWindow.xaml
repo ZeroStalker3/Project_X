@@ -22,5 +22,12 @@
             Name="FrmMain"
             Grid.Row="1"
             Grid.Column="0"/>
+        <Button
+            Height="20"
+            Width="40"
+            Content="Back"
+            HorizontalAlignment="Right"
+            VerticalAlignment="Bottom"
+            Click="Button_Click"/>
     </Grid>
 </Window>
