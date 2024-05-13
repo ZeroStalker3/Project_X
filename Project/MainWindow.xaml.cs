@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project.Class;
+using Project.PageM;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,9 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
+
+            PageNext.frmObj = FrmMain;
+            FrmMain.Navigate(new PageAuth());
         }
     }
 }

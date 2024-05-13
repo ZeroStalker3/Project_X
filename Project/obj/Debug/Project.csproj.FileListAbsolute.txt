@@ -1,0 +1,17 @@
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.csproj.AssemblyReference.cache
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\MainWindow.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\App.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project_MarkupCompile.cache
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project_MarkupCompile.lref
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\PageAuth.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\Project.exe.config
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\Project.exe
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\Project.pdb
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\MainWindow.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\PageAuth.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.g.resources
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.Properties.Resources.resources
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.csproj.GenerateResource.cache
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.csproj.CoreCompileInputs.cache
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.exe
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.pdb
