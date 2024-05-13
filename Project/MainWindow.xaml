@@ -27,6 +27,7 @@
             Width="40"
             Content="Back"
             HorizontalAlignment="Right"
+            Background="Transparent"
             VerticalAlignment="Bottom"
             Click="Button_Click"/>
     </Grid>
