@@ -31,6 +31,7 @@
                         Text="Заказчика"/>
                 </TextBlock>
                 <TextBox
+                    Name="NameTxt"
                     Height="30"
                     Width="300"/>
             </DockPanel>
@@ -46,6 +47,7 @@
                     VerticalAlignment="Center"
                     Text="Введите логин: "/>
                 <TextBox
+                    x:Name="LoginTxt"
                     Height="30"
                     Width="300"/>
             </DockPanel>
@@ -61,6 +63,7 @@
                     VerticalAlignment="Center"
                     Text="Введите пароль: "/>
                 <PasswordBox
+                    x:Name="PasswordTxt"
                     Height="30"
                     Width="300"/>
             </DockPanel>
@@ -76,6 +79,7 @@
                     VerticalAlignment="Center"
                     Text="Повторите пароль: "/>
                 <PasswordBox
+                    x:Name="RepeatPasswordTxt"
                     Height="30"
                     Width="300"/>
             </DockPanel>

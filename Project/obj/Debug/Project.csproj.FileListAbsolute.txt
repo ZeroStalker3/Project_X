@@ -25,3 +25,9 @@ C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Pro
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\Заказчик\PageZakazchik.baml
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\Кладовщик\PageSklad.baml
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\Менеджер\PageMenedger.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\EntityFramework.dll
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\EntityFramework.SqlServer.dll
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\EntityFramework.xml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\EntityFramework.SqlServer.xml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project_Content.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.csproj.Up2Date

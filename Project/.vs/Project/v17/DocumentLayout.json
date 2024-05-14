@@ -3,27 +3,39 @@
   "WorkspaceRootPath": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\",
   "Documents": [
     {
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\class\\database\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|",
+      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:class\\database\\model1.edmx||{C99AEA30-8E36-4515-B76F-496F5A48A6AA}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:mainwindow.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\pagem\\pagereg.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pagereg.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\pagem\\pageauth.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
+      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pageauth.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\pagem\\pageauth.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pageauth.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
+    },
+    {
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\class\\odbconecthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:class\\odbconecthelper.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
+    },
+    {
       "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\pagem\\pagereg.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pagereg.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\pagem\\pagereg.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
-      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pagereg.xaml.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\pagem\\pageauth.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|",
-      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pageauth.xaml.cs||{8B382828-6202-11D1-8870-0000F87579D2}|"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\pagem\\pageauth.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
-      "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:pagem\\pageauth.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
-    },
-    {
-      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\class\\frameapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\class\\frameapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}",
       "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:class\\frameapp.cs||{A6C744A8-0E4A-4FC6-886A-064283054674}"
     },
     {
-      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|c:\\users\\golub\\onedrive\\\u0434\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0440\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\project_x\\project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
+      "AbsoluteMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}",
       "RelativeMoniker": "D:0:0:{25719CD4-0F83-4AC0-B003-7846C3DC9285}|Project.csproj|solutionrelative:mainwindow.xaml||{F11ACC28-31D1-4C80-A34B-F4E09D3D753C}"
     }
   ],
@@ -34,7 +46,7 @@
       "DocumentGroups": [
         {
           "DockedWidth": 200,
-          "SelectedChildIndex": 6,
+          "SelectedChildIndex": 3,
           "Children": [
             {
               "$type": "Bookmark",
@@ -46,7 +58,32 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 2,
+              "DocumentIndex": 1,
+              "Title": "MainWindow.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\MainWindow.xaml.cs",
+              "RelativeDocumentMoniker": "MainWindow.xaml.cs",
+              "ToolTip": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\MainWindow.xaml.cs",
+              "RelativeToolTip": "MainWindow.xaml.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAABEAAAARAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T01:09:52.038Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "Model1.edmx [Diagram1]",
+              "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\Class\\Database\\Model1.edmx",
+              "RelativeDocumentMoniker": "Class\\Database\\Model1.edmx",
+              "ToolTip": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\Class\\Database\\Model1.edmx [Diagram1]",
+              "RelativeToolTip": "Class\\Database\\Model1.edmx [Diagram1]",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.001116|",
+              "WhenOpened": "2024-05-14T01:05:58.184Z",
+              "EditorCaption": " [Diagram1]"
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 3,
               "Title": "PageAuth.xaml.cs",
               "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageAuth.xaml.cs",
               "RelativeDocumentMoniker": "PageM\\PageAuth.xaml.cs",
@@ -59,7 +96,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 3,
+              "DocumentIndex": 4,
               "Title": "PageAuth.xaml",
               "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageAuth.xaml",
               "RelativeDocumentMoniker": "PageM\\PageAuth.xaml",
@@ -71,7 +108,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 4,
+              "DocumentIndex": 7,
               "Title": "FrameApp.cs",
               "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\Class\\FrameApp.cs",
               "RelativeDocumentMoniker": "Class\\FrameApp.cs",
@@ -79,25 +116,11 @@
               "RelativeToolTip": "Class\\FrameApp.cs",
               "ViewState": "AQIAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T00:46:57.276Z",
-              "EditorCaption": ""
+              "WhenOpened": "2024-05-14T00:46:57.276Z"
             },
             {
               "$type": "Document",
-              "DocumentIndex": 1,
-              "Title": "PageM\\PageReg.xaml.cs",
-              "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageReg.xaml.cs",
-              "RelativeDocumentMoniker": "PageM\\PageReg.xaml.cs",
-              "ToolTip": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageReg.xaml.cs",
-              "RelativeToolTip": "PageM\\PageReg.xaml.cs",
-              "ViewState": "AQIAAAAAAAAAAAAAAAAAACMAAAAlAAAA",
-              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
-              "WhenOpened": "2024-05-14T00:45:20.254Z",
-              "EditorCaption": ""
-            },
-            {
-              "$type": "Document",
-              "DocumentIndex": 0,
+              "DocumentIndex": 6,
               "Title": "PageReg.xaml",
               "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageReg.xaml",
               "RelativeDocumentMoniker": "PageM\\PageReg.xaml",
@@ -109,7 +132,7 @@
             },
             {
               "$type": "Document",
-              "DocumentIndex": 5,
+              "DocumentIndex": 8,
               "Title": "MainWindow.xaml",
               "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\MainWindow.xaml",
               "RelativeDocumentMoniker": "MainWindow.xaml",
@@ -117,6 +140,38 @@
               "RelativeToolTip": "MainWindow.xaml",
               "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003549|",
               "WhenOpened": "2024-05-14T00:29:49.737Z",
+              "EditorCaption": ""
+            }
+          ]
+        },
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 1,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 5,
+              "Title": "OdbConectHelper.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\Class\\OdbConectHelper.cs",
+              "RelativeDocumentMoniker": "Class\\OdbConectHelper.cs",
+              "ToolTip": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\Class\\OdbConectHelper.cs",
+              "RelativeToolTip": "Class\\OdbConectHelper.cs",
+              "ViewState": "AQIAAAAAAAAAAAAAAAAAAA4AAAAAAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T01:09:07.77Z",
+              "EditorCaption": ""
+            },
+            {
+              "$type": "Document",
+              "DocumentIndex": 2,
+              "Title": "PageReg.xaml.cs",
+              "DocumentMoniker": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageReg.xaml.cs",
+              "RelativeDocumentMoniker": "PageM\\PageReg.xaml.cs",
+              "ToolTip": "C:\\Users\\golub\\OneDrive\\\u0414\u043E\u043A\u0443\u043C\u0435\u043D\u0442\u044B\\\u0420\u0430\u0431\u043E\u0447\u0438\u0439 \u0441\u0442\u043E\u043B\\Project_X\\Project\\PageM\\PageReg.xaml.cs",
+              "RelativeToolTip": "PageM\\PageReg.xaml.cs",
+              "ViewState": "AQIAAAYAAAAAAAAAAAAAACQAAAAeAAAA",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.000738|",
+              "WhenOpened": "2024-05-14T00:45:20.254Z",
               "EditorCaption": ""
             }
           ]
