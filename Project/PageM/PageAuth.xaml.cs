@@ -28,7 +28,19 @@ namespace Project.PageM
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
+            var userObj = OdbConectHelper.entObj.Users.FirstOrDefault(x => x.Логин == logtxt.Text && x.Пароль == psbtxt.Password);
+            if (userObj == null)
+            {
+                MessageBox.Show("Такой пользователь отсутсвует в приложения",
+                    "Уведомление",
+                     MessageBoxButton.OK,
+                     MessageBoxImage.Warning);
+                FrameApp.frmObj.Navigate(new PageReg());
+            }
+            else
+            {
 
+            }
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)

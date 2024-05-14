@@ -21,6 +21,7 @@
                     FontSize="14pt"
                     Text="Login: "/>
                 <TextBox
+                    x:Name="logtxt"
                     FontSize="12pt"
                     VerticalContentAlignment="Center"
                     Height="30"
@@ -35,6 +36,7 @@
                     FontSize="14pt"
                     Text="Password: "/>
                 <PasswordBox
+                    x:Name="psbtxt"
                     FontSize="14pt"
                     VerticalContentAlignment="Center"
                     Height="30"
