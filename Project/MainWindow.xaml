@@ -11,7 +11,7 @@
             <RowDefinition Height="60*"/>
             <RowDefinition Height="375*"/>
         </Grid.RowDefinitions>
-        <TextBox 
+        <TextBlock 
             Text="Швейная фабрика" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"

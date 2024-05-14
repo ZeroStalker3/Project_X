@@ -7,7 +7,7 @@ using System.Windows.Controls;
 
 namespace Project.Class
 {
-    class PageNext
+    class FrameApp
     {
         public static Frame frmObj;
     }

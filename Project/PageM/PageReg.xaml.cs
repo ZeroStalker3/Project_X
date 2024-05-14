@@ -1,5 +1,4 @@
 ﻿using Project.Class;
-using Project.PageM;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -15,24 +14,26 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Project
+namespace Project.PageM
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PageReg.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageReg : Page
     {
-        public MainWindow()
+        public PageReg()
         {
             InitializeComponent();
-
-            FrameApp.frmObj = FrmMain;
-            FrmMain.Navigate(new PageAuth());
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void Reg_Click(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmObj.Navigate(new PageAuth());
+
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.GoBack();
         }
     }
 }

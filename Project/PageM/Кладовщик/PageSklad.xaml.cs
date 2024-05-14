@@ -1,6 +1,4 @@
-﻿using Project.Class;
-using Project.PageM;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -15,24 +13,16 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Project
+namespace Project.PageM.Кладовщик
 {
     /// <summary>
-    /// Interaction logic for MainWindow.xaml
+    /// Interaction logic for PageSklad.xaml
     /// </summary>
-    public partial class MainWindow : Window
+    public partial class PageSklad : Page
     {
-        public MainWindow()
+        public PageSklad()
         {
             InitializeComponent();
-
-            FrameApp.frmObj = FrmMain;
-            FrmMain.Navigate(new PageAuth());
-        }
-
-        private void Button_Click(object sender, RoutedEventArgs e)
-        {
-            FrameApp.frmObj.Navigate(new PageAuth());
         }
     }
 }
