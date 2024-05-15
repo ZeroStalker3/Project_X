@@ -1,0 +1,88 @@
+﻿<Page x:Class="Project.PageM.MainPage.SecondPage.PageAddProduct"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project.PageM.MainPage.SecondPage"
+      mc:Ignorable="d" 
+      Title="PageAddProduct">
+
+    <Grid>
+        <StackPanel>
+            <TextBlock
+                HorizontalAlignment="Center"
+                Margin="10"
+                FontSize="16pt"
+       Text="Добавление Нового Продукта"/>
+            <StackPanel>
+                <DockPanel
+                    Margin="5">
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Margin="0 0 59.7 0"
+                        Text="Артикул: "/>
+                    <TextBox
+                        Height="30"
+                        Width="250"/>
+                </DockPanel>
+                <DockPanel
+                    Margin="5">
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Text="Наименование: "/>
+                    <TextBox
+                        Height="30"
+                        Width="250"/>
+                </DockPanel>
+                <DockPanel
+                    Margin="5">
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Margin="0 0 58.5 0"
+                        Text="Ширина: "/>
+                    <TextBox
+                        Height="30"
+                        Width="250"/>
+                </DockPanel>
+                <DockPanel
+                    Margin="5">
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Margin="0 0 75 0"
+                        Text="Длина: "/>
+                    <TextBox
+                        Height="30"
+                        Width="250"/>
+                </DockPanel>
+                <DockPanel
+                    Margin="5">
+                    <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        Margin="0 0 23.8 0"
+                        FontSize="14pt"
+                        Text="Коментарий: "/>
+                    <TextBox
+                        Height="30"
+                        Width="250"/>
+                </DockPanel>
+            </StackPanel>
+            <DockPanel>
+                <Button
+                    Content="Save"
+                    Height="30"
+                    Width="300"
+                    Name="Save"
+                    Click="Save_Click"/>
+            </DockPanel>
+        </StackPanel>     
+    </Grid>
+</Page>

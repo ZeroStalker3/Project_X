@@ -1,19 +1,10 @@
 ﻿using Project.Class;
 using Project.Class.Database;
+using Project.PageM.MainPage.SecondPage;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Project.PageM.MainPage
 {
@@ -49,16 +40,16 @@ namespace Project.PageM.MainPage
         private void FabricRecalculate_Click(object sender, RoutedEventArgs e)
         {
             //float quantity = Convert.ToInt32(FabricQuantityTextBox.Text);
-            //string selected = (string)this.FabricUnitComboBox.DisplayMemberPath;
+            //string text = FabricUnitComboBox.Text;
+            //int select = Convert.ToInt32(FabricUnitComboBox.SelectedValue);
 
-            //var obj = OdbConectHelper.entObj.Clothes.Where(x => x.Наименование == selected);
-            //if (selected == Convert.ToString(obj)) 
+            //Warehouse_Cloth warehouse_Cloth = new Warehouse_Cloth()
             //{
-            //    Warehouse_Cloth warehouse_Cloth = new Warehouse_Cloth
-            //    {
-            //        Рулон = Convert.ToInt32(quantity)
-            //    };
-            //}
+            //    Рулон = Convert.ToInt32(select)
+            //};
+
+            //OdbConectHelper.entObj.Warehouse_Accessories.Add(warehouse_Cloth);
+            //OdbConectHelper.entObj.SaveChanges();
 
         }
 
@@ -74,7 +65,7 @@ namespace Project.PageM.MainPage
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameApp.frmObj.Navigate(new PageAddProduct());
         }
 
         private void EditProduct_Click(object sender, RoutedEventArgs e)

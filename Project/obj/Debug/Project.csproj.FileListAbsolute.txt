@@ -33,3 +33,7 @@ C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Pro
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.csproj.Up2Date
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageAccountingMaterials.g.cs
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageAccountingMaterials.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\SecondPage\PageAddProduct.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\SecondPage\PageAddProduct.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageConstruct.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageConstruct.baml

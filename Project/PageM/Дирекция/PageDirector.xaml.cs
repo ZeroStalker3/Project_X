@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project.Class;
+using Project.PageM.MainPage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,16 @@ namespace Project.PageM.Дирекция
         public PageDirector()
         {
             InitializeComponent();
+        }
+
+        private void PageAccountingMaterials_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageAccountingMaterials());
+        }
+
+        private void PageConstructorProducts_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageConstruct());
         }
     }
 }

@@ -1,5 +1,6 @@
 ﻿using Project.Class;
 using Project.PageM.MainPage;
+using Project.PageM.Дирекция;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -40,7 +41,8 @@ namespace Project.PageM
             }
             else
             {
-                FrameApp.frmObj.Navigate(new PageAccountingMaterials());
+                FrameApp.frmObj.Navigate(new PageConstruct());
+                
             }
         }
 
