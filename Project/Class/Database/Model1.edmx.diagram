@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<edmx:Edmx Version="3.0" xmlns:edmx="http://schemas.microsoft.com/ado/2009/11/edmx">
+ <!-- EF Designer content (DO NOT EDIT MANUALLY BELOW HERE) -->
+  <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
+    <!-- Diagram content (shape and connector positions) -->
+    <edmx:Diagrams>
+      <Diagram DiagramId="0c512745d2bc4f9ba77a42a14665cc05" Name="Diagram1">
+        <EntityTypeShape EntityType="DataBase1Model.Accessory" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Accessories_TheProduct" Width="2.25" PointX="6.375" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Cloth" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Order" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Ordered_Products" Width="2" PointX="5" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.sysdiagram" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.TheProduct" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.User" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Warehouse_Accessories" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Warehouse_Cloth" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
+        <AssociationConnector Association="DataBase1Model.FK__Склад_фур__Артик__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Фурнитура__Артик__656C112C" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Фурнитура__Артик__66603565" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Склад_тка__Артик__628FA481" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Заказ__Заказчик__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Заказ__Менеджер__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Заказанны__Номер__5AEE82B9" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.FK__Заказанны__Артик__5BE2A6F2" ManuallyRouted="false" />
+        <AssociationConnector Association="DataBase1Model.Cloth_TheProduct" ManuallyRouted="false" />
+      </Diagram>
+    </edmx:Diagrams>
+  </edmx:Designer>
+</edmx:Edmx>

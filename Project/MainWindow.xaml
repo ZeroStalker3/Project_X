@@ -11,7 +11,7 @@
             <RowDefinition Height="60*"/>
             <RowDefinition Height="375*"/>
         </Grid.RowDefinitions>
-        <TextBox 
+        <TextBlock 
             Text="Швейная фабрика" 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
@@ -22,5 +22,14 @@
             Name="FrmMain"
             Grid.Row="1"
             Grid.Column="0"/>
+        <Button
+            Margin="10"
+            Height="20"
+            Width="40"
+            Content="Back"
+            HorizontalAlignment="Right"
+            Background="Transparent"
+            VerticalAlignment="Bottom"
+            Click="Button_Click"/>
     </Grid>
 </Window>

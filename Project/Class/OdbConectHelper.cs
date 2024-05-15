@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Class.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -8,6 +9,6 @@ namespace Project.Class
 {
     class OdbConectHelper
     {
-        //public static databasename;
+        public static DataBase1Entities entObj;
     }
 }

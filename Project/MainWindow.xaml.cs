@@ -25,9 +25,15 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
+            OdbConectHelper.entObj = new Class.Database.DataBase1Entities();
 
-            PageNext.frmObj = FrmMain;
+            FrameApp.frmObj = FrmMain;
             FrmMain.Navigate(new PageAuth());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageAuth());
         }
     }
 }
