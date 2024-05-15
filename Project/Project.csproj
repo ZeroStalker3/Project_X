@@ -123,6 +123,10 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="PageM\MainPage\PageAccountingMaterials.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageM\PageAuth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -149,6 +153,9 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="PageM\MainPage\PageAccountingMaterials.xaml.cs">
+      <DependentUpon>PageAccountingMaterials.xaml</DependentUpon>
+    </Compile>
     <Compile Include="PageM\PageAuth.xaml.cs">
       <DependentUpon>PageAuth.xaml</DependentUpon>
     </Compile>

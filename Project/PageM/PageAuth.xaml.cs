@@ -1,4 +1,5 @@
 ﻿using Project.Class;
+using Project.PageM.MainPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -39,7 +40,7 @@ namespace Project.PageM
             }
             else
             {
-
+                FrameApp.frmObj.Navigate(new PageAccountingMaterials());
             }
         }
 

@@ -1,0 +1,7 @@
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\bin\Debug\Sort.exe.config
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\bin\Debug\Sort.exe
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\bin\Debug\Sort.pdb
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\obj\Debug\Sort.csproj.AssemblyReference.cache
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\obj\Debug\Sort.csproj.CoreCompileInputs.cache
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\obj\Debug\Sort.exe
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Sort\obj\Debug\Sort.pdb

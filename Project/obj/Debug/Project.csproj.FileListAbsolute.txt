@@ -31,3 +31,5 @@ C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Pro
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\bin\Debug\EntityFramework.SqlServer.xml
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project_Content.g.cs
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\Project.csproj.Up2Date
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageAccountingMaterials.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageAccountingMaterials.baml
