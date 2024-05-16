@@ -59,6 +59,7 @@
             {
               "$type": "Bookmark",
               "Name": "ST:0:0:{1c4feeaa-4718-4aa9-859d-94ce25d182ba}"
+<<<<<<< Updated upstream
             },
             {
               "$type": "Document",
@@ -84,6 +85,30 @@
               "WhenOpened": "2024-05-16T07:24:58.927Z",
               "EditorCaption": ""
             },
+=======
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "FloatingWindowState": {
+        "Id": "f7c70d12-09fc-4479-95ce-9c25740bc93a",
+        "Display": 0,
+        "X": 1005,
+        "Y": 92,
+        "Width": 920,
+        "Height": 993,
+        "WindowState": 0
+      },
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+>>>>>>> Stashed changes
             {
               "$type": "Document",
               "DocumentIndex": 1,

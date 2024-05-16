@@ -12,9 +12,13 @@ DEBUG;TRACE
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\App.xaml
 10-189989474
 2304948545
+<<<<<<< Updated upstream
 29-1662642736
+=======
+28847199589
+>>>>>>> Stashed changes
 18-705928279
 MainWindow.xaml;PageM\MainPage\PageAccountingMaterials.xaml;PageM\MainPage\PageConstruct.xaml;PageM\MainPage\SecondPage\PageAddProduct.xaml;PageM\PageAuth.xaml;PageM\PageReg.xaml;PageM\Дирекция\PageDirector.xaml;PageM\Заказчик\PageZakazchik.xaml;PageM\Кладовщик\PageSklad.xaml;PageM\Менеджер\PageMenedger.xaml;
 
-False
+True
 
