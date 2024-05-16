@@ -131,6 +131,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageM\MainPage\PageProductDetail1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageProductdetail2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageM\MainPage\SecondPage\PageAddProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -166,6 +174,12 @@
     </Compile>
     <Compile Include="PageM\MainPage\PageConstruct.xaml.cs">
       <DependentUpon>PageConstruct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageProductDetail1.xaml.cs">
+      <DependentUpon>PageProductDetail1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageProductdetail2.xaml.cs">
+      <DependentUpon>PageProductdetail2.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageM\MainPage\SecondPage\PageAddProduct.xaml.cs">
       <DependentUpon>PageAddProduct.xaml</DependentUpon>

@@ -1,0 +1,68 @@
+﻿<Page x:Class="Project.PageM.MainPage.PageProductdetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project.PageM.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageProductdetail">
+
+    <Grid>
+        <StackPanel>
+            <Image Name="ProductImage" Width="200" Height="200" Margin="10"/>
+            <TextBlock Text="Product Name:" FontWeight="Bold"/>
+            <TextBlock Name="ProductName"/>
+            <TextBlock Text="Description:" FontWeight="Bold"/>
+            <TextBlock Name="ProductDescription" TextWrapping="Wrap"/>
+            <TextBlock Text="Composition:" FontWeight="Bold"/>
+            <TextBlock Name="ProductComposition" TextWrapping="Wrap"/>
+            <TextBlock Text="Care Instructions:" FontWeight="Bold"/>
+            <TextBlock Name="ProductCareInstructions" TextWrapping="Wrap"/>
+            <TextBlock Text="Specifications:" FontWeight="Bold"/>
+            <ListView Name="SpecificationList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="100"/>
+                        <GridViewColumn Header="Material" Width="200">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding MaterialRequirements}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding MaterialName}"/>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                        <GridViewColumn Header="Quantity" Width="100">
+                            <GridViewColumn.CellTemplate>
+                                <DataTemplate>
+                                    <ItemsControl ItemsSource="{Binding MaterialRequirements}">
+                                        <ItemsControl.ItemTemplate>
+                                            <DataTemplate>
+                                                <TextBlock Text="{Binding Quantity}"/>
+                                            </DataTemplate>
+                                        </ItemsControl.ItemTemplate>
+                                    </ItemsControl>
+                                </DataTemplate>
+                            </GridViewColumn.CellTemplate>
+                        </GridViewColumn>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+            <TextBlock Text="Specification History:" FontWeight="Bold"/>
+            <ListView Name="SpecificationHistoryList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Date" DisplayMemberBinding="{Binding ChangeDate}" Width="100"/>
+                        <GridViewColumn Header="Changes" DisplayMemberBinding="{Binding Changes}" Width="400"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+
+</Page>
