@@ -37,3 +37,4 @@ C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Pro
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\SecondPage\PageAddProduct.baml
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageConstruct.g.cs
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageConstruct.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\App.baml

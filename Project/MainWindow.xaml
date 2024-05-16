@@ -5,7 +5,11 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="1080" Width="1920"
+        ResizeMode="NoResize"
+        WindowStyle="None"
+        WindowState="Maximized"
+        >
     <Grid>
         <Grid.RowDefinitions>
             <RowDefinition Height="60*"/>
@@ -17,6 +21,35 @@
             VerticalAlignment="Center"
             FontSize="18pt"
             />
+        <!--Начало разметки приложения-->
+        <StackPanel 
+             VerticalAlignment="Top"
+             Orientation="Horizontal">
+            <Button
+                 Name="Exit"
+                 Click="Exit_Click"
+                 Style="{StaticResource windowsPanel}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border
+                     CornerRadius="10"
+                     Background="Red"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button 
+                 Name="Min"
+                 Click="Min_Click"
+                 Style="{StaticResource windowsPanel}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border
+                     CornerRadius="10"
+                     Background="YellowGreen"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+        </StackPanel>
         <Frame 
             NavigationUIVisibility="Hidden"
             Name="FrmMain"
@@ -24,8 +57,9 @@
             Grid.Column="0"/>
         <Button
             Margin="10"
-            Height="20"
-            Width="40"
+            Height="30"
+            FontSize="14pt"
+            Width="70"
             Content="Back"
             HorizontalAlignment="Right"
             Background="Transparent"
