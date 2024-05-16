@@ -127,6 +127,14 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageM\MainPage\PageConstruct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\SecondPage\PageAddProduct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageM\PageAuth.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -155,6 +163,12 @@
   <ItemGroup>
     <Compile Include="PageM\MainPage\PageAccountingMaterials.xaml.cs">
       <DependentUpon>PageAccountingMaterials.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageConstruct.xaml.cs">
+      <DependentUpon>PageConstruct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\SecondPage\PageAddProduct.xaml.cs">
+      <DependentUpon>PageAddProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageM\PageAuth.xaml.cs">
       <DependentUpon>PageAuth.xaml</DependentUpon>
@@ -218,6 +232,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Снимок экрана 2024-05-10 201514.png" />
   </ItemGroup>
   <ItemGroup>
     <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />

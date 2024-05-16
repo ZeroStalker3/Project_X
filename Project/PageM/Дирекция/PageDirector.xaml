@@ -9,6 +9,24 @@
       Title="PageDirector">
 
     <Grid>
-        
+        <StackPanel>
+            <Button
+            Height="30"
+            Name="PageAccountingMaterials"
+            Click="PageAccountingMaterials_Click"
+            Width="150"
+            Content="PageAccountingMaterials"/>
+            <Button
+            Height="30"
+            Width="150"
+            Name="PageConstructorProducts"
+            Click="PageConstructorProducts_Click"
+            Content="PageConstructorProducts"/>
+            <Button
+            Height="30"
+            Width="150"
+            Content="PageConstructorProducts"/>
+        </StackPanel>
+
     </Grid>
 </Page>
