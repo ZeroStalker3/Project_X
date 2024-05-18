@@ -18,6 +18,6 @@ namespace Project.Class.Database
         public string Артикул_фурнитуры { get; set; }
         public int Количество { get; set; }
     
-        public virtual Accessory Accessory { get; set; }
+        public virtual Accessories Accessories { get; set; }
     }
 }

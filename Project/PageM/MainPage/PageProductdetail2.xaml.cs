@@ -1,4 +1,5 @@
 ﻿using Project.Class;
+using Project.Class.Database;
 using System;
 using System.Collections.Generic;
 using System.Data.Odbc;
@@ -21,27 +22,25 @@ namespace Project.PageM.MainPage
     {
         private readonly int _productId;
         private static OdbConectHelper _context;
-        public PageProductdetail(string Атрибут)
+        private string Atributes;
+
+        public PageProductdetail(TheProduct theProduct)
         {
             InitializeComponent();
-            _context = new OdbConectHelper();
-            string _productId = Атрибут;
+            Atributes = theProduct.Артикул;
             LoadProductDetails();
         }
 
         private void LoadProductDetails()
         {
-            var product = OdbConectHelper.entObj.TheProducts.Find(_productId);
+            var product = OdbConectHelper.entObj.TheProduct.Find(Atributes);
 
             if (product != null)
             {
-                //ProductImage.Source = new BitmapImage(new Uri(product.ImagePath));
-                //ProductName.Text = product.Name;
-                //ProductDescription.Text = product.Description;
-                //ProductComposition.Text = product.Composition;
-                //ProductCareInstructions.Text = product.CareInstructions;
-                //SpecificationList.ItemsSource = product.Specifications;
-                //SpecificationHistoryList.ItemsSource = product.SpecificationHistories;
+                //ProductImage.Source = new BitmapImage(new Uri(product.Изображени)); //Добавить изображение в базу данных
+                ProductName.Text = product.Наименование;
+                ProductDescription.Text = product.Комментарий;
+                ProductComposition.Text = product.Артикул;
             }
         }
     }

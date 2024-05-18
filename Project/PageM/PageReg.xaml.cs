@@ -43,7 +43,7 @@ namespace Project.PageM
                     Роль = "Заказчик",
                     Наименование = NameZakazchik
                 };
-                OdbConectHelper.entObj.Users.Add(user);
+                OdbConectHelper.entObj.User.Add(user);
                 OdbConectHelper.entObj.SaveChanges();
                 MessageBox.Show("Заказчик" + " успешно добавлен", "Уведомление",
                 MessageBoxButton.OK,

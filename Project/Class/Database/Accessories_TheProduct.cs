@@ -19,7 +19,7 @@ namespace Project.Class.Database
         public string Размещение { get; set; }
         public int Количество { get; set; }
     
-        public virtual Accessory Accessory { get; set; }
+        public virtual Accessories Accessories { get; set; }
         public virtual TheProduct TheProduct { get; set; }
     }
 }

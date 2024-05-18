@@ -17,8 +17,8 @@ namespace Project.Class.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public User()
         {
-            this.Orders = new HashSet<Order>();
-            this.Orders1 = new HashSet<Order>();
+            this.Order = new HashSet<Order>();
+            this.Order1 = new HashSet<Order>();
         }
     
         public string Логин { get; set; }
@@ -27,8 +27,8 @@ namespace Project.Class.Database
         public string Наименование { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders { get; set; }
+        public virtual ICollection<Order> Order { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Order> Orders1 { get; set; }
+        public virtual ICollection<Order> Order1 { get; set; }
     }
 }

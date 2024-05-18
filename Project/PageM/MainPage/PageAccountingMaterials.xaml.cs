@@ -23,18 +23,17 @@ namespace Project.PageM.MainPage
 
         private void LoadData()
         {
-            FabricDataGrid.ItemsSource = OdbConectHelper.entObj.Clothes.ToList();
+            FabricDataGrid.ItemsSource = OdbConectHelper.entObj.Cloth.ToList();
             AccessoryDataGrid.ItemsSource = OdbConectHelper.entObj.Accessories.ToList();
             ProductDataGrid.ItemsSource = OdbConectHelper.entObj.Ordered_Products.ToList();
 
             FabricUnitComboBox.DisplayMemberPath = "Наименование";
             FabricUnitComboBox.SelectedValuePath = "Артикул";
-            FabricUnitComboBox.ItemsSource = OdbConectHelper.entObj.Clothes.ToList();
+            FabricUnitComboBox.ItemsSource = OdbConectHelper.entObj.Cloth.ToList();
 
             AccessoryUnitComboBox.DisplayMemberPath = "Наименование";
             AccessoryUnitComboBox.SelectedValuePath = "Артикул";
             AccessoryUnitComboBox.ItemsSource = OdbConectHelper.entObj.Accessories.ToList();
-
         }
 
         private void FabricRecalculate_Click(object sender, RoutedEventArgs e)

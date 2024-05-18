@@ -1,8 +1,8 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DataBase1ModelStoreContainer" CdmEntityContainer="DataBase1Entities">
+  <EntityContainerMapping StorageEntityContainer="DataBase1ModelStoreContainer" CdmEntityContainer="DataBase1Entities1">
     <EntitySetMapping Name="Accessories">
-      <EntityTypeMapping TypeName="DataBase1Model.Accessory">
+      <EntityTypeMapping TypeName="DataBase1Model.Accessories">
         <MappingFragment StoreEntitySet="Accessories">
           <ScalarProperty Name="Артикул" ColumnName="Артикул" />
           <ScalarProperty Name="Наименование" ColumnName="Наименование" />
@@ -24,7 +24,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Clothes">
+    <EntitySetMapping Name="Cloth">
       <EntityTypeMapping TypeName="DataBase1Model.Cloth">
         <MappingFragment StoreEntitySet="Cloth">
           <ScalarProperty Name="Артикул" ColumnName="Артикул" />
@@ -38,7 +38,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Orders">
+    <EntitySetMapping Name="Order">
       <EntityTypeMapping TypeName="DataBase1Model.Order">
         <MappingFragment StoreEntitySet="Order">
           <ScalarProperty Name="Номер" ColumnName="Номер" />
@@ -60,7 +60,7 @@
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="DataBase1Model.sysdiagram">
+      <EntityTypeMapping TypeName="DataBase1Model.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -70,7 +70,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TheProducts">
+    <EntitySetMapping Name="TheProduct">
       <EntityTypeMapping TypeName="DataBase1Model.TheProduct">
         <MappingFragment StoreEntitySet="TheProduct">
           <ScalarProperty Name="Артикул" ColumnName="Артикул" />
@@ -81,7 +81,7 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Users">
+    <EntitySetMapping Name="User">
       <EntityTypeMapping TypeName="DataBase1Model.User">
         <MappingFragment StoreEntitySet="User">
           <ScalarProperty Name="Логин" ColumnName="Логин" />

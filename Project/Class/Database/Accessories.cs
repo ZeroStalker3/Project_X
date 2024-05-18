@@ -12,10 +12,10 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Accessory
+    public partial class Accessories
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Accessory()
+        public Accessories()
         {
             this.Warehouse_Accessories = new HashSet<Warehouse_Accessories>();
             this.Accessories_TheProduct = new HashSet<Accessories_TheProduct>();

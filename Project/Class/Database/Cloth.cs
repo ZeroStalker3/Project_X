@@ -18,7 +18,7 @@ namespace Project.Class.Database
         public Cloth()
         {
             this.Warehouse_Cloth = new HashSet<Warehouse_Cloth>();
-            this.TheProducts = new HashSet<TheProduct>();
+            this.TheProduct = new HashSet<TheProduct>();
         }
     
         public string Артикул { get; set; }
@@ -33,6 +33,6 @@ namespace Project.Class.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Warehouse_Cloth> Warehouse_Cloth { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TheProduct> TheProducts { get; set; }
+        public virtual ICollection<TheProduct> TheProduct { get; set; }
     }
 }

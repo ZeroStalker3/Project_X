@@ -4,13 +4,13 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0c512745d2bc4f9ba77a42a14665cc05" Name="Diagram1">
-        <EntityTypeShape EntityType="DataBase1Model.Accessory" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Accessories_TheProduct" Width="2.25" PointX="6.375" PointY="3.5" IsExpanded="true" />
+      <Diagram DiagramId="15f092c8b4be4ecdae951c6b8e41332b" Name="Diagram1">
+        <EntityTypeShape EntityType="DataBase1Model.Accessories" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Accessories_TheProduct" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBase1Model.Cloth" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBase1Model.Order" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Ordered_Products" Width="2" PointX="5" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.sysdiagram" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.Ordered_Products" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="DataBase1Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBase1Model.TheProduct" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBase1Model.User" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
         <EntityTypeShape EntityType="DataBase1Model.Warehouse_Accessories" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />

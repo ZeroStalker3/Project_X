@@ -11,45 +11,19 @@
     <Grid>
         <StackPanel>
             <Image Name="ProductImage" Width="200" Height="200" Margin="10"/>
-            <TextBlock Text="Product Name:" FontWeight="Bold"/>
+            <TextBlock Text="Наименование:" FontWeight="Bold"/>
             <TextBlock Name="ProductName"/>
-            <TextBlock Text="Description:" FontWeight="Bold"/>
+            <TextBlock Text="Коментарий:" FontWeight="Bold"/>
             <TextBlock Name="ProductDescription" TextWrapping="Wrap"/>
-            <TextBlock Text="Composition:" FontWeight="Bold"/>
+            <TextBlock Text="Артикул:" FontWeight="Bold"/>
             <TextBlock Name="ProductComposition" TextWrapping="Wrap"/>
-            <TextBlock Text="Care Instructions:" FontWeight="Bold"/>
-            <TextBlock Name="ProductCareInstructions" TextWrapping="Wrap"/>
-            <TextBlock Text="Specifications:" FontWeight="Bold"/>
+            <TextBlock Text="Спецификация:" FontWeight="Bold"/>
             <ListView Name="SpecificationList">
                 <ListView.View>
                     <GridView>
-                        <GridViewColumn Header="Size" DisplayMemberBinding="{Binding Size}" Width="100"/>
-                        <GridViewColumn Header="Material" Width="200">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <ItemsControl ItemsSource="{Binding MaterialRequirements}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <TextBlock Text="{Binding MaterialName}"/>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
-                        <GridViewColumn Header="Quantity" Width="100">
-                            <GridViewColumn.CellTemplate>
-                                <DataTemplate>
-                                    <ItemsControl ItemsSource="{Binding MaterialRequirements}">
-                                        <ItemsControl.ItemTemplate>
-                                            <DataTemplate>
-                                                <TextBlock Text="{Binding Quantity}"/>
-                                            </DataTemplate>
-                                        </ItemsControl.ItemTemplate>
-                                    </ItemsControl>
-                                </DataTemplate>
-                            </GridViewColumn.CellTemplate>
-                        </GridViewColumn>
+                        <GridViewColumn Header="Ширина" DisplayMemberBinding="{Binding Ширина}" Width="100"/>
+                        <GridViewColumn Header="Длина" DisplayMemberBinding="{Binding Длина}" Width="100"/>
+                        <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Ordered_Products.Количество}" Width="100"/>
                     </GridView>
                 </ListView.View>
             </ListView>

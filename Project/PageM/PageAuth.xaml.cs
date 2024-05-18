@@ -30,7 +30,7 @@ namespace Project.PageM
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            var userObj = OdbConectHelper.entObj.Users.FirstOrDefault(x => x.Логин == logtxt.Text && x.Пароль == psbtxt.Password);
+            var userObj = OdbConectHelper.entObj.User.FirstOrDefault(x => x.Логин == logtxt.Text && x.Пароль == psbtxt.Password);
             if (userObj == null)
             {
                 MessageBox.Show("Такой пользователь отсутсвует в приложения",
@@ -41,7 +41,7 @@ namespace Project.PageM
             }
             else
             {
-                FrameApp.frmObj.Navigate(new PageConstruct());
+                FrameApp.frmObj.Navigate(new PageProductDetail1());
                 
             }
         }

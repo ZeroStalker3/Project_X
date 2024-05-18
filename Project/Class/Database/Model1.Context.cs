@@ -13,10 +13,10 @@ namespace Project.Class.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataBase1Entities : DbContext
+    public partial class DataBase1Entities1 : DbContext
     {
-        public DataBase1Entities()
-            : base("name=DataBase1Entities")
+        public DataBase1Entities1()
+            : base("name=DataBase1Entities1")
         {
         }
     
@@ -25,14 +25,14 @@ namespace Project.Class.Database
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Accessory> Accessories { get; set; }
+        public virtual DbSet<Accessories> Accessories { get; set; }
         public virtual DbSet<Accessories_TheProduct> Accessories_TheProduct { get; set; }
-        public virtual DbSet<Cloth> Clothes { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
+        public virtual DbSet<Cloth> Cloth { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<Ordered_Products> Ordered_Products { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<TheProduct> TheProducts { get; set; }
-        public virtual DbSet<User> Users { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<TheProduct> TheProduct { get; set; }
+        public virtual DbSet<User> User { get; set; }
         public virtual DbSet<Warehouse_Accessories> Warehouse_Accessories { get; set; }
         public virtual DbSet<Warehouse_Cloth> Warehouse_Cloth { get; set; }
     }

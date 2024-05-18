@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Project.Class;
+using Project.Class.Database;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,28 @@ namespace Project.PageM.MainPage
         public PageProductDetail1()
         {
             InitializeComponent();
+            LoadData(); 
+        }
+
+        private void LoadData()
+        {
+            DataGridList.ItemsSource = OdbConectHelper.entObj.TheProduct.ToList();
+            Cmbselect.DisplayMemberPath = "Наименование";
+            Cmbselect.SelectedValuePath = "Артикул";
+        }
+
+        private void Edit_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageProductdetail((sender as Button).DataContext as TheProduct));
+        }
+
+        private void Cmbselect_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string select = Convert.ToString(Cmbselect.SelectedValue);
+            DataGridList.ItemsSource = OdbConectHelper.entObj.TheProduct.Where(x
+                => x.Артикул == select).ToList();
+            DataGridList.SelectedIndex = 0;
         }
     }
 }
+    

@@ -1,6 +1,6 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Schema Namespace="DataBase1Model" Alias="Self" annotation:UseStrongSpatialTypes="false" xmlns:annotation="http://schemas.microsoft.com/ado/2009/02/edm/annotation" xmlns:customannotation="http://schemas.microsoft.com/ado/2013/11/edm/customannotation" xmlns="http://schemas.microsoft.com/ado/2009/11/edm">
-  <EntityType Name="Accessory">
+  <EntityType Name="Accessories">
     <Key>
       <PropertyRef Name="Артикул" />
     </Key>
@@ -23,7 +23,7 @@
     <Property Name="Артикул_изделия" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Размещение" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Количество" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Accessory" Relationship="Self.FK__Фурнитура__Артик__656C112C" FromRole="Accessories_TheProduct" ToRole="Accessories" />
+    <NavigationProperty Name="Accessories" Relationship="Self.FK__Фурнитура__Артик__656C112C" FromRole="Accessories_TheProduct" ToRole="Accessories" />
     <NavigationProperty Name="TheProduct" Relationship="Self.FK__Фурнитура__Артик__66603565" FromRole="Accessories_TheProduct" ToRole="TheProduct" />
   </EntityType>
   <EntityType Name="Cloth">
@@ -39,7 +39,7 @@
     <Property Name="Длина" Type="Double" Nullable="false" />
     <Property Name="Цена" Type="Decimal" Precision="19" Scale="4" Nullable="false" />
     <NavigationProperty Name="Warehouse_Cloth" Relationship="Self.FK__Склад_тка__Артик__628FA481" FromRole="Cloth" ToRole="Warehouse_Cloth" />
-    <NavigationProperty Name="TheProducts" Relationship="Self.Cloth_TheProduct" FromRole="Cloth" ToRole="TheProduct" />
+    <NavigationProperty Name="TheProduct" Relationship="Self.Cloth_TheProduct" FromRole="Cloth" ToRole="TheProduct" />
   </EntityType>
   <EntityType Name="Order">
     <Key>
@@ -66,7 +66,7 @@
     <NavigationProperty Name="Order" Relationship="Self.FK__Заказанны__Номер__5AEE82B9" FromRole="Ordered_Products" ToRole="Order" />
     <NavigationProperty Name="TheProduct" Relationship="Self.FK__Заказанны__Артик__5BE2A6F2" FromRole="Ordered_Products" ToRole="TheProduct" />
   </EntityType>
-  <EntityType Name="sysdiagram">
+  <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
     </Key>
@@ -87,7 +87,7 @@
     <Property Name="Комментарий" Type="String" MaxLength="Max" FixedLength="false" Unicode="true" />
     <NavigationProperty Name="Accessories_TheProduct" Relationship="Self.FK__Фурнитура__Артик__66603565" FromRole="TheProduct" ToRole="Accessories_TheProduct" />
     <NavigationProperty Name="Ordered_Products" Relationship="Self.FK__Заказанны__Артик__5BE2A6F2" FromRole="TheProduct" ToRole="Ordered_Products" />
-    <NavigationProperty Name="Clothes" Relationship="Self.Cloth_TheProduct" FromRole="TheProduct" ToRole="Cloth" />
+    <NavigationProperty Name="Cloth" Relationship="Self.Cloth_TheProduct" FromRole="TheProduct" ToRole="Cloth" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -97,8 +97,8 @@
     <Property Name="Пароль" Type="String" MaxLength="100" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Роль" Type="String" MaxLength="50" FixedLength="false" Unicode="true" Nullable="false" />
     <Property Name="Наименование" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Orders" Relationship="Self.FK__Заказ__Заказчик__571DF1D5" FromRole="User" ToRole="Order" />
-    <NavigationProperty Name="Orders1" Relationship="Self.FK__Заказ__Менеджер__5812160E" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Order" Relationship="Self.FK__Заказ__Заказчик__571DF1D5" FromRole="User" ToRole="Order" />
+    <NavigationProperty Name="Order1" Relationship="Self.FK__Заказ__Менеджер__5812160E" FromRole="User" ToRole="Order" />
   </EntityType>
   <EntityType Name="Warehouse_Accessories">
     <Key>
@@ -107,7 +107,7 @@
     <Property Name="Партия" Type="Int32" Nullable="false" />
     <Property Name="Артикул_фурнитуры" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Количество" Type="Int32" Nullable="false" />
-    <NavigationProperty Name="Accessory" Relationship="Self.FK__Склад_фур__Артик__5441852A" FromRole="Warehouse_Accessories" ToRole="Accessories" />
+    <NavigationProperty Name="Accessories" Relationship="Self.FK__Склад_фур__Артик__5441852A" FromRole="Warehouse_Accessories" ToRole="Accessories" />
   </EntityType>
   <EntityType Name="Warehouse_Cloth">
     <Key>
@@ -120,7 +120,7 @@
     <NavigationProperty Name="Cloth" Relationship="Self.FK__Склад_тка__Артик__628FA481" FromRole="Warehouse_Cloth" ToRole="Cloth" />
   </EntityType>
   <Association Name="FK__Склад_фур__Артик__5441852A">
-    <End Role="Accessories" Type="Self.Accessory" Multiplicity="0..1" />
+    <End Role="Accessories" Type="Self.Accessories" Multiplicity="0..1" />
     <End Role="Warehouse_Accessories" Type="Self.Warehouse_Accessories" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Accessories">
@@ -132,7 +132,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK__Фурнитура__Артик__656C112C">
-    <End Role="Accessories" Type="Self.Accessory" Multiplicity="1" />
+    <End Role="Accessories" Type="Self.Accessories" Multiplicity="1" />
     <End Role="Accessories_TheProduct" Type="Self.Accessories_TheProduct" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Accessories">
@@ -219,15 +219,15 @@
     <End Role="Cloth" Type="Self.Cloth" Multiplicity="*" />
     <End Role="TheProduct" Type="Self.TheProduct" Multiplicity="*" />
   </Association>
-  <EntityContainer Name="DataBase1Entities" annotation:LazyLoadingEnabled="true">
-    <EntitySet Name="Accessories" EntityType="Self.Accessory" />
+  <EntityContainer Name="DataBase1Entities1" annotation:LazyLoadingEnabled="true">
+    <EntitySet Name="Accessories" EntityType="Self.Accessories" />
     <EntitySet Name="Accessories_TheProduct" EntityType="Self.Accessories_TheProduct" />
-    <EntitySet Name="Clothes" EntityType="Self.Cloth" />
-    <EntitySet Name="Orders" EntityType="Self.Order" />
+    <EntitySet Name="Cloth" EntityType="Self.Cloth" />
+    <EntitySet Name="Order" EntityType="Self.Order" />
     <EntitySet Name="Ordered_Products" EntityType="Self.Ordered_Products" />
-    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagram" />
-    <EntitySet Name="TheProducts" EntityType="Self.TheProduct" />
-    <EntitySet Name="Users" EntityType="Self.User" />
+    <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" />
+    <EntitySet Name="TheProduct" EntityType="Self.TheProduct" />
+    <EntitySet Name="User" EntityType="Self.User" />
     <EntitySet Name="Warehouse_Accessories" EntityType="Self.Warehouse_Accessories" />
     <EntitySet Name="Warehouse_Cloth" EntityType="Self.Warehouse_Cloth" />
     <AssociationSet Name="FK__Склад_фур__Артик__5441852A" Association="Self.FK__Склад_фур__Артик__5441852A">
@@ -239,32 +239,32 @@
       <End Role="Accessories_TheProduct" EntitySet="Accessories_TheProduct" />
     </AssociationSet>
     <AssociationSet Name="FK__Фурнитура__Артик__66603565" Association="Self.FK__Фурнитура__Артик__66603565">
-      <End Role="TheProduct" EntitySet="TheProducts" />
+      <End Role="TheProduct" EntitySet="TheProduct" />
       <End Role="Accessories_TheProduct" EntitySet="Accessories_TheProduct" />
     </AssociationSet>
     <AssociationSet Name="FK__Склад_тка__Артик__628FA481" Association="Self.FK__Склад_тка__Артик__628FA481">
-      <End Role="Cloth" EntitySet="Clothes" />
+      <End Role="Cloth" EntitySet="Cloth" />
       <End Role="Warehouse_Cloth" EntitySet="Warehouse_Cloth" />
     </AssociationSet>
     <AssociationSet Name="FK__Заказ__Заказчик__571DF1D5" Association="Self.FK__Заказ__Заказчик__571DF1D5">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Order" EntitySet="Orders" />
+      <End Role="User" EntitySet="User" />
+      <End Role="Order" EntitySet="Order" />
     </AssociationSet>
     <AssociationSet Name="FK__Заказ__Менеджер__5812160E" Association="Self.FK__Заказ__Менеджер__5812160E">
-      <End Role="User" EntitySet="Users" />
-      <End Role="Order" EntitySet="Orders" />
+      <End Role="User" EntitySet="User" />
+      <End Role="Order" EntitySet="Order" />
     </AssociationSet>
     <AssociationSet Name="FK__Заказанны__Номер__5AEE82B9" Association="Self.FK__Заказанны__Номер__5AEE82B9">
-      <End Role="Order" EntitySet="Orders" />
+      <End Role="Order" EntitySet="Order" />
       <End Role="Ordered_Products" EntitySet="Ordered_Products" />
     </AssociationSet>
     <AssociationSet Name="FK__Заказанны__Артик__5BE2A6F2" Association="Self.FK__Заказанны__Артик__5BE2A6F2">
-      <End Role="TheProduct" EntitySet="TheProducts" />
+      <End Role="TheProduct" EntitySet="TheProduct" />
       <End Role="Ordered_Products" EntitySet="Ordered_Products" />
     </AssociationSet>
     <AssociationSet Name="Cloth_TheProduct" Association="Self.Cloth_TheProduct">
-      <End Role="Cloth" EntitySet="Clothes" />
-      <End Role="TheProduct" EntitySet="TheProducts" />
+      <End Role="Cloth" EntitySet="Cloth" />
+      <End Role="TheProduct" EntitySet="TheProduct" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

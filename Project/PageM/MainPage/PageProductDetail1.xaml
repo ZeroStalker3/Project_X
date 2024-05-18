@@ -9,8 +9,40 @@
       Title="PageProductDetail1">
 
     <Grid>
-        <DataGrid>
-            
-        </DataGrid>
+        <StackPanel>
+            <ComboBox
+                Height="20"
+                Width="130"
+                Name="Cmbselect"
+                SelectionChanged="Cmbselect_SelectionChanged"/>
+            <DataGrid
+                AutoGenerateColumns="False"
+                IsReadOnly="True"
+                VerticalScrollBarVisibility="Auto"
+            HorizontalAlignment="Center"
+            VerticalAlignment="Top"
+                Name="DataGridList">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Width="*"
+                        Header="Наименование продукта"
+                        Binding ="{Binding Наименование}"/>
+                    <DataGridTextColumn 
+                        Width="*"
+                        Header="Артикул"
+                        Binding ="{Binding Артикул}"/>
+                    <DataGridTemplateColumn 
+                        Width="*">
+                        <DataGridTemplateColumn.CellTemplate>
+                            <DataTemplate>
+                                <Button Content="Редактировать оценки"
+                                        Name="Edit"
+                                        Click="Edit_Click"/>
+                            </DataTemplate>
+                        </DataGridTemplateColumn.CellTemplate>
+                    </DataGridTemplateColumn>
+                </DataGrid.Columns>
+            </DataGrid>
+        </StackPanel>
     </Grid>
 </Page>
