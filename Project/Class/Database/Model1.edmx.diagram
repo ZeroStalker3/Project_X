@@ -4,26 +4,28 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="15f092c8b4be4ecdae951c6b8e41332b" Name="Diagram1">
-        <EntityTypeShape EntityType="DataBase1Model.Accessories" Width="1.5" PointX="3" PointY="14.375" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Accessories_TheProduct" Width="1.5" PointX="5.25" PointY="3.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Cloth" Width="1.5" PointX="0.75" PointY="4.625" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Order" Width="1.5" PointX="3" PointY="10.25" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Ordered_Products" Width="1.5" PointX="5.25" PointY="0.75" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.sysdiagrams" Width="1.5" PointX="5.75" PointY="6.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.TheProduct" Width="1.5" PointX="3" PointY="3.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.User" Width="1.5" PointX="0.75" PointY="10.5" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Warehouse_Accessories" Width="1.5" PointX="5.25" PointY="14.875" IsExpanded="true" />
-        <EntityTypeShape EntityType="DataBase1Model.Warehouse_Cloth" Width="1.5" PointX="3" PointY="6.75" IsExpanded="true" />
-        <AssociationConnector Association="DataBase1Model.FK__Склад_фур__Артик__5441852A" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Фурнитура__Артик__656C112C" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Фурнитура__Артик__66603565" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Склад_тка__Артик__628FA481" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Заказ__Заказчик__571DF1D5" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Заказ__Менеджер__5812160E" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Заказанны__Номер__5AEE82B9" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.FK__Заказанны__Артик__5BE2A6F2" ManuallyRouted="false" />
-        <AssociationConnector Association="DataBase1Model.Cloth_TheProduct" ManuallyRouted="false" />
+      <Diagram DiagramId="0aeb92c94a0c41ab8aea7df9253c853a" Name="Diagram1" ZoomLevel="74">
+        <EntityTypeShape EntityType="TextileProductionModel.Accessory" Width="1.5" PointX="6" PointY="1.25" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.AccessoryStock" Width="1.5" PointX="8.25" PointY="1.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.Fabric" Width="1.5" PointX="0.75" PointY="3.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.FabricStock" Width="1.5" PointX="3" PointY="2.625" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.Order" Width="1.5" PointX="3" PointY="9.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.OrderedProducts" Width="1.5" PointX="5.25" PointY="5.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.Product" Width="1.5" PointX="3" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.ProductAccessories" Width="1.5" PointX="8.25" PointY="5.375" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.sysdiagrams" Width="1.5" PointX="5.75" PointY="9.75" IsExpanded="true" />
+        <EntityTypeShape EntityType="TextileProductionModel.User" Width="1.5" PointX="0.75" PointY="9.625" IsExpanded="true" />
+        <AssociationConnector Association="TextileProductionModel.FK__Accessory__Acces__47DBAE45" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__ProductAc__Acces__440B1D61" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__FabricSto__Fabri__3F466844" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__Order__Customer__534D60F1" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__Order__Manager__5441852A" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__OrderedPr__Order__571DF1D5" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__OrderedPr__Produ__5812160E" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.FK__ProductAc__Produ__44FF419A" ManuallyRouted="false" />
+        <AssociationConnector Association="TextileProductionModel.ProductFabrics" ManuallyRouted="false" />
+        <EntityTypeShape EntityType="TextileProductionModel.ProductSpecificationHistory" Width="1.5" PointX="5.25" PointY="12.625" />
+        <AssociationConnector Association="TextileProductionModel.FK_ProductSpecificationHistory_Product" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

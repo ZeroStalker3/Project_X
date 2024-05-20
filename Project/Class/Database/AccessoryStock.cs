@@ -12,13 +12,12 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Ordered_Products
+    public partial class AccessoryStock
     {
-        public int Номер_заказа { get; set; }
-        public string Артикул_изделия { get; set; }
-        public int Количество { get; set; }
+        public string BatchID { get; set; }
+        public string AccessoryID { get; set; }
+        public int Quantity { get; set; }
     
-        public virtual Order Order { get; set; }
-        public virtual TheProduct TheProduct { get; set; }
+        public virtual Accessory Accessory { get; set; }
     }
 }

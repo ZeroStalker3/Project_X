@@ -21,10 +21,10 @@ namespace Project.Class.Database
             this.Order1 = new HashSet<Order>();
         }
     
-        public string Логин { get; set; }
-        public string Пароль { get; set; }
-        public string Роль { get; set; }
-        public string Наименование { get; set; }
+        public string Username { get; set; }
+        public string Password { get; set; }
+        public string Role { get; set; }
+        public string Name { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Order> Order { get; set; }

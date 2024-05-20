@@ -26,16 +26,16 @@
                     <DataGridTextColumn 
                         Width="*"
                         Header="Наименование продукта"
-                        Binding ="{Binding Наименование}"/>
+                        Binding ="{Binding Name}"/>
                     <DataGridTextColumn 
                         Width="*"
                         Header="Артикул"
-                        Binding ="{Binding Артикул}"/>
+                        Binding ="{Binding ProductID}"/>
                     <DataGridTemplateColumn 
                         Width="*">
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
-                                <Button Content="Редактировать оценки"
+                                <Button Content="Редактировать изделие"
                                         Name="Edit"
                                         Click="Edit_Click"/>
                             </DataTemplate>

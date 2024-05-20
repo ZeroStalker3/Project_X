@@ -17,19 +17,19 @@ namespace Project.Class.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Order()
         {
-            this.Ordered_Products = new HashSet<Ordered_Products>();
+            this.OrderedProducts = new HashSet<OrderedProducts>();
         }
     
-        public int Номер { get; set; }
-        public System.DateTime Дата { get; set; }
-        public string Этап_выполнения { get; set; }
-        public string Заказчик { get; set; }
-        public string Менеджер { get; set; }
-        public Nullable<decimal> Стоимость { get; set; }
+        public int OrderNumber { get; set; }
+        public System.DateTime OrderDate { get; set; }
+        public string Status { get; set; }
+        public string Customer { get; set; }
+        public string Manager { get; set; }
+        public Nullable<decimal> Cost { get; set; }
     
         public virtual User User { get; set; }
         public virtual User User1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ordered_Products> Ordered_Products { get; set; }
+        public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
     }
 }

@@ -23,17 +23,17 @@ namespace Project.PageM.MainPage
 
         private void LoadData()
         {
-            FabricDataGrid.ItemsSource = OdbConectHelper.entObj.Cloth.ToList();
-            AccessoryDataGrid.ItemsSource = OdbConectHelper.entObj.Accessories.ToList();
-            ProductDataGrid.ItemsSource = OdbConectHelper.entObj.Ordered_Products.ToList();
+            FabricDataGrid.ItemsSource = OdbConectHelper.entObj.Fabric.ToList();
+            AccessoryDataGrid.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
+            ProductDataGrid.ItemsSource = OdbConectHelper.entObj.Product.ToList();
 
-            FabricUnitComboBox.DisplayMemberPath = "Наименование";
-            FabricUnitComboBox.SelectedValuePath = "Артикул";
-            FabricUnitComboBox.ItemsSource = OdbConectHelper.entObj.Cloth.ToList();
+            FabricUnitComboBox.DisplayMemberPath = "Name";
+            FabricUnitComboBox.SelectedValuePath = "FabricID";
+            FabricUnitComboBox.ItemsSource = OdbConectHelper.entObj.Fabric.ToList();
 
-            AccessoryUnitComboBox.DisplayMemberPath = "Наименование";
-            AccessoryUnitComboBox.SelectedValuePath = "Артикул";
-            AccessoryUnitComboBox.ItemsSource = OdbConectHelper.entObj.Accessories.ToList();
+            AccessoryUnitComboBox.DisplayMemberPath = "Name";
+            AccessoryUnitComboBox.SelectedValuePath = "AccessoryID";
+            AccessoryUnitComboBox.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
         }
 
         private void FabricRecalculate_Click(object sender, RoutedEventArgs e)

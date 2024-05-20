@@ -24,23 +24,29 @@ namespace Project.PageM.MainPage
         private static OdbConectHelper _context;
         private string Atributes;
 
-        public PageProductdetail(TheProduct theProduct)
+        public PageProductdetail(Product theProduct)
         {
             InitializeComponent();
-            Atributes = theProduct.Артикул;
+            Atributes = theProduct.ProductID;
+            LoadData();
             LoadProductDetails();
+        }
+
+        private void LoadData() 
+        {
+            SpecificationList.ItemsSource = OdbConectHelper.entObj.Product.ToList();
         }
 
         private void LoadProductDetails()
         {
-            var product = OdbConectHelper.entObj.TheProduct.Find(Atributes);
+            var product = OdbConectHelper.entObj.Product.Find(Atributes);
 
             if (product != null)
             {
                 //ProductImage.Source = new BitmapImage(new Uri(product.Изображени)); //Добавить изображение в базу данных
-                ProductName.Text = product.Наименование;
-                ProductDescription.Text = product.Комментарий;
-                ProductComposition.Text = product.Артикул;
+                ProductName.Text = product.Name;
+                ProductDescription.Text = product.Comment;
+                ProductComposition.Text = product.ProductID;
             }
         }
     }

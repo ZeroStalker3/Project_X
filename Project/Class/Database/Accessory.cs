@@ -12,27 +12,27 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Cloth
+    public partial class Accessory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Cloth()
+        public Accessory()
         {
-            this.Warehouse_Cloth = new HashSet<Warehouse_Cloth>();
-            this.TheProduct = new HashSet<TheProduct>();
+            this.AccessoryStock = new HashSet<AccessoryStock>();
+            this.ProductAccessories = new HashSet<ProductAccessories>();
         }
     
-        public string Артикул { get; set; }
-        public string Наименование { get; set; }
-        public string Цвет { get; set; }
-        public string Рисунок { get; set; }
-        public string Состав { get; set; }
-        public double Ширина { get; set; }
-        public double Длина { get; set; }
-        public decimal Цена { get; set; }
+        public string AccessoryID { get; set; }
+        public string Name { get; set; }
+        public string Type { get; set; }
+        public decimal Width { get; set; }
+        public Nullable<decimal> Length { get; set; }
+        public Nullable<decimal> Weight { get; set; }
+        public byte[] Image { get; set; }
+        public decimal Price { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Warehouse_Cloth> Warehouse_Cloth { get; set; }
+        public virtual ICollection<AccessoryStock> AccessoryStock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<TheProduct> TheProduct { get; set; }
+        public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
     }
 }

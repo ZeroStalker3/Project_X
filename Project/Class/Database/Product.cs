@@ -12,27 +12,31 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class TheProduct
+    public partial class Product
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public TheProduct()
+        public Product()
         {
-            this.Accessories_TheProduct = new HashSet<Accessories_TheProduct>();
-            this.Ordered_Products = new HashSet<Ordered_Products>();
-            this.Cloth = new HashSet<Cloth>();
+            this.OrderedProducts = new HashSet<OrderedProducts>();
+            this.ProductAccessories = new HashSet<ProductAccessories>();
+            this.Fabric = new HashSet<Fabric>();
+            this.ProductSpecificationHistory = new HashSet<ProductSpecificationHistory>();
         }
     
-        public string Артикул { get; set; }
-        public string Наименование { get; set; }
-        public double Ширина { get; set; }
-        public double Длина { get; set; }
-        public string Комментарий { get; set; }
+        public string ProductID { get; set; }
+        public string Name { get; set; }
+        public decimal Width { get; set; }
+        public decimal Length { get; set; }
+        public byte[] Image { get; set; }
+        public string Comment { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Accessories_TheProduct> Accessories_TheProduct { get; set; }
+        public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Ordered_Products> Ordered_Products { get; set; }
+        public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Cloth> Cloth { get; set; }
+        public virtual ICollection<Fabric> Fabric { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<ProductSpecificationHistory> ProductSpecificationHistory { get; set; }
     }
 }

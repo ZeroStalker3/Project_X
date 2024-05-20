@@ -12,12 +12,15 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Warehouse_Accessories
+    public partial class ProductSpecificationHistory
     {
-        public int Партия { get; set; }
-        public string Артикул_фурнитуры { get; set; }
-        public int Количество { get; set; }
+        public int HistoryID { get; set; }
+        public string ProductID { get; set; }
+        public System.DateTime ChangeDate { get; set; }
+        public Nullable<decimal> Width { get; set; }
+        public Nullable<decimal> Length { get; set; }
+        public string ChangeReason { get; set; }
     
-        public virtual Accessories Accessories { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

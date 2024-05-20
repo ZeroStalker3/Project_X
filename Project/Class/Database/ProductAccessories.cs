@@ -12,13 +12,17 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Warehouse_Cloth
+    public partial class ProductAccessories
     {
-        public int Рулон { get; set; }
-        public string Артикул_ткани { get; set; }
-        public double Ширина { get; set; }
-        public double Длина { get; set; }
+        public string AccessoryID { get; set; }
+        public string ProductID { get; set; }
+        public string Placement { get; set; }
+        public Nullable<decimal> Width { get; set; }
+        public Nullable<decimal> Length { get; set; }
+        public Nullable<decimal> Rotation { get; set; }
+        public int Quantity { get; set; }
     
-        public virtual Cloth Cloth { get; set; }
+        public virtual Accessory Accessory { get; set; }
+        public virtual Product Product { get; set; }
     }
 }

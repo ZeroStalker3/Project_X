@@ -1,66 +1,102 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Mapping Space="C-S" xmlns="http://schemas.microsoft.com/ado/2009/11/mapping/cs">
-  <EntityContainerMapping StorageEntityContainer="DataBase1ModelStoreContainer" CdmEntityContainer="DataBase1Entities1">
-    <EntitySetMapping Name="Accessories">
-      <EntityTypeMapping TypeName="DataBase1Model.Accessories">
-        <MappingFragment StoreEntitySet="Accessories">
-          <ScalarProperty Name="Артикул" ColumnName="Артикул" />
-          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
-          <ScalarProperty Name="Ширина" ColumnName="Ширина" />
-          <ScalarProperty Name="Длина" ColumnName="Длина" />
-          <ScalarProperty Name="Тип" ColumnName="Тип" />
-          <ScalarProperty Name="Вес" ColumnName="Вес" />
-          <ScalarProperty Name="Цена" ColumnName="Цена" />
+  <EntityContainerMapping StorageEntityContainer="TextileProductionModelStoreContainer" CdmEntityContainer="TextileProductionEntities">
+    <EntitySetMapping Name="Accessory">
+      <EntityTypeMapping TypeName="TextileProductionModel.Accessory">
+        <MappingFragment StoreEntitySet="Accessory">
+          <ScalarProperty Name="AccessoryID" ColumnName="AccessoryID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Type" ColumnName="Type" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Weight" ColumnName="Weight" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Accessories_TheProduct">
-      <EntityTypeMapping TypeName="DataBase1Model.Accessories_TheProduct">
-        <MappingFragment StoreEntitySet="Accessories_TheProduct">
-          <ScalarProperty Name="Артикул_фурнитуры" ColumnName="Артикул_фурнитуры" />
-          <ScalarProperty Name="Артикул_изделия" ColumnName="Артикул_изделия" />
-          <ScalarProperty Name="Размещение" ColumnName="Размещение" />
-          <ScalarProperty Name="Количество" ColumnName="Количество" />
+    <EntitySetMapping Name="AccessoryStock">
+      <EntityTypeMapping TypeName="TextileProductionModel.AccessoryStock">
+        <MappingFragment StoreEntitySet="AccessoryStock">
+          <ScalarProperty Name="BatchID" ColumnName="BatchID" />
+          <ScalarProperty Name="AccessoryID" ColumnName="AccessoryID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Cloth">
-      <EntityTypeMapping TypeName="DataBase1Model.Cloth">
-        <MappingFragment StoreEntitySet="Cloth">
-          <ScalarProperty Name="Артикул" ColumnName="Артикул" />
-          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
-          <ScalarProperty Name="Цвет" ColumnName="Цвет" />
-          <ScalarProperty Name="Рисунок" ColumnName="Рисунок" />
-          <ScalarProperty Name="Состав" ColumnName="Состав" />
-          <ScalarProperty Name="Ширина" ColumnName="Ширина" />
-          <ScalarProperty Name="Длина" ColumnName="Длина" />
-          <ScalarProperty Name="Цена" ColumnName="Цена" />
+    <EntitySetMapping Name="Fabric">
+      <EntityTypeMapping TypeName="TextileProductionModel.Fabric">
+        <MappingFragment StoreEntitySet="Fabric">
+          <ScalarProperty Name="FabricID" ColumnName="FabricID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Color" ColumnName="Color" />
+          <ScalarProperty Name="Pattern" ColumnName="Pattern" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Composition" ColumnName="Composition" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Price" ColumnName="Price" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="FabricStock">
+      <EntityTypeMapping TypeName="TextileProductionModel.FabricStock">
+        <MappingFragment StoreEntitySet="FabricStock">
+          <ScalarProperty Name="RollID" ColumnName="RollID" />
+          <ScalarProperty Name="FabricID" ColumnName="FabricID" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="Order">
-      <EntityTypeMapping TypeName="DataBase1Model.Order">
+      <EntityTypeMapping TypeName="TextileProductionModel.Order">
         <MappingFragment StoreEntitySet="Order">
-          <ScalarProperty Name="Номер" ColumnName="Номер" />
-          <ScalarProperty Name="Дата" ColumnName="Дата" />
-          <ScalarProperty Name="Этап_выполнения" ColumnName="Этап_выполнения" />
-          <ScalarProperty Name="Заказчик" ColumnName="Заказчик" />
-          <ScalarProperty Name="Менеджер" ColumnName="Менеджер" />
-          <ScalarProperty Name="Стоимость" ColumnName="Стоимость" />
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="OrderDate" ColumnName="OrderDate" />
+          <ScalarProperty Name="Status" ColumnName="Status" />
+          <ScalarProperty Name="Customer" ColumnName="Customer" />
+          <ScalarProperty Name="Manager" ColumnName="Manager" />
+          <ScalarProperty Name="Cost" ColumnName="Cost" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Ordered_Products">
-      <EntityTypeMapping TypeName="DataBase1Model.Ordered_Products">
-        <MappingFragment StoreEntitySet="Ordered_Products">
-          <ScalarProperty Name="Номер_заказа" ColumnName="Номер_заказа" />
-          <ScalarProperty Name="Артикул_изделия" ColumnName="Артикул_изделия" />
-          <ScalarProperty Name="Количество" ColumnName="Количество" />
+    <EntitySetMapping Name="OrderedProducts">
+      <EntityTypeMapping TypeName="TextileProductionModel.OrderedProducts">
+        <MappingFragment StoreEntitySet="OrderedProducts">
+          <ScalarProperty Name="OrderNumber" ColumnName="OrderNumber" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="Product">
+      <EntityTypeMapping TypeName="TextileProductionModel.Product">
+        <MappingFragment StoreEntitySet="Product">
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Image" ColumnName="Image" />
+          <ScalarProperty Name="Comment" ColumnName="Comment" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
+    <EntitySetMapping Name="ProductAccessories">
+      <EntityTypeMapping TypeName="TextileProductionModel.ProductAccessories">
+        <MappingFragment StoreEntitySet="ProductAccessories">
+          <ScalarProperty Name="AccessoryID" ColumnName="AccessoryID" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="Placement" ColumnName="Placement" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Rotation" ColumnName="Rotation" />
+          <ScalarProperty Name="Quantity" ColumnName="Quantity" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
     <EntitySetMapping Name="sysdiagrams">
-      <EntityTypeMapping TypeName="DataBase1Model.sysdiagrams">
+      <EntityTypeMapping TypeName="TextileProductionModel.sysdiagrams">
         <MappingFragment StoreEntitySet="sysdiagrams">
           <ScalarProperty Name="name" ColumnName="name" />
           <ScalarProperty Name="principal_id" ColumnName="principal_id" />
@@ -70,52 +106,22 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="TheProduct">
-      <EntityTypeMapping TypeName="DataBase1Model.TheProduct">
-        <MappingFragment StoreEntitySet="TheProduct">
-          <ScalarProperty Name="Артикул" ColumnName="Артикул" />
-          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
-          <ScalarProperty Name="Ширина" ColumnName="Ширина" />
-          <ScalarProperty Name="Длина" ColumnName="Длина" />
-          <ScalarProperty Name="Комментарий" ColumnName="Комментарий" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
     <EntitySetMapping Name="User">
-      <EntityTypeMapping TypeName="DataBase1Model.User">
+      <EntityTypeMapping TypeName="TextileProductionModel.User">
         <MappingFragment StoreEntitySet="User">
-          <ScalarProperty Name="Логин" ColumnName="Логин" />
-          <ScalarProperty Name="Пароль" ColumnName="Пароль" />
-          <ScalarProperty Name="Роль" ColumnName="Роль" />
-          <ScalarProperty Name="Наименование" ColumnName="Наименование" />
+          <ScalarProperty Name="Username" ColumnName="Username" />
+          <ScalarProperty Name="Password" ColumnName="Password" />
+          <ScalarProperty Name="Role" ColumnName="Role" />
+          <ScalarProperty Name="Name" ColumnName="Name" />
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
-    <EntitySetMapping Name="Warehouse_Accessories">
-      <EntityTypeMapping TypeName="DataBase1Model.Warehouse_Accessories">
-        <MappingFragment StoreEntitySet="Warehouse_Accessories">
-          <ScalarProperty Name="Партия" ColumnName="Партия" />
-          <ScalarProperty Name="Артикул_фурнитуры" ColumnName="Артикул_фурнитуры" />
-          <ScalarProperty Name="Количество" ColumnName="Количество" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <EntitySetMapping Name="Warehouse_Cloth">
-      <EntityTypeMapping TypeName="DataBase1Model.Warehouse_Cloth">
-        <MappingFragment StoreEntitySet="Warehouse_Cloth">
-          <ScalarProperty Name="Рулон" ColumnName="Рулон" />
-          <ScalarProperty Name="Артикул_ткани" ColumnName="Артикул_ткани" />
-          <ScalarProperty Name="Ширина" ColumnName="Ширина" />
-          <ScalarProperty Name="Длина" ColumnName="Длина" />
-        </MappingFragment>
-      </EntityTypeMapping>
-    </EntitySetMapping>
-    <AssociationSetMapping Name="Cloth_TheProduct" TypeName="DataBase1Model.Cloth_TheProduct" StoreEntitySet="Cloth_TheProduct">
-      <EndProperty Name="Cloth">
-        <ScalarProperty Name="Артикул" ColumnName="Артикул_ткани" />
+    <AssociationSetMapping Name="ProductFabrics" TypeName="TextileProductionModel.ProductFabrics" StoreEntitySet="ProductFabrics">
+      <EndProperty Name="Fabric">
+        <ScalarProperty Name="FabricID" ColumnName="FabricID" />
       </EndProperty>
-      <EndProperty Name="TheProduct">
-        <ScalarProperty Name="Артикул" ColumnName="Артикул_изделия" />
+      <EndProperty Name="Product">
+        <ScalarProperty Name="ProductID" ColumnName="ProductID" />
       </EndProperty>
     </AssociationSetMapping>
   </EntityContainerMapping>

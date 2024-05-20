@@ -9,6 +9,6 @@ namespace Project.Class
 {
     class OdbConectHelper
     {
-        public static DataBase1Entities1 entObj;
+        public static TextileProductionEntities entObj;
     }
 }

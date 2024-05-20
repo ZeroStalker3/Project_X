@@ -18,15 +18,21 @@
             <TextBlock Text="Артикул:" FontWeight="Bold"/>
             <TextBlock Name="ProductComposition" TextWrapping="Wrap"/>
             <TextBlock Text="Спецификация:" FontWeight="Bold"/>
-            <ListView Name="SpecificationList">
-                <ListView.View>
-                    <GridView>
-                        <GridViewColumn Header="Ширина" DisplayMemberBinding="{Binding Ширина}" Width="100"/>
-                        <GridViewColumn Header="Длина" DisplayMemberBinding="{Binding Длина}" Width="100"/>
-                        <GridViewColumn Header="Количество" DisplayMemberBinding="{Binding Ordered_Products.Количество}" Width="100"/>
-                    </GridView>
-                </ListView.View>
-            </ListView>
+            <DataGrid
+                Name="SpecificationList"
+                Width="200"
+                HorizontalAlignment="Left">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Header="Высота" 
+                        Binding="{Binding Length}" 
+                        Width="100"/>
+                    <DataGridTextColumn 
+                        Header="ширина" 
+                        Binding="{Binding Width}" 
+                        Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
             <TextBlock Text="Specification History:" FontWeight="Bold"/>
             <ListView Name="SpecificationHistoryList">
                 <ListView.View>

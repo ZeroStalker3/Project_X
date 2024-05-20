@@ -38,10 +38,10 @@ namespace Project.PageM
 
                 User user = new User
                 {
-                    Логин = login,
-                    Пароль = password,
-                    Роль = "Заказчик",
-                    Наименование = NameZakazchik
+                    Username = login,
+                    Password = password,
+                    Role = "Заказчик",
+                    Name = NameZakazchik
                 };
                 OdbConectHelper.entObj.User.Add(user);
                 OdbConectHelper.entObj.SaveChanges();

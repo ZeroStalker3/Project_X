@@ -30,21 +30,21 @@ namespace Project.PageM.MainPage
 
         private void LoadData()
         {
-            DataGridList.ItemsSource = OdbConectHelper.entObj.TheProduct.ToList();
-            Cmbselect.DisplayMemberPath = "Наименование";
-            Cmbselect.SelectedValuePath = "Артикул";
+            DataGridList.ItemsSource = OdbConectHelper.entObj.Product.ToList();
+            Cmbselect.DisplayMemberPath = "Name";
+            Cmbselect.SelectedValuePath = "ProductID";
         }
 
         private void Edit_Click(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmObj.Navigate(new PageProductdetail((sender as Button).DataContext as TheProduct));
+            FrameApp.frmObj.Navigate(new PageProductdetail((sender as Button).DataContext as Product));
         }
 
         private void Cmbselect_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
             string select = Convert.ToString(Cmbselect.SelectedValue);
-            DataGridList.ItemsSource = OdbConectHelper.entObj.TheProduct.Where(x
-                => x.Артикул == select).ToList();
+            DataGridList.ItemsSource = OdbConectHelper.entObj.Product.Where(x
+                => x.ProductID == select).ToList();
             DataGridList.SelectedIndex = 0;
         }
     }
