@@ -96,6 +96,17 @@
     <Property Name="FabricID" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="ProductID" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
+  <EntityType Name="ProductSpecificationHistory">
+    <Key>
+      <PropertyRef Name="HistoryID" />
+    </Key>
+    <Property Name="HistoryID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="ProductID" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="ChangeDate" Type="datetime" Nullable="false" />
+    <Property Name="Width" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="Length" Type="decimal" Precision="10" Scale="2" />
+    <Property Name="ChangeReason" Type="nvarchar" MaxLength="255" />
+  </EntityType>
   <EntityType Name="sysdiagrams">
     <Key>
       <PropertyRef Name="diagram_id" />
@@ -235,6 +246,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_ProductSpecificationHistory_Product">
+    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="ProductSpecificationHistory" Type="Self.ProductSpecificationHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductSpecificationHistory">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="TextileProductionModelStoreContainer">
     <EntitySet Name="Accessory" EntityType="Self.Accessory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="AccessoryStock" EntityType="Self.AccessoryStock" Schema="dbo" store:Type="Tables" />
@@ -245,6 +268,7 @@
     <EntitySet Name="Product" EntityType="Self.Product" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductAccessories" EntityType="Self.ProductAccessories" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="ProductFabrics" EntityType="Self.ProductFabrics" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="ProductSpecificationHistory" EntityType="Self.ProductSpecificationHistory" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Accessory__Acces__47DBAE45" Association="Self.FK__Accessory__Acces__47DBAE45">
@@ -286,6 +310,10 @@
     <AssociationSet Name="FK__ProductFa__Produ__3C69FB99" Association="Self.FK__ProductFa__Produ__3C69FB99">
       <End Role="Product" EntitySet="Product" />
       <End Role="ProductFabrics" EntitySet="ProductFabrics" />
+    </AssociationSet>
+    <AssociationSet Name="FK_ProductSpecificationHistory_Product" Association="Self.FK_ProductSpecificationHistory_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductSpecificationHistory" EntitySet="ProductSpecificationHistory" />
     </AssociationSet>
   </EntityContainer>
 </Schema>

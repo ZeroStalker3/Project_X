@@ -124,5 +124,17 @@
         <ScalarProperty Name="ProductID" ColumnName="ProductID" />
       </EndProperty>
     </AssociationSetMapping>
+    <EntitySetMapping Name="ProductSpecificationHistory">
+      <EntityTypeMapping TypeName="TextileProductionModel.ProductSpecificationHistory">
+        <MappingFragment StoreEntitySet="ProductSpecificationHistory">
+          <ScalarProperty Name="ChangeReason" ColumnName="ChangeReason" />
+          <ScalarProperty Name="Length" ColumnName="Length" />
+          <ScalarProperty Name="Width" ColumnName="Width" />
+          <ScalarProperty Name="ChangeDate" ColumnName="ChangeDate" />
+          <ScalarProperty Name="ProductID" ColumnName="ProductID" />
+          <ScalarProperty Name="HistoryID" ColumnName="HistoryID" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

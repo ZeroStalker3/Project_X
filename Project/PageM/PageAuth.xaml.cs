@@ -41,7 +41,7 @@ namespace Project.PageM
             }
             else
             {
-                FrameApp.frmObj.Navigate(new PageProductDetail1());
+                FrameApp.frmObj.Navigate(new PageAccountingMaterials());
                 
             }
         }

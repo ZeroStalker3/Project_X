@@ -40,7 +40,7 @@ namespace Project.PageM
                 {
                     Username = login,
                     Password = password,
-                    Role = "Заказчик",
+                    Role = "Storekeeper",  
                     Name = NameZakazchik
                 };
                 OdbConectHelper.entObj.User.Add(user);

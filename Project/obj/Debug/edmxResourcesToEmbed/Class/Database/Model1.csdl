@@ -88,6 +88,7 @@
     <NavigationProperty Name="OrderedProducts" Relationship="Self.FK__OrderedPr__Produ__5812160E" FromRole="Product" ToRole="OrderedProducts" />
     <NavigationProperty Name="ProductAccessories" Relationship="Self.FK__ProductAc__Produ__44FF419A" FromRole="Product" ToRole="ProductAccessories" />
     <NavigationProperty Name="Fabric" Relationship="Self.ProductFabrics" FromRole="Product" ToRole="Fabric" />
+    <NavigationProperty Name="ProductSpecificationHistory" Relationship="TextileProductionModel.FK_ProductSpecificationHistory_Product" FromRole="Product" ToRole="ProductSpecificationHistory" />
   </EntityType>
   <EntityType Name="ProductAccessories">
     <Key>
@@ -272,5 +273,34 @@
       <End Role="Fabric" EntitySet="Fabric" />
       <End Role="Product" EntitySet="Product" />
     </AssociationSet>
+    <EntitySet Name="ProductSpecificationHistory" EntityType="TextileProductionModel.ProductSpecificationHistory" />
+    <AssociationSet Name="FK_ProductSpecificationHistory_Product" Association="TextileProductionModel.FK_ProductSpecificationHistory_Product">
+      <End Role="Product" EntitySet="Product" />
+      <End Role="ProductSpecificationHistory" EntitySet="ProductSpecificationHistory" />
+    </AssociationSet>
   </EntityContainer>
+  <EntityType Name="ProductSpecificationHistory">
+    <Key>
+      <PropertyRef Name="HistoryID" />
+    </Key>
+    <Property Name="HistoryID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
+    <Property Name="ProductID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="ChangeDate" Type="DateTime" Nullable="false" Precision="3" />
+    <Property Name="Width" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="Length" Type="Decimal" Precision="10" Scale="2" />
+    <Property Name="ChangeReason" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="Product" Relationship="TextileProductionModel.FK_ProductSpecificationHistory_Product" FromRole="ProductSpecificationHistory" ToRole="Product" />
+  </EntityType>
+  <Association Name="FK_ProductSpecificationHistory_Product">
+    <End Type="TextileProductionModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="TextileProductionModel.ProductSpecificationHistory" Role="ProductSpecificationHistory" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Product">
+        <PropertyRef Name="ProductID" />
+      </Principal>
+      <Dependent Role="ProductSpecificationHistory">
+        <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
 </Schema>

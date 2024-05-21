@@ -23,9 +23,23 @@ namespace Project.PageM.MainPage
 
         private void LoadData()
         {
+            //Сортировка
+            CmbFabric.ItemsSource = OdbConectHelper.entObj.Fabric.ToList();
+            CmbFabric.DisplayMemberPath = "Name";
+            CmbFabric.SelectedValuePath = "FabricID";
+
+            CmbAccessory.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
+            CmbAccessory.DisplayMemberPath = "Name";
+            CmbAccessory.SelectedValuePath = "AccessoryID";
+
+            CmbProduct.ItemsSource = OdbConectHelper.entObj.Product.ToList();
+            CmbProduct.DisplayMemberPath = "Name";
+            CmbProduct.SelectedValuePath = "ProductID";
+
+            //Вывод данных
             FabricDataGrid.ItemsSource = OdbConectHelper.entObj.Fabric.ToList();
-            AccessoryDataGrid.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
-            ProductDataGrid.ItemsSource = OdbConectHelper.entObj.Product.ToList();
+            AccessoryDataGrid.ItemsSource = OdbConectHelper.entObj.AccessoryStock.ToList();
+            ProductDataGrid.ItemsSource = OdbConectHelper.entObj.OrderedProducts.ToList();
 
             FabricUnitComboBox.DisplayMemberPath = "Name";
             FabricUnitComboBox.SelectedValuePath = "FabricID";
@@ -70,6 +84,30 @@ namespace Project.PageM.MainPage
         private void EditProduct_Click(object sender, RoutedEventArgs e)
         {
 
+        }
+
+        private void CmbFabric_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string select = Convert.ToString(CmbFabric.SelectedValue);
+            FabricDataGrid.ItemsSource = OdbConectHelper.entObj.Fabric.Where(x
+                => x.FabricID == select).ToList();
+            FabricDataGrid.SelectedIndex = 0;
+        }
+
+        private void CmbAccessory_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string select = Convert.ToString(CmbAccessory.SelectedValue);
+            AccessoryDataGrid.ItemsSource = OdbConectHelper.entObj.AccessoryStock.Where(x
+                => x.AccessoryID == select).ToList();
+            AccessoryDataGrid.SelectedIndex = 0;
+        }
+
+        private void CmbProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            string select = Convert.ToString(CmbProduct.SelectedValue);
+            ProductDataGrid.ItemsSource = OdbConectHelper.entObj.OrderedProducts.Where(x
+                => x.ProductID == select).ToList();
+            ProductDataGrid.SelectedIndex = 0;
         }
     }
 }
