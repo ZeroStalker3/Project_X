@@ -1,5 +1,7 @@
 ﻿using Project.Class;
 using Project.PageM.MainPage;
+using Project.PageM.MainPage.PageWithListProduct;
+using Project.PageM.MainPage.SecondPage;
 using Project.PageM.Дирекция;
 using System;
 using System.Collections.Generic;
@@ -41,7 +43,7 @@ namespace Project.PageM
             }
             else
             {
-                FrameApp.frmObj.Navigate(new PageAccountingMaterials());
+                FrameApp.frmObj.Navigate(new PageDirector());
                 
             }
         }
