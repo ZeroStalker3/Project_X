@@ -17,7 +17,9 @@ namespace Project.Class.Database
         public string BatchID { get; set; }
         public string AccessoryID { get; set; }
         public int Quantity { get; set; }
+        public Nullable<int> SuppleirID { get; set; }
     
         public virtual Accessory Accessory { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

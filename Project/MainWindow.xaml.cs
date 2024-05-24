@@ -49,5 +49,10 @@ namespace Project
         {
             this.DragMove();
         }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.GoBack();
+        }
     }
 }

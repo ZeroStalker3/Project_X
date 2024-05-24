@@ -21,8 +21,10 @@ namespace Project.Class.Database
         public Nullable<decimal> Length { get; set; }
         public Nullable<decimal> Rotation { get; set; }
         public int Quantity { get; set; }
+        public Nullable<int> SuppleirID { get; set; }
     
         public virtual Accessory Accessory { get; set; }
         public virtual Product Product { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

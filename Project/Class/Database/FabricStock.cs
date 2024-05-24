@@ -18,7 +18,9 @@ namespace Project.Class.Database
         public string FabricID { get; set; }
         public decimal Width { get; set; }
         public decimal Length { get; set; }
+        public Nullable<int> SupplierID { get; set; }
     
         public virtual Fabric Fabric { get; set; }
+        public virtual Supplier Supplier { get; set; }
     }
 }

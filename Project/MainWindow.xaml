@@ -56,11 +56,22 @@
             Grid.Row="1"
             Grid.Column="0"/>
         <Button
+            Margin="10 10 110 10"
+            Height="30"
+            FontSize="14pt"
+            Width="70"
+            Name="Back"
+            Content="Назад"
+            HorizontalAlignment="Right"
+            Background="Transparent"
+            VerticalAlignment="Bottom"
+            Click="Back_Click"/>
+        <Button
             Margin="10"
             Height="30"
             FontSize="14pt"
             Width="70"
-            Content="Back"
+            Content="Exit"
             HorizontalAlignment="Right"
             Background="Transparent"
             VerticalAlignment="Bottom"

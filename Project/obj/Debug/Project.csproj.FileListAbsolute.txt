@@ -45,3 +45,7 @@ C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Pro
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageWithListProduct\PageListProduct.g.cs
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageWithListProduct\PageListProduct.baml
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageWithListProduct\PageEdit.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageWithListProduct\PageEdit.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageDocumentList.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageDocumentList.baml

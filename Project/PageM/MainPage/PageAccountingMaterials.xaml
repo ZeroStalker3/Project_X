@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project.PageM.MainPage"
       mc:Ignorable="d"
-      Title="PageAccountingMaterials"
+      Title="Бухгалтерские материалы"
       Height="280">
     <Grid
         >

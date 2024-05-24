@@ -12,31 +12,24 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class Product
+    public partial class Supplier
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public Product()
+        public Supplier()
         {
-            this.OrderedProducts = new HashSet<OrderedProducts>();
+            this.AccessoryStock = new HashSet<AccessoryStock>();
+            this.FabricStock = new HashSet<FabricStock>();
             this.ProductAccessories = new HashSet<ProductAccessories>();
-            this.ProductSpecificationHistory = new HashSet<ProductSpecificationHistory>();
-            this.Fabric = new HashSet<Fabric>();
         }
     
-        public string ProductID { get; set; }
+        public int ID { get; set; }
         public string Name { get; set; }
-        public decimal Width { get; set; }
-        public decimal Length { get; set; }
-        public byte[] Image { get; set; }
-        public string Comment { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
+        public virtual ICollection<AccessoryStock> AccessoryStock { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<FabricStock> FabricStock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<ProductSpecificationHistory> ProductSpecificationHistory { get; set; }
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Fabric> Fabric { get; set; }
     }
 }

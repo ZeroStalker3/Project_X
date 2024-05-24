@@ -114,6 +114,9 @@
     <Compile Include="Class\Database\ProductSpecificationHistory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\Database\Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\Database\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -131,6 +134,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageM\MainPage\PageConstruct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageDocumentList.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -185,6 +192,9 @@
     </Compile>
     <Compile Include="PageM\MainPage\PageConstruct.xaml.cs">
       <DependentUpon>PageConstruct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageDocumentList.xaml.cs">
+      <DependentUpon>PageDocumentList.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageM\MainPage\PageProductDetail1.xaml.cs">
       <DependentUpon>PageProductDetail1.xaml</DependentUpon>
