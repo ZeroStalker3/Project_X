@@ -12,21 +12,21 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class FabricStock
+    public partial class MaterialMovement
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FabricStock()
+        public MaterialMovement()
         {
             this.Inventory = new HashSet<Inventory>();
         }
     
-        public string RollID { get; set; }
-        public string FabricID { get; set; }
-        public decimal Width { get; set; }
-        public decimal Length { get; set; }
-        public Nullable<int> SupplierID { get; set; }
+        public int Id { get; set; }
+        public string Name { get; set; }
+        public int StartQuantity { get; set; }
+        public int Received { get; set; }
+        public int WrittenOff { get; set; }
+        public int EndQuantity { get; set; }
     
-        public virtual Supplier Supplier { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inventory> Inventory { get; set; }
     }

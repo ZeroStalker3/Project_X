@@ -17,7 +17,6 @@ namespace Project.Class.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Fabric()
         {
-            this.FabricStock = new HashSet<FabricStock>();
             this.Product = new HashSet<Product>();
         }
     
@@ -30,9 +29,9 @@ namespace Project.Class.Database
         public decimal Width { get; set; }
         public decimal Length { get; set; }
         public decimal Price { get; set; }
+        public Nullable<int> IdMaterials { get; set; }
     
-        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<FabricStock> FabricStock { get; set; }
+        public virtual Inventory Inventory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Product { get; set; }
     }

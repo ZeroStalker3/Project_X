@@ -47,5 +47,11 @@ C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Pro
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\GeneratedInternalTypeHelper.g.cs
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageWithListProduct\PageEdit.g.cs
 C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageWithListProduct\PageEdit.baml
-C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageDocumentList.g.cs
-C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageDocumentList.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageInventory.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageInventory.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageReports.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageReports.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageOrders.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageOrders.baml
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageOfferOrder.g.cs
+C:\Users\golub\OneDrive\Документы\Рабочий стол\Project_X\Project\obj\Debug\PageM\MainPage\PageOfferOrder.baml

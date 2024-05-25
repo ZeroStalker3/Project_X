@@ -12,22 +12,26 @@ namespace Project.Class.Database
     using System;
     using System.Collections.Generic;
     
-    public partial class FabricStock
+    public partial class Inventory
     {
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
-        public FabricStock()
+        public Inventory()
         {
-            this.Inventory = new HashSet<Inventory>();
+            this.Fabric = new HashSet<Fabric>();
         }
     
+        public string Name { get; set; }
+        public int AccountedQuantity { get; set; }
+        public int ActualQuantity { get; set; }
+        public Nullable<int> Difference { get; set; }
+        public Nullable<double> DifferencePercentage { get; set; }
+        public int ID { get; set; }
         public string RollID { get; set; }
-        public string FabricID { get; set; }
-        public decimal Width { get; set; }
-        public decimal Length { get; set; }
-        public Nullable<int> SupplierID { get; set; }
+        public Nullable<int> IdMovementMaterial { get; set; }
     
-        public virtual Supplier Supplier { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
-        public virtual ICollection<Inventory> Inventory { get; set; }
+        public virtual ICollection<Fabric> Fabric { get; set; }
+        public virtual FabricStock FabricStock { get; set; }
+        public virtual MaterialMovement MaterialMovement { get; set; }
     }
 }

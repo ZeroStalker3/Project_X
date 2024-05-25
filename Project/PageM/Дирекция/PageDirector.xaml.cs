@@ -51,7 +51,17 @@ namespace Project.PageM.Дирекция
 
         private void PageDocumentList_Click(object sender, RoutedEventArgs e)
         {
-            FrameApp.frmObj.Navigate(new PageDocumentList());
+            FrameApp.frmObj.Navigate(new PageInventory());
+        }
+
+        private void PageReports_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageReports());
+        }
+
+        private void PageOrders_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageOrders());
         }
     }
 }

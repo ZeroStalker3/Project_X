@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,23 +17,20 @@ using System.Windows.Shapes;
 namespace Project.PageM.MainPage
 {
     /// <summary>
-    /// Interaction logic for PageDocumentList.xaml
+    /// Interaction logic for PageOrders.xaml
     /// </summary>
-    public partial class PageDocumentList : Page
+    public partial class PageOrders : Page
     {
-        public PageDocumentList()
+        public PageOrders()
         {
             InitializeComponent();
+
+            ordersDataGrid.ItemsSource=OdbConectHelper.entObj.OrderedProducts.ToList();
         }
 
-        private void Button_Click(object sender, RoutedEventArgs e)
+        private void offorder_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void SaveDocumentButton_Click(object sender, RoutedEventArgs e)
-        {
-
+            FrameApp.frmObj.Navigate(new PageOfferOrder());
         }
     }
 }

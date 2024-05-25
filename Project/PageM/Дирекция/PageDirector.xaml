@@ -33,7 +33,9 @@
                 Name="PageListProduct"
             Content="PageListProduct"
                 Click="PageListProduct_Click"/>
-            <Button Height="30" Width="150" Name="PageDocumentList" Content="PageDocumentList" Click="PageDocumentList_Click"/>
+            <Button Height="30" Width="150" Name="PageDocumentList" Content="Inventory" Click="PageDocumentList_Click"/>
+            <Button x:Name="PageReports" Height="30" Width="150" Content="PageReports" Click="PageReports_Click"/>
+            <Button x:Name="PageOrders" Height="30" Width="150" Content="PageOrders" Click="PageOrders_Click"/>
         </StackPanel>
 
     </Grid>

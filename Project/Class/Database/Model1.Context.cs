@@ -29,11 +29,14 @@ namespace Project.Class.Database
         public virtual DbSet<AccessoryStock> AccessoryStock { get; set; }
         public virtual DbSet<Fabric> Fabric { get; set; }
         public virtual DbSet<FabricStock> FabricStock { get; set; }
+        public virtual DbSet<Inventory> Inventory { get; set; }
+        public virtual DbSet<MaterialMovement> MaterialMovement { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderedProducts> OrderedProducts { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductAccessories> ProductAccessories { get; set; }
         public virtual DbSet<ProductSpecificationHistory> ProductSpecificationHistory { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
         public virtual DbSet<User> User { get; set; }
