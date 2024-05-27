@@ -32,5 +32,10 @@ namespace Project.PageM.MainPage
         {
             FrameApp.frmObj.Navigate(new PageOfferOrder());
         }
+
+        private void Production_Click(object sender, RoutedEventArgs e)
+        {
+
+        }
     }
 }
