@@ -38,19 +38,22 @@ namespace Project.PageM
             {
                 MessageBox.Show("Введите логин", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
-            else if (string.IsNullOrWhiteSpace(psbtxt.Password))
-            {
-                MessageBox.Show("Введите пароль", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
-            }
-            else if (userObj == null)
-            {
-                MessageBox.Show("Такой пользователь отсутствует в приложении", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
-                FrameApp.frmObj.Navigate(new PageReg());
-            }
-            else if (!userObj.Password.Equals(psbtxt.Password, StringComparison.Ordinal))
-            {
-                MessageBox.Show("Неверный пароль", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
-            }
+            else
+                if (string.IsNullOrWhiteSpace(psbtxt.Password))
+                {
+                    MessageBox.Show("Введите пароль", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            else
+                if (userObj == null)
+                {
+                    MessageBox.Show("Такой пользователь отсутствует в приложении", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    FrameApp.frmObj.Navigate(new PageReg());
+                }
+            else 
+                if (!userObj.Password.Equals(psbtxt.Password, StringComparison.Ordinal))
+                {
+                    MessageBox.Show("Неверный пароль", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
             else
             {
                 FrameApp.frmObj.Navigate(new PageDirector());
