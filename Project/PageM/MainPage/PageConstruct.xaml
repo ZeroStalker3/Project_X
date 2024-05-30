@@ -5,147 +5,93 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project.PageM.MainPage"
       mc:Ignorable="d" 
-      Title="PageConstruct">
+      Title="Конструктор">
 
 
-    <Grid>
+    <Grid Margin="20">
         <Grid.RowDefinitions>
-            <RowDefinition/>
-            <RowDefinition/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         <Grid.ColumnDefinitions>
-            <ColumnDefinition/>
             <ColumnDefinition Width="*"/>
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <Image Name="DroppedImage" Width="400" Grid.Column="1" Grid.ColumnSpan="2"
-               Grid.Row="1"
-               Margin="0 0 100 10"
-               Height="400" HorizontalAlignment="Center" VerticalAlignment="Center">
-            <Image.RenderTransform>
-                <TransformGroup>
-                    <RotateTransform x:Name="ImageRotateTransform" CenterX="200" CenterY="200" />
-                    <ScaleTransform x:Name="ImageScaleTransform" CenterX="200" CenterY="200" />
-                </TransformGroup>
-            </Image.RenderTransform>
-        </Image>
-        <StackPanel
-            Grid.Column="1"
-            Grid.ColumnSpan="2"
-            Grid.Row="0">
-            <TextBlock
-            Text="Для поворачивания картинки: "
-            FontSize="14pt"
-            Grid.Column="1"
-                Margin="0 10 0 5"
-            HorizontalAlignment="Center"
-            VerticalAlignment="Center"/>
-            <Slider Name="RotationSlider" Minimum="0" 
-                    Margin="0 5 0 10"
-                    Maximum="360" Grid.Column="1" ValueChanged="RotationSlider_ValueChanged" 
-                Width="200" Height="20" HorizontalAlignment="Center" VerticalAlignment="Center"/>
-            <Rectangle Name="DropTargetRectangle" Width="150" Height="150" 
-                        Margin="0 0 30 0" 
-                       Fill="LightGray"
-                   HorizontalAlignment="Right" VerticalAlignment="Top"
+        <!-- Верхняя часть страницы с изображением и инструментами -->
+        <StackPanel Grid.Row="0" Grid.Column="0" Grid.ColumnSpan="2" Orientation="Horizontal" HorizontalAlignment="Center">
+            <!-- Изображение -->
+            <Image Name="DroppedImage" Width="400" Height="400" Margin="0 0 20 0"
+               HorizontalAlignment="Center" VerticalAlignment="Center">
+                <Image.RenderTransform>
+                    <TransformGroup>
+                        <RotateTransform x:Name="ImageRotateTransform" CenterX="200" CenterY="200" />
+                        <ScaleTransform x:Name="ImageScaleTransform" CenterX="200" CenterY="200" />
+                    </TransformGroup>
+                </Image.RenderTransform>
+            </Image>
+
+            <!-- Поворот изображения -->
+            <StackPanel Margin="0 20" HorizontalAlignment="Center" VerticalAlignment="Center">
+
+            </StackPanel>
+
+            <!-- Прямоугольник для перетаскивания -->
+            <Rectangle Name="DropTargetRectangle" Width="150" Height="150" Fill="LightGray" Margin="20 0 0 0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center"
                    AllowDrop="True"
                    Drop="DropTargetRectangle_Drop"
                    DragEnter="DropTargetRectangle_DragEnter"
                    DragLeave="DropTargetRectangle_DragLeave"
-                   DragOver="DropTargetRectangle_DragOver">
-            </Rectangle>
+                   DragOver="DropTargetRectangle_DragOver"/>
         </StackPanel>
 
-        <StackPanel
-                Margin="10,10,10,10" Grid.RowSpan="2">
-            <DockPanel
-                    Margin="5">
-                <TextBlock
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                    FontSize="14pt"
-                        ><Run Text="Введите ширин"/><Run Language="ru-ru" Text="у"/><Run Text=" фурнитуры: "/></TextBlock>
-                <TextBox
-                    FontSize="14pt"
-                        VerticalContentAlignment="Center"
-                        Height="30"
-                        Name="txtbox"
-                        Text="{Binding ElementName=slider, Path=Value, UpdateSourceTrigger=PropertyChanged}"
-                        Width="150"/>
-            </DockPanel>
-            <Slider
-                    x:Name="slider"
-                    IsSelectionRangeEnabled="True"
-                    VerticalAlignment="Center"
-                    Value="0.2"
-                    Minimum="0.1"
-                    Maximum="5"
-                    TickFrequency="0.1"
-                    IsSnapToTickEnabled="True"
-                    ValueChanged="slider_ValueChanged"
-                    Width="350"
-                    SelectionEnd="{Binding ElementName=slider, Path=Value}"/>
-            <DockPanel
-                    Margin="5">
-                <TextBlock
-                        VerticalAlignment="Center"
-                        HorizontalAlignment="Center"
-                    FontSize="14pt"
-                        ><Run Text="Введите "/><Run Language="ru-ru" Text="высоту"/><Run Text=" фурнитуры: "/></TextBlock>
-                <TextBox
-                        VerticalContentAlignment="Center"
-                        Height="30"
-                    FontSize="14pt"
-                        Name="txtbox1"
-                        Text="{Binding ElementName=slider1, Path=Value, UpdateSourceTrigger=PropertyChanged}"
-                        Width="150"/>
-            </DockPanel>
-            <Slider
-                    x:Name="slider1"
-                    IsSelectionRangeEnabled="True"
-                    VerticalAlignment="Center"
-                    Value="0.2"
-                    Minimum="0.1"
-                    Maximum="5"
-                    ValueChanged="slider1_ValueChanged"
-                    TickFrequency="0.1"
-                    IsSnapToTickEnabled="True"
-                    Width="350"
-                    SelectionEnd="{Binding ElementName=slider1, Path=Value}"/>
-            <DockPanel
-                Margin="5">
-                <TextBlock
-                    Text="Выбор Ткани: "
-                    FontSize="14pt"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
-                <ComboBox 
-                    HorizontalAlignment="Right"
-                    Width="170"/>
-            </DockPanel>
-            <DockPanel
-                Margin="5">
-                <TextBlock
-                    Text="Выбор Оконтовки: "
-                    FontSize="14pt"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
-                <ComboBox 
-                    HorizontalAlignment="Right"
-                    Width="170"/>
-            </DockPanel>
-            <DockPanel
-                Margin="5">
-                <TextBlock
-                    Text="Выбор Размещения: "
-                    FontSize="14pt"
-                    HorizontalAlignment="Center"
-                    VerticalAlignment="Center"/>
-                <ComboBox 
-                    HorizontalAlignment="Right"
-                    Width="170"/>
-            </DockPanel>
+        <!-- Нижняя часть страницы с настройками -->
+        <StackPanel Grid.Row="1" Grid.Column="0" Grid.ColumnSpan="2" Margin="0,20,0,0">
+            <!-- Настройка ширины фурнитуры -->
+            <StackPanel Margin="0,10" HorizontalAlignment="Center">
+                <TextBlock Text="Ширина ткани:" FontSize="16"/>
+                <TextBox Name="txtbox" Height="30" Width="150" 
+                         Text="{Binding ElementName=slider, Path=Value, UpdateSourceTrigger=PropertyChanged}">
+                </TextBox>
+                <Slider x:Name="slider" IsSelectionRangeEnabled="True" Value="0.1"
+                    Minimum="0.1" Maximum="5" TickFrequency="0.1"
+                        ValueChanged="slider_ValueChanged"
+                        SelectionEnd="{Binding ElementName=slider, Path=Value}"
+                    IsSnapToTickEnabled="True" Width="350"/>
+            </StackPanel>
+
+            <!-- Настройка высоты фурнитуры -->
+            <StackPanel Margin="0,20" HorizontalAlignment="Center">
+                <TextBlock Text="Высота ткани:" FontSize="16"/>
+                <TextBox Name="txtbox1" Text="{Binding ElementName=slider1, Path=Value, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="150"/>
+                <Slider x:Name="slider1" IsSelectionRangeEnabled="True" Value="0.1"
+                    Minimum="0.1" Maximum="5" TickFrequency="0.1"
+                        ValueChanged="slider1_ValueChanged" 
+                    SelectionEnd="{Binding ElementName=slider1, Path=Value}"
+                    IsSnapToTickEnabled="True" Width="350"/>
+            </StackPanel>
+
+            <!-- Выбор ткани -->
+            <StackPanel Margin="0,20" HorizontalAlignment="Center">
+                <TextBlock Text="Выбор Ткани:" FontSize="16"/>
+                <ComboBox Name="cmbcloth" Width="170"/>
+            </StackPanel>
+
+            <!-- Выбор оконтовки -->
+            <StackPanel Margin="0,20" HorizontalAlignment="Center">
+                <TextBlock Text="Выбор Фурнитуры:" FontSize="16"/>
+                <ComboBox Name="cmbOcontovka" Width="170"/>
+            </StackPanel>
+
+            <!-- Выбор размещения -->
+            <StackPanel Margin="0,20" HorizontalAlignment="Center">
+                <!--<TextBlock Text="Выбор Размещения:" FontSize="16"/>
+                <ComboBox Name="cmbResize" Width="170"/>-->
+                <TextBlock Text="Повернуть изображение:" FontSize="16" Margin="0 0 0 10"/>
+                <Slider Name="RotationSlider" Minimum="0" Maximum="360" Width="200" ValueChanged="RotationSlider_ValueChanged" />
+            </StackPanel>
         </StackPanel>
     </Grid>
+
 </Page>

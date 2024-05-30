@@ -5,7 +5,7 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project.PageM"
       mc:Ignorable="d" 
-      Title="PageReg">
+      Title="Регистрация">
 
     <Grid>
         <StackPanel
@@ -87,20 +87,22 @@
             <DockPanel
                 Margin="0 5 0 0">
                 <Button
-                    Height="30"
-                    Width="150"
+                    Height="40"
+                    Width="170"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Name="Reg"
+                    FontSize="14pt"
                     Click="Reg_Click"
                     Margin="50 0 5 0">
                     Зарегистрироваться
                 </Button>
                 <Button
-                    Height="30"
+                    Height="40"
                     Name="Back"
                     Click="Back_Click"
-                    Width="150"
+                    Width="170"
+                    FontSize="14pt"
                     HorizontalAlignment="Center"
                     VerticalAlignment="Center"
                     Margin="5 0 0 0">

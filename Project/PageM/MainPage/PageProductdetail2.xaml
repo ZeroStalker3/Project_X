@@ -1,0 +1,48 @@
+﻿<Page x:Class="Project.PageM.MainPage.PageProductdetail"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project.PageM.MainPage"
+      mc:Ignorable="d" 
+      d:DesignHeight="450" d:DesignWidth="800"
+      Title="PageProductdetail">
+
+    <Grid>
+        <StackPanel>
+            <Image Name="ProductImage" Width="200" Height="200" Margin="10"/>
+            <TextBlock Text="Наименование:" FontWeight="Bold"/>
+            <TextBlock Name="ProductName"/>
+            <TextBlock Text="Коментарий:" FontWeight="Bold"/>
+            <TextBlock Name="ProductDescription" TextWrapping="Wrap"/>
+            <TextBlock Text="Артикул:" FontWeight="Bold"/>
+            <TextBlock Name="ProductComposition" TextWrapping="Wrap"/>
+            <TextBlock Text="Спецификация:" FontWeight="Bold"/>
+            <DataGrid
+                Name="SpecificationList"
+                Width="200"
+                HorizontalAlignment="Left">
+                <DataGrid.Columns>
+                    <DataGridTextColumn 
+                        Header="Высота" 
+                        Binding="{Binding Length}" 
+                        Width="100"/>
+                    <DataGridTextColumn 
+                        Header="ширина" 
+                        Binding="{Binding Width}" 
+                        Width="100"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <TextBlock Text="Specification History:" FontWeight="Bold"/>
+            <ListView Name="SpecificationHistoryList">
+                <ListView.View>
+                    <GridView>
+                        <GridViewColumn Header="Date" DisplayMemberBinding="{Binding ChangeDate}" Width="100"/>
+                        <GridViewColumn Header="Changes" DisplayMemberBinding="{Binding Changes}" Width="400"/>
+                    </GridView>
+                </ListView.View>
+            </ListView>
+        </StackPanel>
+    </Grid>
+
+</Page>

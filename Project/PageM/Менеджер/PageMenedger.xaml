@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Project.PageM.Менеджер"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageMenedger">
+      Title="Страница менеджера">
 
     <Grid>
         

@@ -5,13 +5,19 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project.PageM.MainPage.SecondPage"
       mc:Ignorable="d" 
-      Title="PageAddProduct">
+      Title="Добавления Изделия">
 
     <Grid>
-        <StackPanel>
-            <TextBlock
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <StackPanel
+                VerticalAlignment="Center"
                 HorizontalAlignment="Center"
-                Margin="10"
+                Margin="40 0 0 0">
+                <TextBlock
+                HorizontalAlignment="Center"
+                Margin="10 45 10 10"
                 FontSize="16pt"
        Text="Добавление Нового Продукта"/>
             <StackPanel>
@@ -24,6 +30,7 @@
                         Margin="0 0 59.7 0"
                         Text="Артикул: "/>
                     <TextBox
+                        x:Name="txtAtributes"
                         Height="30"
                         Width="250"/>
                 </DockPanel>
@@ -35,6 +42,7 @@
                         FontSize="14pt"
                         Text="Наименование: "/>
                     <TextBox
+                        x:Name="txtName"
                         Height="30"
                         Width="250"/>
                 </DockPanel>
@@ -47,6 +55,7 @@
                         Margin="0 0 58.5 0"
                         Text="Ширина: "/>
                     <TextBox
+                        x:Name="txtWidth"
                         Height="30"
                         Width="250"/>
                 </DockPanel>
@@ -59,6 +68,7 @@
                         Margin="0 0 75 0"
                         Text="Длина: "/>
                     <TextBox
+                        x:Name="txtLegth"
                         Height="30"
                         Width="250"/>
                 </DockPanel>
@@ -71,14 +81,40 @@
                         FontSize="14pt"
                         Text="Коментарий: "/>
                     <TextBox
+                        Name="txtComment"
                         Height="30"
                         Width="250"/>
                 </DockPanel>
+                </StackPanel>
+                <!-- Drag&Drop -->
+                <DockPanel
+                    Margin="0 10 0 10">
+                    <TextBlock
+                        Text="Вставте картинку: "
+                        VerticalAlignment="Center"
+                        HorizontalAlignment="Right"
+                        FontSize="15pt"/>
+                    <Button x:Name="SelectImgae"
+                            Click="SelectImgae_Click" Content="Выбрать" Height="30" Width="150"/>
+                    <!--<Rectangle Name="DropTargetRectangle" Width="150" Height="150" 
+                        Margin="0 0 30 0" 
+                       Fill="LightGray"
+                   HorizontalAlignment="Right" VerticalAlignment="Top"
+                   AllowDrop="True"
+                   Drop="DropTargetRectangle_Drop"
+                   DragEnter="DropTargetRectangle_DragEnter"
+                   DragLeave="DropTargetRectangle_DragLeave"
+                   DragOver="DropTargetRectangle_DragOver">
+                    </Rectangle>-->
+                </DockPanel>
+                <Image x:Name="ProductImage" Margin="0 5 0 10"
+                       Height="400" HorizontalAlignment="Center" VerticalAlignment="Center"/>
             </StackPanel>
             <DockPanel>
                 <Button
                     Content="Save"
                     Height="30"
+                    Margin="0 0 0 150"
                     Width="300"
                     Name="Save"
                     Click="Save_Click"/>

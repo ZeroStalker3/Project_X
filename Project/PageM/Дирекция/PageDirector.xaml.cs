@@ -1,5 +1,7 @@
 ﻿using Project.Class;
 using Project.PageM.MainPage;
+using Project.PageM.MainPage.PageWithListProduct;
+using Project.PageM.MainPage.SecondPage;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -35,6 +37,36 @@ namespace Project.PageM.Дирекция
         private void PageConstructorProducts_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frmObj.Navigate(new PageConstruct());
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageAddProduct());
+        }
+
+        private void PageListProduct_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageListProduct());
+        }
+
+        private void PageDocumentList_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageInventory());
+        }
+
+        private void PageReports_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageReports());
+        }
+
+        private void PageOrders_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageOrders());
+        }
+
+        private void PageFabricCutting_Click(object sender, RoutedEventArgs e)
+        {
+            //FrameApp.frmObj.Navigate(new ());
         }
     }
 }

@@ -38,12 +38,12 @@ namespace Project.PageM
 
                 User user = new User
                 {
-                    Логин = login,
-                    Пароль = password,
-                    Роль = "Заказчик",
-                    Наименование = NameZakazchik
+                    Username = login,
+                    Password = password,
+                    Role = "Customer",  
+                    Name = NameZakazchik
                 };
-                OdbConectHelper.entObj.Users.Add(user);
+                OdbConectHelper.entObj.User.Add(user);
                 OdbConectHelper.entObj.SaveChanges();
                 MessageBox.Show("Заказчик" + " успешно добавлен", "Уведомление",
                 MessageBoxButton.OK,

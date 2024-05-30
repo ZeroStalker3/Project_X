@@ -5,28 +5,59 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project.PageM.Дирекция"
       mc:Ignorable="d" 
-      d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageDirector">
+      Title="Страница директора">
 
     <Grid>
-        <StackPanel>
-            <Button
-            Height="30"
-            Name="PageAccountingMaterials"
-            Click="PageAccountingMaterials_Click"
-            Width="150"
-            Content="PageAccountingMaterials"/>
-            <Button
-            Height="30"
-            Width="150"
-            Name="PageConstructorProducts"
-            Click="PageConstructorProducts_Click"
-            Content="PageConstructorProducts"/>
-            <Button
-            Height="30"
-            Width="150"
-            Content="PageConstructorProducts"/>
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center" Margin="0 20">
+            <Button Height="50" Width="200" Name="PageAccountingMaterials" Click="PageAccountingMaterials_Click">
+                <StackPanel>
+                    <TextBlock Text="Учет материалов" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageAccountingMaterials)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageConstructorProducts" Click="PageConstructorProducts_Click">
+                <StackPanel>
+                    <TextBlock Text="Конструктор изделий" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageConstructorProducts)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageAddProduct" Click="Button_Click">
+                <StackPanel>
+                    <TextBlock Text="Добавить изделие" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageAddProduct)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageListProduct" Click="PageListProduct_Click">
+                <StackPanel>
+                    <TextBlock Text="Список изделий" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageListProduct)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageDocumentList" Click="PageDocumentList_Click">
+                <StackPanel>
+                    <TextBlock Text="Список документов" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(Inventory)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageReports" Click="PageReports_Click">
+                <StackPanel>
+                    <TextBlock Text="Отчеты" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageReports)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageOrders" Click="PageOrders_Click">
+                <StackPanel>
+                    <TextBlock Text="Заказы" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageOrders)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
+            <Button Height="50" Width="200" Name="PageFabricCutting" Click="PageFabricCutting_Click">
+                <StackPanel>
+                    <TextBlock Text="Раскрой ткани" HorizontalAlignment="Center"/>
+                    <TextBlock Text="(PageFabricCutting)" HorizontalAlignment="Center" FontStyle="Italic"/>
+                </StackPanel>
+            </Button>
         </StackPanel>
-
     </Grid>
+
 </Page>

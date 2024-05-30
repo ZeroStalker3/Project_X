@@ -1,6 +1,11 @@
 ﻿using Project.Class;
 using Project.PageM.MainPage;
+using Project.PageM.MainPage.PageWithListProduct;
+using Project.PageM.MainPage.SecondPage;
 using Project.PageM.Дирекция;
+using Project.PageM.Заказчик;
+using Project.PageM.Кладовщик;
+using Project.PageM.Менеджер;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -30,20 +35,47 @@ namespace Project.PageM
 
         private void Login_Click(object sender, RoutedEventArgs e)
         {
-            var userObj = OdbConectHelper.entObj.Users.FirstOrDefault(x => x.Логин == logtxt.Text && x.Пароль == psbtxt.Password);
-            if (userObj == null)
+            var userObj = OdbConectHelper.entObj.User.FirstOrDefault(x => x.Username == logtxt.Text);
+
+            if (string.IsNullOrWhiteSpace(logtxt.Text))
             {
-                MessageBox.Show("Такой пользователь отсутсвует в приложения",
-                    "Уведомление",
-                     MessageBoxButton.OK,
-                     MessageBoxImage.Warning);
-                FrameApp.frmObj.Navigate(new PageReg());
+                MessageBox.Show("Введите логин", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
             }
             else
+                if (string.IsNullOrWhiteSpace(psbtxt.Password))
+                {
+                    MessageBox.Show("Введите пароль", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
+                }
+            else
+                if (userObj == null)
+                {
+                    MessageBox.Show("Такой пользователь отсутствует в приложении", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                    FrameApp.frmObj.Navigate(new PageReg());
+                }
+            else 
+                if (!userObj.Password.Equals(psbtxt.Password, StringComparison.Ordinal))
+                {
+                    MessageBox.Show("Неверный пароль", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Warning);
+                }
+            else
             {
-                FrameApp.frmObj.Navigate(new PageConstruct());
-                
+                switch (userObj.Role)
+                {
+                    case "Customer":
+                        FrameApp.frmObj.Navigate(new PageZakazchik());
+                        break;
+                    case "Director":
+                        FrameApp.frmObj.Navigate(new PageDirector());
+                        break;
+                    case "Storekeeper":
+                        FrameApp.frmObj.Navigate(new PageSklad());
+                        break;
+                    case "Manager":
+                        FrameApp.frmObj.Navigate(new PageMenedger());
+                        break;
+                }
             }
+
         }
 
         private void Registration_Click(object sender, RoutedEventArgs e)

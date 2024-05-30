@@ -13,10 +13,10 @@ namespace Project.Class.Database
     using System.Data.Entity;
     using System.Data.Entity.Infrastructure;
     
-    public partial class DataBase1Entities : DbContext
+    public partial class TextileProductionEntities : DbContext
     {
-        public DataBase1Entities()
-            : base("name=DataBase1Entities")
+        public TextileProductionEntities()
+            : base("name=TextileProductionEntities")
         {
         }
     
@@ -25,15 +25,20 @@ namespace Project.Class.Database
             throw new UnintentionalCodeFirstException();
         }
     
-        public virtual DbSet<Accessory> Accessories { get; set; }
-        public virtual DbSet<Accessories_TheProduct> Accessories_TheProduct { get; set; }
-        public virtual DbSet<Cloth> Clothes { get; set; }
-        public virtual DbSet<Order> Orders { get; set; }
-        public virtual DbSet<Ordered_Products> Ordered_Products { get; set; }
-        public virtual DbSet<sysdiagram> sysdiagrams { get; set; }
-        public virtual DbSet<TheProduct> TheProducts { get; set; }
-        public virtual DbSet<User> Users { get; set; }
-        public virtual DbSet<Warehouse_Accessories> Warehouse_Accessories { get; set; }
-        public virtual DbSet<Warehouse_Cloth> Warehouse_Cloth { get; set; }
+        public virtual DbSet<Accessory> Accessory { get; set; }
+        public virtual DbSet<AccessoryStock> AccessoryStock { get; set; }
+        public virtual DbSet<Fabric> Fabric { get; set; }
+        public virtual DbSet<FabricStock> FabricStock { get; set; }
+        public virtual DbSet<Inventory> Inventory { get; set; }
+        public virtual DbSet<MaterialMovement> MaterialMovement { get; set; }
+        public virtual DbSet<Order> Order { get; set; }
+        public virtual DbSet<OrderedProducts> OrderedProducts { get; set; }
+        public virtual DbSet<Product> Product { get; set; }
+        public virtual DbSet<ProductAccessories> ProductAccessories { get; set; }
+        public virtual DbSet<ProductSpecificationHistory> ProductSpecificationHistory { get; set; }
+        public virtual DbSet<Role> Role { get; set; }
+        public virtual DbSet<Supplier> Supplier { get; set; }
+        public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<User> User { get; set; }
     }
 }

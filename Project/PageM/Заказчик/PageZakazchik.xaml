@@ -6,9 +6,18 @@
       xmlns:local="clr-namespace:Project.PageM.Заказчик"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageZakazchik">
+      Title="Страница заказчика">
+
 
     <Grid>
-        
+        <Grid.RowDefinitions>
+            <RowDefinition Height=".15*"/>
+            <RowDefinition Height=".8*"/>
+        </Grid.RowDefinitions>
+        <TabControl Grid.Row="1">
+            <TabItem Header="Мои заказы">
+                <Frame Name="FrCustomerOrderMenu" NavigationUIVisibility="Hidden"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Page>

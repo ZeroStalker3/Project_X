@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.PageM.MainPage;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,7 @@ namespace Project.PageM.Заказчик
         public PageZakazchik()
         {
             InitializeComponent();
+            FrCustomerOrderMenu.Navigate(new PageOrders());
         }
     }
 }

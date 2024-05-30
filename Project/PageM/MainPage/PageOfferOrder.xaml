@@ -1,0 +1,24 @@
+﻿<Page x:Class="Project.PageM.MainPage.PageOfferOrder"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:Project.PageM.MainPage"
+      mc:Ignorable="d" 
+      Title="Оформление заказа">
+
+    <Grid>
+        <StackPanel>
+            <TextBox Name="customerTextBox" Text="Заказчик" Width="300"/>
+            <TextBox Name="managerTextBox" Text="Менеджер" Width="300" Margin="10"/>
+            <DataGrid Name="orderItemsDataGrid" AutoGenerateColumns="False" CanUserAddRows="True">
+                <DataGrid.Columns>
+                    <DataGridTextColumn Header="Изделие" Binding="{Binding Product.Name}" />
+                    <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
+                    <DataGridTextColumn Header="Цена" Binding="{Binding Order.Cost}"/>
+                </DataGrid.Columns>
+            </DataGrid>
+            <Button Content="Сохранить заказ" HorizontalAlignment="Right" Width="150" Margin="10" Height="30" Click="SaveOrder"/>
+        </StackPanel>
+    </Grid>
+</Page>

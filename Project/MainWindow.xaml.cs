@@ -25,7 +25,7 @@ namespace Project
         public MainWindow()
         {
             InitializeComponent();
-            OdbConectHelper.entObj = new Class.Database.DataBase1Entities();
+            OdbConectHelper.entObj = new Class.Database.TextileProductionEntities();
 
             FrameApp.frmObj = FrmMain;
             FrmMain.Navigate(new PageAuth());
@@ -48,6 +48,11 @@ namespace Project
         private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
         {
             this.DragMove();
+        }
+
+        private void Back_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.GoBack();
         }
     }
 }

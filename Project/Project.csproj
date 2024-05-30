@@ -72,13 +72,22 @@
       <DependentUpon>App.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="Class\Database\Accessories_TheProduct.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class\Database\Accessory.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class\Database\Cloth.cs">
+    <Compile Include="Class\Database\AccessoryStock.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Fabric.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\FabricStock.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Inventory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\MaterialMovement.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\Database\Model1.Context.cs">
@@ -99,26 +108,33 @@
     <Compile Include="Class\Database\Order.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class\Database\Ordered_Products.cs">
+    <Compile Include="Class\Database\OrderedProducts.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class\Database\sysdiagram.cs">
+    <Compile Include="Class\Database\Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class\Database\TheProduct.cs">
+    <Compile Include="Class\Database\ProductAccessories.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\ProductSpecificationHistory.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Role.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\Supplier.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
+    <Compile Include="Class\Database\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
     <Compile Include="Class\Database\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
-    <Compile Include="Class\Database\Warehouse_Accessories.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
-    <Compile Include="Class\Database\Warehouse_Cloth.cs">
-      <DependentUpon>Model1.tt</DependentUpon>
-    </Compile>
     <Compile Include="Class\OdbConectHelper.cs" />
     <Compile Include="Class\FrameApp.cs" />
+    <Compile Include="Class\PrintHelper.cs" />
     <Compile Include="MainWindow.xaml.cs">
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
@@ -128,6 +144,46 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="PageM\MainPage\PageConstruct.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageForPage\BuildingCuttingMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageInventory.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageOfferOrder.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageOrders.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageProductDetail1.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageProductdetail2.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageProduction.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageReports.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageWithListProduct\PageEdit.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="PageM\MainPage\PageWithListProduct\PageListProduct.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -159,6 +215,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageM\MainPage\PageAccountingMaterials.xaml.cs">
@@ -166,6 +226,36 @@
     </Compile>
     <Compile Include="PageM\MainPage\PageConstruct.xaml.cs">
       <DependentUpon>PageConstruct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageForPage\BuildingCuttingMap.xaml.cs">
+      <DependentUpon>BuildingCuttingMap.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageInventory.xaml.cs">
+      <DependentUpon>PageInventory.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageOfferOrder.xaml.cs">
+      <DependentUpon>PageOfferOrder.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageOrders.xaml.cs">
+      <DependentUpon>PageOrders.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageProductDetail1.xaml.cs">
+      <DependentUpon>PageProductDetail1.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageProductdetail2.xaml.cs">
+      <DependentUpon>PageProductdetail2.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageProduction.xaml.cs">
+      <DependentUpon>PageProduction.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageReports.xaml.cs">
+      <DependentUpon>PageReports.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageWithListProduct\PageEdit.xaml.cs">
+      <DependentUpon>PageEdit.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageWithListProduct\PageListProduct.xaml.cs">
+      <DependentUpon>PageListProduct.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageM\MainPage\SecondPage\PageAddProduct.xaml.cs">
       <DependentUpon>PageAddProduct.xaml</DependentUpon>
@@ -222,20 +312,23 @@
     <None Include="App.config" />
   </ItemGroup>
   <ItemGroup>
+    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+  </ItemGroup>
+  <ItemGroup>
     <Content Include="Class\Database\Model1.Context.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
-      <LastGenOutput>Model1.Context.cs</LastGenOutput>
       <DependentUpon>Model1.edmx</DependentUpon>
+      <LastGenOutput>Model1.Context.cs</LastGenOutput>
     </Content>
     <Content Include="Class\Database\Model1.tt">
       <Generator>TextTemplatingFileGenerator</Generator>
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
-    <Resource Include="Снимок экрана 2024-05-10 201514.png" />
-  </ItemGroup>
-  <ItemGroup>
-    <Service Include="{508349B6-6B84-4DF5-91F0-309BEEBAD82D}" />
+    <Resource Include="Logo\logo-01.jpg" />
+    <Resource Include="Logo\logo-02.jpg" />
+    <Resource Include="Logo\logo-03.jpg" />
+    <Resource Include="Logo\logo-04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
