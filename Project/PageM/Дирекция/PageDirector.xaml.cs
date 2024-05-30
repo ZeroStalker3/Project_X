@@ -63,5 +63,10 @@ namespace Project.PageM.Дирекция
         {
             FrameApp.frmObj.Navigate(new PageOrders());
         }
+
+        private void PageFabricCutting_Click(object sender, RoutedEventArgs e)
+        {
+            //FrameApp.frmObj.Navigate(new ());
+        }
     }
 }

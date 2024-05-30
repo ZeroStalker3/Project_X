@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +21,18 @@ namespace Project.PageM.MainPage
         public PageConstruct()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            cmbcloth.ItemsSource = OdbConectHelper.entObj.Fabric.ToList();
+            cmbcloth.DisplayMemberPath = "Name";
+            cmbcloth.SelectedValuePath = "FabricID";
+
+            cmbOcontovka.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
+            cmbOcontovka.DisplayMemberPath = "Name"; 
+            cmbOcontovka.SelectedValuePath = "AccessoryID";
         }
 
         private void DropTargetRectangle_DragEnter(object sender, DragEventArgs e)

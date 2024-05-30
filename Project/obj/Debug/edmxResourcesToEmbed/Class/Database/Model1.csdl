@@ -44,14 +44,6 @@
       <End Role="MaterialMovement" EntitySet="MaterialMovement" />
       <End Role="Inventory" EntitySet="Inventory" />
     </AssociationSet>
-    <AssociationSet Name="FK__Order__Customer__534D60F1" Association="TextileProductionModel.FK__Order__Customer__534D60F1">
-      <End Role="User" EntitySet="User" />
-      <End Role="Order" EntitySet="Order" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Order__Manager__5441852A" Association="TextileProductionModel.FK__Order__Manager__5441852A">
-      <End Role="User" EntitySet="User" />
-      <End Role="Order" EntitySet="Order" />
-    </AssociationSet>
     <AssociationSet Name="FK__OrderedPr__Order__571DF1D5" Association="TextileProductionModel.FK__OrderedPr__Order__571DF1D5">
       <End Role="Order" EntitySet="Order" />
       <End Role="OrderedProducts" EntitySet="OrderedProducts" />
@@ -170,8 +162,6 @@
     <Property Name="Customer" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Manager" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Cost" Type="Decimal" Precision="10" Scale="2" />
-    <NavigationProperty Name="User" Relationship="TextileProductionModel.FK__Order__Customer__534D60F1" FromRole="Order" ToRole="User" />
-    <NavigationProperty Name="User1" Relationship="TextileProductionModel.FK__Order__Manager__5441852A" FromRole="Order" ToRole="User" />
     <NavigationProperty Name="OrderedProducts" Relationship="TextileProductionModel.FK__OrderedPr__Order__571DF1D5" FromRole="Order" ToRole="OrderedProducts" />
   </EntityType>
   <EntityType Name="OrderedProducts">
@@ -264,8 +254,6 @@
     <Property Name="Password" Type="String" Nullable="false" MaxLength="100" FixedLength="false" Unicode="true" />
     <Property Name="Role" Type="String" Nullable="false" MaxLength="20" FixedLength="false" Unicode="true" />
     <Property Name="Name" Type="String" MaxLength="100" FixedLength="false" Unicode="true" />
-    <NavigationProperty Name="Order" Relationship="TextileProductionModel.FK__Order__Customer__534D60F1" FromRole="User" ToRole="Order" />
-    <NavigationProperty Name="Order1" Relationship="TextileProductionModel.FK__Order__Manager__5441852A" FromRole="User" ToRole="Order" />
   </EntityType>
   <Association Name="FK__Accessory__Acces__47DBAE45">
     <End Type="TextileProductionModel.Accessory" Role="Accessory" Multiplicity="1" />
@@ -348,30 +336,6 @@
       </Principal>
       <Dependent Role="Inventory">
         <PropertyRef Name="IdMovementMaterial" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Order__Customer__534D60F1">
-    <End Type="TextileProductionModel.User" Role="User" Multiplicity="1" />
-    <End Type="TextileProductionModel.Order" Role="Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="Customer" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Order__Manager__5441852A">
-    <End Type="TextileProductionModel.User" Role="User" Multiplicity="0..1" />
-    <End Type="TextileProductionModel.Order" Role="Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="Manager" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

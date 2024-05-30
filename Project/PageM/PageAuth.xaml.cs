@@ -3,6 +3,9 @@ using Project.PageM.MainPage;
 using Project.PageM.MainPage.PageWithListProduct;
 using Project.PageM.MainPage.SecondPage;
 using Project.PageM.Дирекция;
+using Project.PageM.Заказчик;
+using Project.PageM.Кладовщик;
+using Project.PageM.Менеджер;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -56,7 +59,21 @@ namespace Project.PageM
                 }
             else
             {
-                FrameApp.frmObj.Navigate(new PageDirector());
+                switch (userObj.Role)
+                {
+                    case "Customer":
+                        FrameApp.frmObj.Navigate(new PageZakazchik());
+                        break;
+                    case "Director":
+                        FrameApp.frmObj.Navigate(new PageDirector());
+                        break;
+                    case "Storekeeper":
+                        FrameApp.frmObj.Navigate(new PageSklad());
+                        break;
+                    case "Manager":
+                        FrameApp.frmObj.Navigate(new PageMenedger());
+                        break;
+                }
             }
 
         }

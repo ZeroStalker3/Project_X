@@ -180,30 +180,6 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
-  <Association Name="FK__Order__Customer__534D60F1">
-    <End Role="User" Type="Self.User" Multiplicity="1" />
-    <End Role="Order" Type="Self.Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="Customer" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
-  <Association Name="FK__Order__Manager__5441852A">
-    <End Role="User" Type="Self.User" Multiplicity="0..1" />
-    <End Role="Order" Type="Self.Order" Multiplicity="*" />
-    <ReferentialConstraint>
-      <Principal Role="User">
-        <PropertyRef Name="Username" />
-      </Principal>
-      <Dependent Role="Order">
-        <PropertyRef Name="Manager" />
-      </Dependent>
-    </ReferentialConstraint>
-  </Association>
   <Association Name="FK__OrderedPr__Order__571DF1D5">
     <End Role="Order" Type="Self.Order" Multiplicity="1" />
     <End Role="OrderedProducts" Type="Self.OrderedProducts" Multiplicity="*" />
@@ -380,14 +356,6 @@
     <AssociationSet Name="FK__Accessory__Acces__47DBAE45" Association="Self.FK__Accessory__Acces__47DBAE45">
       <End Role="Accessory" EntitySet="Accessory" />
       <End Role="AccessoryStock" EntitySet="AccessoryStock" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Order__Customer__534D60F1" Association="Self.FK__Order__Customer__534D60F1">
-      <End Role="User" EntitySet="User" />
-      <End Role="Order" EntitySet="Order" />
-    </AssociationSet>
-    <AssociationSet Name="FK__Order__Manager__5441852A" Association="Self.FK__Order__Manager__5441852A">
-      <End Role="User" EntitySet="User" />
-      <End Role="Order" EntitySet="Order" />
     </AssociationSet>
     <AssociationSet Name="FK__OrderedPr__Order__571DF1D5" Association="Self.FK__OrderedPr__Order__571DF1D5">
       <End Role="Order" EntitySet="Order" />

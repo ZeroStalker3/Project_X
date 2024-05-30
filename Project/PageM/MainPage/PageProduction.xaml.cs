@@ -27,10 +27,10 @@ namespace Project.PageM.MainPage
 
         private void SaveProduction(object sender, RoutedEventArgs e)
         {
-            var product = productTextBox.Text;
-            var quantity = int.Parse(quantityTextBox.Text);
-            var usedMaterials = usedMaterialsTextBox.Text;
-            MessageBox.Show($"Производство сохранено.\nИзделие: {product}\nКоличество: {quantity}\nИспользованные материалы: {usedMaterials}");
+            //var product = productTextBox.Text;
+            //var quantity = int.Parse(quantityTextBox.Text);
+            //var usedMaterials = usedMaterialsTextBox.Text;
+            //MessageBox.Show($"Производство сохранено.\nИзделие: {product}\nКоличество: {quantity}\nИспользованные материалы: {usedMaterials}");
         }
     }
 }

@@ -27,8 +27,6 @@ namespace Project.Class.Database
         public string Manager { get; set; }
         public Nullable<decimal> Cost { get; set; }
     
-        public virtual User User { get; set; }
-        public virtual User User1 { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
     }

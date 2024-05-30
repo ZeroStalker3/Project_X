@@ -1,19 +1,9 @@
 ﻿using Project.Class;
 using Project.Class.Database;
 using System;
-using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
-using System.Windows.Input;
-using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
-using System.Windows.Shapes;
 
 namespace Project.PageM.MainPage
 {
@@ -30,24 +20,41 @@ namespace Project.PageM.MainPage
 
         private void SaveOrder(object sender, RoutedEventArgs e)
         {
-            var customer = customerTextBox.Text;
-            var manager = managerTextBox.Text;
-            var OrderCost = OdbConectHelper.entObj.Order.Sum(item => item.Cost);
-            var OrderQuantity = OdbConectHelper.entObj.OrderedProducts.Sum(item => item.Quantity);
-            var totalOrderCost = OrderCost * OrderQuantity;
-            MessageBox.Show($"Заказ сохранен.\nЗаказчик: {customer}\nМенеджер: {manager}\nОбщая стоимость: {totalOrderCost}");
 
-            Order order = new Order() {
-            OrderNumber = 1231,
-            Status = "New",
-            //Customer = customer,
-            //Manager = manager,
-            Cost = totalOrderCost,
-            OrderDate = DateTime.Now
-            };
-            OdbConectHelper.entObj.Order.Add(order);
-            OdbConectHelper.entObj.SaveChanges();
+            // Предположим, что у вас есть ListBox с именем orderListBox
+            var selectedOrder = orderItemsDataGrid.SelectedItem as Order;
 
+            if (selectedOrder != null)
+            {
+                var customer = customerTextBox.Text;
+                var manager = managerTextBox.Text;
+
+                // Здесь используется только выделенный заказ
+                var orderCost = selectedOrder.Cost;
+                var orderQuantity = selectedOrder.OrderedProducts.Sum(item => item.Quantity);
+                var totalOrderCost = orderCost * orderQuantity;
+
+                MessageBox.Show($"Заказ сохранен.\nЗаказчик: {customer}\nМенеджер: {manager}\nОбщая стоимость: {totalOrderCost}");
+
+                // Создаем новый заказ с использованием данных выделенного заказа
+                Order order = new Order()
+                {
+                    OrderNumber = selectedOrder.OrderNumber, // Используем номер выделенного заказа
+                    Status = "New",
+                    Customer = customer,
+                    Manager = manager,
+                    Cost = totalOrderCost,
+                    OrderDate = DateTime.Now
+                };
+
+                // Добавляем новый заказ в контекст и сохраняем изменения
+                OdbConectHelper.entObj.Order.Add(order);
+                OdbConectHelper.entObj.SaveChanges();
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, выберите заказ для сохранения.");
+            }
         }
     }
 }

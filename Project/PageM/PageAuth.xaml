@@ -5,62 +5,33 @@
       xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
       xmlns:local="clr-namespace:Project.PageM"
       mc:Ignorable="d" 
-      Title="PageAuth">
+      Title="Авторизация">
 
-
-    <Grid>
-        <StackPanel
-            VerticalAlignment="Center"
-            Margin="0 0 0 200"
-            HorizontalAlignment="Center">
-            <DockPanel
-                Margin="0 5 0 5">
-                <TextBlock
-                    Margin="0 0 31 0"
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontSize="14pt"
-                    Text="Login: "/>
-                <TextBox
-                    x:Name="logtxt"
-                    FontSize="12pt"
-                    VerticalContentAlignment="Center"
-                    Height="30"
-                    Width="220"
-                    />
-            </DockPanel>
-            <DockPanel
-                Margin="0 5 0 5">
-                <TextBlock
-                    VerticalAlignment="Center"
-                    HorizontalAlignment="Center"
-                    FontSize="14pt"
-                    Text="Password: "/>
-                <PasswordBox
-                    x:Name="psbtxt"
-                    FontSize="14pt"
-                    VerticalContentAlignment="Center"
-                    Height="30"
-                    Width="220"
-                    />
-            </DockPanel>
-            <DockPanel
-                Margin="5 0 0 0">
-                <Button
-                    Content="Login"
-                    Margin="5 5 10 0"
-                    Name="Login"
-                    Click="Login_Click"
-                    Height="30"
-                    Width="130"/>
-                <Button
-                    Content="Registration"
-                    Name="Registration"
-                    Click="Registration_Click"
-                    Margin="10 5 10 0"
-                    Height="30"
-                    Width="130"/>
-            </DockPanel>
+    <Grid Margin="100">
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+        <StackPanel Grid.Row="0" HorizontalAlignment="Center" Margin="0 0 0 20">
+            <TextBlock FontSize="24pt" Text="Login:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="1" HorizontalAlignment="Center" Margin="0 0 0 20">
+            <TextBox x:Name="logtxt" Height="50" Width="500" FontSize="24pt" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="2" HorizontalAlignment="Center" Margin="0 0 0 20">
+            <TextBlock FontSize="24pt" Text="Password:"/>
+        </StackPanel>
+        <StackPanel Grid.Row="3" HorizontalAlignment="Center" Margin="0 0 0 20">
+            <PasswordBox x:Name="psbtxt" Height="50" Width="500" FontSize="24pt" VerticalContentAlignment="Center"/>
+        </StackPanel>
+        <StackPanel Grid.Row="4" Orientation="Horizontal" HorizontalAlignment="Center">
+            <Button Content="Login" Name="Login" Click="Login_Click" FontSize="24pt" Width="300" Margin="10"/>
+            <Button Content="Registration" Name="Registration" Click="Registration_Click" FontSize="24pt" Width="300" Margin="10"/>
         </StackPanel>
     </Grid>
+
 </Page>

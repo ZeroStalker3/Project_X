@@ -6,7 +6,7 @@
       xmlns:local="clr-namespace:Project.PageM.Кладовщик"
       mc:Ignorable="d" 
       d:DesignHeight="450" d:DesignWidth="800"
-      Title="PageSklad">
+      Title="Страница кладовщика">
 
     <Grid>
         

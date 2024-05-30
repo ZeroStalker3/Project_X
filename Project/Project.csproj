@@ -147,6 +147,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="PageM\MainPage\PageForPage\BuildingCuttingMap.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="PageM\MainPage\PageInventory.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
@@ -211,6 +215,10 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Styles.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="PageM\MainPage\PageAccountingMaterials.xaml.cs">
@@ -218,6 +226,9 @@
     </Compile>
     <Compile Include="PageM\MainPage\PageConstruct.xaml.cs">
       <DependentUpon>PageConstruct.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="PageM\MainPage\PageForPage\BuildingCuttingMap.xaml.cs">
+      <DependentUpon>BuildingCuttingMap.xaml</DependentUpon>
     </Compile>
     <Compile Include="PageM\MainPage\PageInventory.xaml.cs">
       <DependentUpon>PageInventory.xaml</DependentUpon>
@@ -314,6 +325,10 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Logo\logo-01.jpg" />
+    <Resource Include="Logo\logo-02.jpg" />
+    <Resource Include="Logo\logo-03.jpg" />
+    <Resource Include="Logo\logo-04.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

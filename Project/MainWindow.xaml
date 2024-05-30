@@ -5,7 +5,7 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
-        Title="MainWindow" Height="1080" Width="1920"
+        Title="Швейная фабрика" Height="1080" Width="1920"
         ResizeMode="NoResize"
         WindowStyle="None"
         WindowState="Maximized"
@@ -15,12 +15,26 @@
             <RowDefinition Height="60*"/>
             <RowDefinition Height="375*"/>
         </Grid.RowDefinitions>
-        <TextBlock 
-            Text="Швейная фабрика" 
+        <StackPanel             
+            Background="#B5D5CA">
+        </StackPanel>
+            
+            <TextBlock 
             HorizontalAlignment="Center"
             VerticalAlignment="Center"
-            FontSize="18pt"
+            FontSize="30pt"
+                Text="{Binding ElementName=FrmMain, Path=Content.Title}"
             />
+        <DockPanel>
+            <Image Source="/Logo/logo-01.jpg" HorizontalAlignment="Left"/>
+            <TextBlock 
+            HorizontalAlignment="Left"
+            VerticalAlignment="Center"
+            FontSize="30pt"
+                Text="Швейная фабрика"
+            />
+        </DockPanel>
+
         <!--Начало разметки приложения-->
         <StackPanel 
              VerticalAlignment="Top"
@@ -45,7 +59,7 @@
                     <ControlTemplate>
                         <Border
                      CornerRadius="10"
-                     Background="YellowGreen"/>
+                     Background="Yellow"/>
                     </ControlTemplate>
                 </Button.Template>
             </Button>

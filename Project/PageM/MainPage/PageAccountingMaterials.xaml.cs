@@ -1,5 +1,6 @@
 ﻿using Project.Class;
 using Project.Class.Database;
+using Project.PageM.MainPage.PageWithListProduct;
 using Project.PageM.MainPage.SecondPage;
 using System;
 using System.Linq;
@@ -73,7 +74,20 @@ namespace Project.PageM.MainPage
 
         private void DeleteProduct_Click(object sender, RoutedEventArgs e)
         {
+            //// Получаем выбранный элемент из DataGrid
+            //var selectedProduct = ProductDataGrid.SelectedItem as Project.Class.Database.Product;
 
+            //// Проверяем, что элемент был выбран
+            //if (selectedProduct != null)
+            //{
+            //    // Удаляем выбранный элемент из источника данных
+            //    OdbConectHelper.entObj.Product.Remove(selectedProduct);
+            //    OdbConectHelper.entObj.SaveChangesAsync();
+            //}
+            //else
+            //{
+
+            //}
         }
 
         private void AddProduct_Click(object sender, RoutedEventArgs e)
@@ -83,7 +97,7 @@ namespace Project.PageM.MainPage
 
         private void EditProduct_Click(object sender, RoutedEventArgs e)
         {
-
+            FrameApp.frmObj.Navigate(new PageListProduct());
         }
 
         private void CmbFabric_SelectionChanged(object sender, SelectionChangedEventArgs e)
