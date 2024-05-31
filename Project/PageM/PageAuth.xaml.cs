@@ -63,15 +63,19 @@ namespace Project.PageM
                 {
                     case 1:
                         FrameApp.frmObj.Navigate(new PageSklad());
+                        MessageBox.Show("Добро пожаловать", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information );
                         break;
                     case 2:
                         FrameApp.frmObj.Navigate(new PageZakazchik());
+                        MessageBox.Show("Добро пожаловать", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                     case 3:
                         FrameApp.frmObj.Navigate(new PageDirector());
+                        MessageBox.Show("Добро пожаловать", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                     case 4:
-                        FrameApp.frmObj.Navigate(new PageMenedger());
+                        FrameApp.frmObj.Navigate(new PageMenedger()); 
+                        MessageBox.Show("Добро пожаловать", "Уведомление", MessageBoxButton.OK, MessageBoxImage.Information);
                         break;
                 }
             }

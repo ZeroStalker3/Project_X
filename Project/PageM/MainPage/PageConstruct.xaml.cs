@@ -20,6 +20,9 @@ namespace Project.PageM.MainPage
 {
     public partial class PageConstruct : Page
     {
+        public string ImagesPath = @"pack://siteoforigin:,,,/Images/";
+
+        private RotateTransform _furnitureRotation = new RotateTransform(0);
         public PageConstruct()
         {
             InitializeComponent();
@@ -48,8 +51,8 @@ namespace Project.PageM.MainPage
 
         private void Clicker_Click(object sender, RoutedEventArgs e)
         {
-            decimal width = Convert.ToDecimal(txtbox.Text);
-            decimal hight = Convert.ToDecimal(txtbox1.Text);
+            decimal width = Convert.ToInt32(txtbox.Text);
+            decimal hight = Convert.ToInt32(txtbox1.Text);
             string cloth = Convert.ToString(cmbcloth.SelectedValue);
             int IdOrder = Convert.ToInt32(tekstbox.Text);
             string Ocontovka = Convert.ToString(cmbOcontovka.SelectedValue);
@@ -90,59 +93,6 @@ namespace Project.PageM.MainPage
             OdbConectHelper.entObj.SaveChanges();
         }
 
-        public string ImagesPath = @"pack://siteoforigin:,,,/Logo/";
-
-        private void cmbcloth_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                //MessageBox.Show(ImagesPath + @"Изделия/");
-                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbcloth.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
-            }
-            catch
-            {
-                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
-            }
-        }
-
-        private void cmbOcontovka_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                //MessageBox.Show(ImagesPath + @"Изделия/");
-                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbOcontovka.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
-            }
-            catch
-            {
-                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
-            }
-        }
-
-        private void cmbOcontovka1_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                //MessageBox.Show(ImagesPath + @"Изделия/");
-                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbOcontovka1.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
-            }
-            catch
-            {
-                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
-            }
-        }
-
-        private void cmbProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
-        {
-            try
-            {
-                //MessageBox.Show(ImagesPath + @"Изделия/");
-                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbProduct.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
-            }
-            catch
-            {
-                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
-            }
-        }
 
         //private void DropTargetRectangle_DragEnter(object sender, DragEventArgs e)
         //{

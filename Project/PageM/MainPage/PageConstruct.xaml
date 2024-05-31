@@ -9,67 +9,49 @@
 
 
 
+    <Grid
+        HorizontalAlignment="Center">
 
-    <Grid Margin="20">
-        <Grid.RowDefinitions>
-            <RowDefinition Height="333"/>
-            <RowDefinition Height="Auto"/>
-            <RowDefinition Height="*"/>
-        </Grid.RowDefinitions>
-        <Grid.ColumnDefinitions>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="250"/>
-            <ColumnDefinition Width="250"/>
-        </Grid.ColumnDefinitions>
-
-        <!-- Верхняя часть страницы с изображением и инструментами -->
-        <StackPanel>
-            <!-- Изображение --><!--
-            <Image Name="DroppedImage" Width="400" Height="400" Margin="0 0 20 0"
-               HorizontalAlignment="Center" VerticalAlignment="Center">
-                <Image.RenderTransform>
-                    <TransformGroup>
-                        <RotateTransform x:Name="ImageRotateTransform" CenterX="200" CenterY="200" />
-                        <ScaleTransform x:Name="ImageScaleTransform" CenterX="200" CenterY="200" />
-                    </TransformGroup>
-                </Image.RenderTransform>
-            </Image>
-            --><!-- Поворот изображения --><!--
-            <StackPanel Margin="0 20" HorizontalAlignment="Center" VerticalAlignment="Center">-->
-            <!--</StackPanel>
-            --><!-- Прямоугольник для перетаскивания --><!--
-            <Rectangle Name="DropTargetRectangle" Width="150" Height="150" Fill="LightGray" Margin="20 0 0 0"
-                   HorizontalAlignment="Center" VerticalAlignment="Center"
-                   AllowDrop="True"
-                   Drop="DropTargetRectangle_Drop"
-                   DragEnter="DropTargetRectangle_DragEnter"
-                   DragLeave="DropTargetRectangle_DragLeave"
-                   DragOver="DropTargetRectangle_DragOver"/>-->
-        </StackPanel>
-
-        <Grid >
+        <Grid Margin="20">
+            <Grid.RowDefinitions>
+                <RowDefinition Height="333"/>
+                <RowDefinition Height="Auto"/>
+                <RowDefinition Height="*"/>
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+                <ColumnDefinition Width="250"/>
+            </Grid.ColumnDefinitions>
+            
+         <!--Верхняя часть страницы с изображением и инструментами--> 
+        
+            <!--<Grid Grid.Row="0" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
-                    <ColumnDefinition/>
-                    <ColumnDefinition/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="Auto"/>
                 </Grid.ColumnDefinitions>
-                <Grid.RowDefinitions>
-                    <RowDefinition/>
-                    <RowDefinition/>
-                </Grid.RowDefinitions>
+                <Rectangle Name="DropTargetRectangle" Width="150" Height="150" Fill="LightGray"
+                       HorizontalAlignment="Center" VerticalAlignment="Center"
+                       AllowDrop="True" Grid.Row="0" Grid.Column="0"
+                       Drop="DropTargetRectangle_Drop"
+                       DragEnter="DropTargetRectangle_DragEnter"
+                       DragLeave="DropTargetRectangle_DragLeave"
+                       DragOver="DropTargetRectangle_DragOver"/>
+                <Image Name="DroppedImage" Width="350" Height="350" Grid.Column="1" Grid.Row="0"
+                   HorizontalAlignment="Center" VerticalAlignment="Center">
+                    <Image.RenderTransform>
+                        <TransformGroup>
+                            <RotateTransform x:Name="ImageRotateTransform" CenterX="75" CenterY="75"/>
+                            <ScaleTransform x:Name="ImageScaleTransform" CenterX="75" CenterY="75"/>
+                        </TransformGroup>
+                    </Image.RenderTransform>
+                </Image>
+            </Grid>-->
+            
+            
 
-                <Image Grid.Row="0" Grid.Column="0" Name="ImProductView"  Stretch="Uniform"/>
-                <Label Grid.Row="0" Grid.Column="0" Content="Изделие" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black"/>
-
-                <Image Grid.Row="0" Grid.Column="1" Name="ImFabricView"  Stretch="Uniform"/>
-            <Label Grid.Row="0" Grid.Column="1" Content="Ткань" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" />
-
-                <Image Grid.Row="1" Grid.Column="0" Name="ImBorderView"  Stretch="Uniform" RenderTransformOrigin="0.5, 0.5"/>
-            <Label Grid.Row="1" Grid.Column="0" Content="Окантовка" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black" />
-
-                <Image Grid.Row="1" Grid.Column="1" Name="ImFurnitureView"  Stretch="Uniform" RenderTransformOrigin="0.5, 0.5"/>
-            <Label Grid.Row="1" Grid.Column="1" Content="Фурнитура" VerticalAlignment="Top" HorizontalAlignment="Left" Foreground="Black"/>
-         </Grid>
 
 
         <!-- Нижняя часть страницы с настройками -->
@@ -80,19 +62,19 @@
                 <TextBox Name="txtbox" Height="30" Width="150" 
                          Text="{Binding ElementName=slider, Path=Value, UpdateSourceTrigger=PropertyChanged}">
                 </TextBox>
-                <Slider x:Name="slider" IsSelectionRangeEnabled="True" Value="0.1"
-                    Minimum="0.1" Maximum="5" TickFrequency="0.1"
+                <Slider x:Name="slider" IsSelectionRangeEnabled="True" Value="1"
+                    Minimum="0" Maximum="10" TickFrequency="1"
                         SelectionEnd="{Binding ElementName=slider, Path=Value}"
                     IsSnapToTickEnabled="True" Width="350"/>
-                        <!--ValueChanged="slider_ValueChanged"-->
+                <!--ValueChanged="slider_ValueChanged"-->
             </StackPanel>
 
             <!-- Настройка высоты фурнитуры -->
             <StackPanel Margin="0,20" HorizontalAlignment="Center">
                 <TextBlock Text="Высота ткани:" FontSize="16pt"/>
                 <TextBox Name="txtbox1" Text="{Binding ElementName=slider1, Path=Value, UpdateSourceTrigger=PropertyChanged}" Height="30" Width="150"/>
-                <Slider x:Name="slider1" IsSelectionRangeEnabled="True" Value="0.1"
-                    Minimum="0.1" Maximum="5" TickFrequency="0.1"
+                <Slider x:Name="slider1" IsSelectionRangeEnabled="True" Value="1"
+                    Minimum="0" Maximum="10" TickFrequency="1"
                     SelectionEnd="{Binding ElementName=slider1, Path=Value}"
                     IsSnapToTickEnabled="True" Width="350"/>
                 <!--ValueChanged="slider1_ValueChanged"-->
@@ -101,7 +83,7 @@
             <!-- Выбор ткани -->
             <StackPanel Margin="0,20" HorizontalAlignment="Center">
                 <TextBlock Text="Выбор Ткани:" FontSize="16pt"/>
-                <ComboBox Name="cmbcloth" Width="170" SelectionChanged="cmbcloth_SelectionChanged"/>
+                <ComboBox Name="cmbcloth" Width="170"/>
             </StackPanel>
 
             <TextBlock Text="Номер заказа:" FontSize="16pt" HorizontalAlignment="Center"/>
@@ -114,7 +96,7 @@
             <!-- Выбор фурнитуры -->
             <StackPanel Margin="0,10" HorizontalAlignment="Center">
                 <TextBlock Text="Выбор Фурнитуры:" FontSize="16pt"/>
-                <ComboBox Name="cmbOcontovka" Width="170" SelectionChanged ="cmbOcontovka_SelectionChanged"/>
+                <ComboBox Name="cmbOcontovka" Width="170"/>
             </StackPanel>
 
             <!-- Выбор  Изделия-->
@@ -122,14 +104,14 @@
                 <TextBlock Text="Изделие: " FontSize="16pt"
                            Margin="0 0 0 10"/>
                 <ComboBox Name="cmbProduct"
-                          Width="170" SelectionChanged="cmbProduct_SelectionChanged"/>
+                          Width="170"/>
             </StackPanel>
 
             <!-- Выбор оконтовки -->
             <StackPanel Margin="0 10 0 0" HorizontalAlignment="Center">
                 <TextBlock Text="Оконтовка: " FontSize="16pt"/>
                 <ComboBox Name="cmbOcontovka1"
-                          Width="170" SelectionChanged="cmbOcontovka1_SelectionChanged"/>
+                          Width="170" />
             </StackPanel>
             <!-- Выбор размещения -->
             <StackPanel Margin="0,20" HorizontalAlignment="Center">
@@ -148,10 +130,10 @@
             <StackPanel>
                 <DockPanel HorizontalAlignment="Center">
                     <TextBlock FontSize="16pt" VerticalAlignment="Center">
-                        Количество: 
+                        Количество:
                     </TextBlock>
                     <TextBox Width="150" Name="Koli4estvoTxt1" VerticalAlignment="Center">
-                        
+
                     </TextBox>
                 </DockPanel>
             </StackPanel>
@@ -162,5 +144,5 @@
             </StackPanel>
         </StackPanel>
     </Grid>
-
+    </Grid>
 </Page>
