@@ -18,6 +18,7 @@ namespace Project.Class.Database
         public Product()
         {
             this.OrderedProducts = new HashSet<OrderedProducts>();
+            this.OrderItem = new HashSet<OrderItem>();
             this.ProductAccessories = new HashSet<ProductAccessories>();
             this.ProductSpecificationHistory = new HashSet<ProductSpecificationHistory>();
             this.Fabric = new HashSet<Fabric>();
@@ -32,6 +33,8 @@ namespace Project.Class.Database
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

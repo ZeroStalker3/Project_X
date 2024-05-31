@@ -17,6 +17,7 @@ namespace Project.Class.Database
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2214:DoNotCallOverridableMethodsInConstructors")]
         public Fabric()
         {
+            this.OrderItem = new HashSet<OrderItem>();
             this.Product = new HashSet<Product>();
         }
     
@@ -32,6 +33,8 @@ namespace Project.Class.Database
         public Nullable<int> IdMaterials { get; set; }
     
         public virtual Inventory Inventory { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Product> Product { get; set; }
     }

@@ -59,18 +59,18 @@ namespace Project.PageM
                 }
             else
             {
-                switch (userObj.Role)
+                switch (userObj.IdRole)
                 {
-                    case "Customer":
-                        FrameApp.frmObj.Navigate(new PageZakazchik());
-                        break;
-                    case "Director":
-                        FrameApp.frmObj.Navigate(new PageDirector());
-                        break;
-                    case "Storekeeper":
+                    case 1:
                         FrameApp.frmObj.Navigate(new PageSklad());
                         break;
-                    case "Manager":
+                    case 2:
+                        FrameApp.frmObj.Navigate(new PageZakazchik());
+                        break;
+                    case 3:
+                        FrameApp.frmObj.Navigate(new PageDirector());
+                        break;
+                    case 4:
                         FrameApp.frmObj.Navigate(new PageMenedger());
                         break;
                 }

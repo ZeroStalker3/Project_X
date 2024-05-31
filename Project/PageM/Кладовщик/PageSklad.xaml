@@ -9,6 +9,35 @@
       Title="Страница кладовщика">
 
     <Grid>
-        
+        <TabControl Grid.Row="1">
+            <TabItem Header="Ткани">
+                <Grid>
+                    <DataGrid Name="DgFabric" AutoGenerateColumns="False" AlternationCount="2" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding FabricID}" Header="Артикул"/>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="название"/>
+                            <DataGridTextColumn Binding="{Binding Color}" Header="Цвет"/>
+                            <DataGridTextColumn Binding="{Binding Image}" Header="Рисунок"/>
+                            <DataGridTextColumn Binding="{Binding Composition}" Header="Состав"/>
+                            <DataGridTextColumn Binding="{Binding Width}" Header="Ширина"/>
+                            <DataGridTextColumn Binding="{Binding Height}" Header="Длина"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+            <TabItem Header="Фурнитура">
+                <Grid>
+                    <DataGrid Name="DgFurniture" AutoGenerateColumns="False" AlternationCount="2" IsReadOnly="True">
+                        <DataGrid.Columns>
+                            <DataGridTextColumn Binding="{Binding AccessoryID}" Header="Артикул"/>
+                            <DataGridTextColumn Binding="{Binding Name}" Header="название"/>
+                            <DataGridTextColumn Binding="{Binding Type}" Header="Тип"/>
+                            <DataGridTextColumn Binding="{Binding Width}" Header="Ширина"/>
+                            <DataGridTextColumn Binding="{Binding Height}" Header="Длина"/>
+                        </DataGrid.Columns>
+                    </DataGrid>
+                </Grid>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Page>

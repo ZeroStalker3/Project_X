@@ -22,7 +22,7 @@
             </DataGrid>
             <StackPanel>
                 <Button Height="30" Width="125" Content="Оформления заказа" Margin="10" HorizontalAlignment="Center" VerticalAlignment="Top" Name="offorder" Click="offorder_Click"/>
-                <Button Height="30" Content="Производство издеия" Margin="10 0 10 10" HorizontalAlignment="Center" VerticalAlignment="Top" Name="Production" Click="Production_Click" />
+                <Button Height="30" Content="Производство изделия" Margin="10 0 10 10" HorizontalAlignment="Center" VerticalAlignment="Top" Name="Production" Click="Production_Click" />
             </StackPanel>
         </DockPanel>
 

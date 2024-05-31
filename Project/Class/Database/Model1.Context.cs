@@ -33,6 +33,7 @@ namespace Project.Class.Database
         public virtual DbSet<MaterialMovement> MaterialMovement { get; set; }
         public virtual DbSet<Order> Order { get; set; }
         public virtual DbSet<OrderedProducts> OrderedProducts { get; set; }
+        public virtual DbSet<OrderItem> OrderItem { get; set; }
         public virtual DbSet<Product> Product { get; set; }
         public virtual DbSet<ProductAccessories> ProductAccessories { get; set; }
         public virtual DbSet<ProductSpecificationHistory> ProductSpecificationHistory { get; set; }

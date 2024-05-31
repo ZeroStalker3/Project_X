@@ -35,7 +35,7 @@ namespace Project.PageM.MainPage
 
         private void Production_Click(object sender, RoutedEventArgs e)
         {
-
+           FrameApp.frmObj.Navigate(new PageProduction());
         }
     }
 }

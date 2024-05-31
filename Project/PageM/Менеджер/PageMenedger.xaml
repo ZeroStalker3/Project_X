@@ -9,6 +9,13 @@
       Title="Страница менеджера">
 
     <Grid>
-        
+        <TabControl Grid.Row="1">
+            <TabItem Header="Заказы">
+                <Frame Name="FrOrders" NavigationUIVisibility="Hidden"/>
+            </TabItem>
+            <TabItem Header="Список изделий">
+                <Frame Grid.Row="1" Name="FrProductList" NavigationUIVisibility="Hidden"/>
+            </TabItem>
+        </TabControl>
     </Grid>
 </Page>

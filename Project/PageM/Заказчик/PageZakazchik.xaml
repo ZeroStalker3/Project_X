@@ -10,12 +10,9 @@
 
 
     <Grid>
-        <Grid.RowDefinitions>
-            <RowDefinition Height=".15*"/>
-            <RowDefinition Height=".8*"/>
-        </Grid.RowDefinitions>
-        <TabControl Grid.Row="1">
-            <TabItem Header="Мои заказы">
+        <TabControl
+            >
+            <TabItem Header="Заказы">
                 <Frame Name="FrCustomerOrderMenu" NavigationUIVisibility="Hidden"/>
             </TabItem>
         </TabControl>

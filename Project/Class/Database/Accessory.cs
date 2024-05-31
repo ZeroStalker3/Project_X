@@ -19,6 +19,7 @@ namespace Project.Class.Database
         {
             this.AccessoryStock = new HashSet<AccessoryStock>();
             this.ProductAccessories = new HashSet<ProductAccessories>();
+            this.OrderItem = new HashSet<OrderItem>();
         }
     
         public string AccessoryID { get; set; }
@@ -34,5 +35,7 @@ namespace Project.Class.Database
         public virtual ICollection<AccessoryStock> AccessoryStock { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItem { get; set; }
     }
 }

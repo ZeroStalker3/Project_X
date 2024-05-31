@@ -1,6 +1,8 @@
 ﻿using Project.Class;
+using Project.Class.Database;
 using System;
 using System.Collections.Generic;
+using System.Data;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -33,92 +35,199 @@ namespace Project.PageM.MainPage
             cmbOcontovka.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
             cmbOcontovka.DisplayMemberPath = "Name"; 
             cmbOcontovka.SelectedValuePath = "AccessoryID";
+
+            cmbProduct.ItemsSource = OdbConectHelper.entObj.Product.ToList();
+            cmbProduct.DisplayMemberPath = "Name";
+            cmbProduct.SelectedValuePath = "ProductID";
+
+
+            cmbOcontovka1.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
+            cmbOcontovka1.DisplayMemberPath = "Name";
+            cmbOcontovka1.SelectedValuePath = "AccessoryID";
         }
 
-        private void DropTargetRectangle_DragEnter(object sender, DragEventArgs e)
+        private void Clicker_Click(object sender, RoutedEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            decimal width = Convert.ToDecimal(txtbox.Text);
+            decimal hight = Convert.ToDecimal(txtbox1.Text);
+            string cloth = Convert.ToString(cmbcloth.SelectedValue);
+            int IdOrder = Convert.ToInt32(tekstbox.Text);
+            string Ocontovka = Convert.ToString(cmbOcontovka.SelectedValue);
+            string Ocontovka1 = Convert.ToString(cmbOcontovka1.SelectedValue);
+            string Product = Convert.ToString(cmbProduct.SelectedValue);
+            int Koli4estvoTxt = Convert.ToInt32(Koli4estvoTxt1.Text);
+            int Rotate = Convert.ToInt32(textbox.Text); 
+            DateTime orderDate = DateTime.Now;
+            decimal productPrice = (
+        Convert.ToDecimal(OdbConectHelper.entObj.Fabric.Where(u => u.FabricID == (string)cmbcloth.SelectedValue).FirstOrDefault().Price) +
+        Convert.ToDecimal(OdbConectHelper.entObj.Accessory.Where(u => u.AccessoryID == (string)cmbOcontovka.SelectedValue).FirstOrDefault().Price) 
+    ) * Convert.ToDecimal(Koli4estvoTxt1.Text);
+            Order order = new Order()
             {
-                e.Effects = DragDropEffects.Copy;
-                DropTargetRectangle.Fill = Brushes.Green;
-            }
-            else
+                OrderNumber = IdOrder ,
+                OrderDate = orderDate,
+                Status = "New",
+                Customer = "customer1" ,
+                Manager = " manager1",
+                Cost = Convert.ToDecimal(OdbConectHelper.entObj.Fabric.Where(u => u.FabricID == (string)cmbcloth.SelectedValue).FirstOrDefault().Price)
+            };
+
+            OrderItem orderitem = new OrderItem()
             {
-                e.Effects = DragDropEffects.None;
-            }
+                IdOreder = IdOrder,
+                IdProduct = Product,
+                IdFabric = cloth,
+                IdAccessory = Ocontovka,
+                Width = width,
+                Height = hight,
+                Price = productPrice,
+                RorarionAngle = Rotate,
+                Amount = Koli4estvoTxt
+            };
+
+            OdbConectHelper.entObj.Order.Add(order);
+            OdbConectHelper.entObj.OrderItem.Add(orderitem);
+            OdbConectHelper.entObj.SaveChanges();
         }
 
-        private void DropTargetRectangle_DragLeave(object sender, DragEventArgs e)
+        public string ImagesPath = @"pack://siteoforigin:,,,/Logo/";
+
+        private void cmbcloth_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            DropTargetRectangle.Fill = Brushes.LightGray;
+            try
+            {
+                //MessageBox.Show(ImagesPath + @"Изделия/");
+                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbcloth.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
+            }
+            catch
+            {
+                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
+            }
         }
 
-        private void DropTargetRectangle_DragOver(object sender, DragEventArgs e)
+        private void cmbOcontovka_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            try
             {
-                e.Effects = DragDropEffects.Copy;
+                //MessageBox.Show(ImagesPath + @"Изделия/");
+                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbOcontovka.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
             }
-            else
+            catch
             {
-                e.Effects = DragDropEffects.None;
+                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
             }
         }
 
-        private void DropTargetRectangle_Drop(object sender, DragEventArgs e)
+        private void cmbOcontovka1_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (e.Data.GetDataPresent(DataFormats.FileDrop))
+            try
             {
-                string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
-                if (files.Length > 0)
-                {
-                    string filePath = files[0];
-                    try
-                    {
-                        BitmapImage bitmap = new BitmapImage(new Uri(filePath));
-                        DroppedImage.Source = bitmap;
-
-                        // Установить CenterX и CenterY для поворота из центра изображения
-                        bitmap.DownloadCompleted += (s, ev) =>
-                        {
-                            ImageRotateTransform.CenterX = DroppedImage.ActualWidth / 2;
-                            ImageRotateTransform.CenterY = DroppedImage.ActualHeight / 2;
-                            ImageScaleTransform.CenterX = DroppedImage.ActualWidth / 2;
-                            ImageScaleTransform.CenterY = DroppedImage.ActualHeight / 2;
-                        };
-
-                        DropTargetRectangle.Fill = Brushes.LightGray;
-                    }
-                    catch (Exception ex)
-                    {
-                        MessageBox.Show("Error loading image: " + ex.Message);
-                    }
-                }
+                //MessageBox.Show(ImagesPath + @"Изделия/");
+                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbOcontovka1.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
+            }
+            catch
+            {
+                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
             }
         }
 
-        private void RotationSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        private void cmbProduct_SelectionChanged(object sender, SelectionChangedEventArgs e)
         {
-            if (ImageRotateTransform != null)
+            try
             {
-                ImageRotateTransform.Angle = e.NewValue;
+                //MessageBox.Show(ImagesPath + @"Изделия/");
+                ImProductView.Source = new BitmapImage(new Uri(ImagesPath + @"Изделия/" + cmbProduct.SelectedValue + ".jpg", UriKind.RelativeOrAbsolute));
+            }
+            catch
+            {
+                ImProductView.Source = new BitmapImage(new Uri(@".\..\Logo\Image\no-image.jpg", UriKind.RelativeOrAbsolute));
             }
         }
 
-        private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (ImageScaleTransform != null)
-            {
-                ImageScaleTransform.ScaleX = e.NewValue;
-            }
-        }
+        //private void DropTargetRectangle_DragEnter(object sender, DragEventArgs e)
+        //{
+        //    if (e.Data.GetDataPresent(DataFormats.FileDrop))
+        //    {
+        //        e.Effects = DragDropEffects.Copy;
+        //        DropTargetRectangle.Fill = Brushes.Green;
+        //    }
+        //    else
+        //    {
+        //        e.Effects = DragDropEffects.None;
+        //    }
+        //}
 
-        private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
-        {
-            if (ImageScaleTransform != null)
-            {
-                ImageScaleTransform.ScaleY = e.NewValue;
-            }
-        }
+        //private void DropTargetRectangle_DragLeave(object sender, DragEventArgs e)
+        //{
+        //    DropTargetRectangle.Fill = Brushes.LightGray;
+        //}
+
+        //private void DropTargetRectangle_DragOver(object sender, DragEventArgs e)
+        //{
+        //    if (e.Data.GetDataPresent(DataFormats.FileDrop))
+        //    {
+        //        e.Effects = DragDropEffects.Copy;
+        //    }
+        //    else
+        //    {
+        //        e.Effects = DragDropEffects.None;
+        //    }
+        //}
+
+        //private void DropTargetRectangle_Drop(object sender, DragEventArgs e)
+        //{
+        //    if (e.Data.GetDataPresent(DataFormats.FileDrop))
+        //    {
+        //        string[] files = (string[])e.Data.GetData(DataFormats.FileDrop);
+        //        if (files.Length > 0)
+        //        {
+        //            string filePath = files[0];
+        //            try
+        //            {
+        //                BitmapImage bitmap = new BitmapImage(new Uri(filePath));
+        //                DroppedImage.Source = bitmap;
+
+        //                // Установить CenterX и CenterY для поворота из центра изображения
+        //                bitmap.DownloadCompleted += (s, ev) =>
+        //                {
+        //                    ImageRotateTransform.CenterX = DroppedImage.ActualWidth / 2;
+        //                    ImageRotateTransform.CenterY = DroppedImage.ActualHeight / 2;
+        //                    ImageScaleTransform.CenterX = DroppedImage.ActualWidth / 2;
+        //                    ImageScaleTransform.CenterY = DroppedImage.ActualHeight / 2;
+        //                };
+
+        //                DropTargetRectangle.Fill = Brushes.LightGray;
+        //            }
+        //            catch (Exception ex)
+        //            {
+        //                MessageBox.Show("Error loading image: " + ex.Message);
+        //            }
+        //        }
+        //    }
+        //}
+
+        //private void RotationSlider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (ImageRotateTransform != null)
+        //    {
+        //        ImageRotateTransform.Angle = e.NewValue;
+        //    }
+        //}
+
+        //private void slider_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (ImageScaleTransform != null)
+        //    {
+        //        ImageScaleTransform.ScaleX = e.NewValue;
+        //    }
+        //}
+
+        //private void slider1_ValueChanged(object sender, RoutedPropertyChangedEventArgs<double> e)
+        //{
+        //    if (ImageScaleTransform != null)
+        //    {
+        //        ImageScaleTransform.ScaleY = e.NewValue;
+        //    }
+        //}
     }
 }

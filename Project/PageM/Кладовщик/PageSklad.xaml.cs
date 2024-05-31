@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Project.Class;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Project.PageM.Кладовщик
         public PageSklad()
         {
             InitializeComponent();
+            LoadData();
+        }
+
+        private void LoadData()
+        {
+            DgFabric.ItemsSource = OdbConectHelper.entObj.Fabric.ToList();
+            DgFurniture.ItemsSource = OdbConectHelper.entObj.Accessory.ToList();
         }
     }
 }

@@ -111,6 +111,9 @@
     <Compile Include="Class\Database\OrderedProducts.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\Database\OrderItem.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\Database\Product.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
@@ -325,6 +328,7 @@
       <DependentUpon>Model1.edmx</DependentUpon>
       <LastGenOutput>Model1.cs</LastGenOutput>
     </Content>
+    <Resource Include="Logo\Image\no-image.jpg" />
     <Resource Include="Logo\logo-01.jpg" />
     <Resource Include="Logo\logo-02.jpg" />
     <Resource Include="Logo\logo-03.jpg" />

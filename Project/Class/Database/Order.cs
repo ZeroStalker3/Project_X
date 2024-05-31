@@ -18,6 +18,7 @@ namespace Project.Class.Database
         public Order()
         {
             this.OrderedProducts = new HashSet<OrderedProducts>();
+            this.OrderItem = new HashSet<OrderItem>();
         }
     
         public int OrderNumber { get; set; }
@@ -29,5 +30,7 @@ namespace Project.Class.Database
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
+        [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
+        public virtual ICollection<OrderItem> OrderItem { get; set; }
     }
 }
