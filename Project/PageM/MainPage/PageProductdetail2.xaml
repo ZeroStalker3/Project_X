@@ -20,7 +20,7 @@
             <TextBlock Text="Спецификация:" FontWeight="Bold"/>
             <DataGrid
                 Name="SpecificationList"
-                Width="200"
+                Width="300"
                 HorizontalAlignment="Left">
                 <DataGrid.Columns>
                     <DataGridTextColumn 
@@ -30,6 +30,10 @@
                     <DataGridTextColumn 
                         Header="ширина" 
                         Binding="{Binding Width}" 
+                        Width="100"/>
+                    <DataGridTextColumn 
+                        Header="ед" 
+                        Binding="{Binding Unit.Name}" 
                         Width="100"/>
                 </DataGrid.Columns>
             </DataGrid>

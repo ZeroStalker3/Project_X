@@ -18,8 +18,10 @@ namespace Project.Class.Database
         public string AccessoryID { get; set; }
         public int Quantity { get; set; }
         public Nullable<int> SuppleirID { get; set; }
+        public int UnitID { get; set; }
     
         public virtual Accessory Accessory { get; set; }
         public virtual Supplier Supplier { get; set; }
+        public virtual Unit Unit { get; set; }
     }
 }

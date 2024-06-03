@@ -16,6 +16,7 @@
     <EntitySet Name="Role" EntityType="TextileProductionModel.Role" />
     <EntitySet Name="Supplier" EntityType="TextileProductionModel.Supplier" />
     <EntitySet Name="sysdiagrams" EntityType="TextileProductionModel.sysdiagrams" />
+    <EntitySet Name="Unit" EntityType="TextileProductionModel.Unit" />
     <EntitySet Name="User" EntityType="TextileProductionModel.User" />
     <AssociationSet Name="FK__Accessory__Acces__47DBAE45" Association="TextileProductionModel.FK__Accessory__Acces__47DBAE45">
       <End Role="Accessory" EntitySet="Accessory" />
@@ -33,6 +34,10 @@
       <End Role="Supplier" EntitySet="Supplier" />
       <End Role="AccessoryStock" EntitySet="AccessoryStock" />
     </AssociationSet>
+    <AssociationSet Name="FK_AccessoryStock_Unit" Association="TextileProductionModel.FK_AccessoryStock_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="AccessoryStock" EntitySet="AccessoryStock" />
+    </AssociationSet>
     <AssociationSet Name="FK_Fabric_Inventory" Association="TextileProductionModel.FK_Fabric_Inventory">
       <End Role="Inventory" EntitySet="Inventory" />
       <End Role="Fabric" EntitySet="Fabric" />
@@ -43,6 +48,10 @@
     </AssociationSet>
     <AssociationSet Name="FK_FabricStock_Supplier" Association="TextileProductionModel.FK_FabricStock_Supplier">
       <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="FabricStock" EntitySet="FabricStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FabricStock_Unit" Association="TextileProductionModel.FK_FabricStock_Unit">
+      <End Role="Unit" EntitySet="Unit" />
       <End Role="FabricStock" EntitySet="FabricStock" />
     </AssociationSet>
     <AssociationSet Name="FK_Inventory_FabricStock" Association="TextileProductionModel.FK_Inventory_FabricStock">
@@ -69,9 +78,17 @@
       <End Role="Product" EntitySet="Product" />
       <End Role="OrderItem" EntitySet="OrderItem" />
     </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Unit" Association="TextileProductionModel.FK_OrderItem_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
     <AssociationSet Name="FK__ProductAc__Produ__44FF419A" Association="TextileProductionModel.FK__ProductAc__Produ__44FF419A">
       <End Role="Product" EntitySet="Product" />
       <End Role="ProductAccessories" EntitySet="ProductAccessories" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Unit" Association="TextileProductionModel.FK_Product_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_ProductSpecificationHistory_Product" Association="TextileProductionModel.FK_ProductSpecificationHistory_Product">
       <End Role="Product" EntitySet="Product" />
@@ -114,8 +131,10 @@
     <Property Name="AccessoryID" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Quantity" Type="Int32" Nullable="false" />
     <Property Name="SuppleirID" Type="Int32" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Accessory" Relationship="TextileProductionModel.FK__Accessory__Acces__47DBAE45" FromRole="AccessoryStock" ToRole="Accessory" />
     <NavigationProperty Name="Supplier" Relationship="TextileProductionModel.FK_AccessoryStock_Supplier" FromRole="AccessoryStock" ToRole="Supplier" />
+    <NavigationProperty Name="Unit" Relationship="TextileProductionModel.FK_AccessoryStock_Unit" FromRole="AccessoryStock" ToRole="Unit" />
   </EntityType>
   <EntityType Name="Fabric">
     <Key>
@@ -144,7 +163,9 @@
     <Property Name="Width" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="Length" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="SupplierID" Type="Int32" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Supplier" Relationship="TextileProductionModel.FK_FabricStock_Supplier" FromRole="FabricStock" ToRole="Supplier" />
+    <NavigationProperty Name="Unit" Relationship="TextileProductionModel.FK_FabricStock_Unit" FromRole="FabricStock" ToRole="Unit" />
     <NavigationProperty Name="Inventory" Relationship="TextileProductionModel.FK_Inventory_FabricStock" FromRole="FabricStock" ToRole="Inventory" />
   </EntityType>
   <EntityType Name="Inventory">
@@ -204,19 +225,21 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
-    <Property Name="IdOreder" Type="Int32" Nullable="false" />
-    <Property Name="IdProduct" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="IdFabric" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
-    <Property Name="IdAccessory" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdOreder" Type="Int32" />
+    <Property Name="IdProduct" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdFabric" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="IdAccessory" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
     <Property Name="Width" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="Height" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="Price" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="RorarionAngle" Type="Int32" Nullable="false" />
     <Property Name="Amount" Type="Int32" Nullable="false" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="Accessory" Relationship="TextileProductionModel.FK_OrderItem_Accessory" FromRole="OrderItem" ToRole="Accessory" />
     <NavigationProperty Name="Fabric" Relationship="TextileProductionModel.FK_OrderItem_Fabric" FromRole="OrderItem" ToRole="Fabric" />
     <NavigationProperty Name="Order" Relationship="TextileProductionModel.FK_OrderItem_Order" FromRole="OrderItem" ToRole="Order" />
     <NavigationProperty Name="Product" Relationship="TextileProductionModel.FK_OrderItem_Product" FromRole="OrderItem" ToRole="Product" />
+    <NavigationProperty Name="Unit" Relationship="TextileProductionModel.FK_OrderItem_Unit" FromRole="OrderItem" ToRole="Unit" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -228,9 +251,11 @@
     <Property Name="Length" Type="Decimal" Nullable="false" Precision="10" Scale="2" />
     <Property Name="Image" Type="Binary" MaxLength="Max" FixedLength="false" />
     <Property Name="Comment" Type="String" MaxLength="255" FixedLength="false" Unicode="true" />
+    <Property Name="UnitID" Type="Int32" Nullable="false" />
     <NavigationProperty Name="OrderedProducts" Relationship="TextileProductionModel.FK__OrderedPr__Produ__5812160E" FromRole="Product" ToRole="OrderedProducts" />
     <NavigationProperty Name="OrderItem" Relationship="TextileProductionModel.FK_OrderItem_Product" FromRole="Product" ToRole="OrderItem" />
     <NavigationProperty Name="ProductAccessories" Relationship="TextileProductionModel.FK__ProductAc__Produ__44FF419A" FromRole="Product" ToRole="ProductAccessories" />
+    <NavigationProperty Name="Unit" Relationship="TextileProductionModel.FK_Product_Unit" FromRole="Product" ToRole="Unit" />
     <NavigationProperty Name="ProductSpecificationHistory" Relationship="TextileProductionModel.FK_ProductSpecificationHistory_Product" FromRole="Product" ToRole="ProductSpecificationHistory" />
     <NavigationProperty Name="Fabric" Relationship="TextileProductionModel.ProductFabrics" FromRole="Product" ToRole="Fabric" />
   </EntityType>
@@ -291,6 +316,17 @@
     <Property Name="version" Type="Int32" />
     <Property Name="definition" Type="Binary" MaxLength="Max" FixedLength="false" />
   </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="Int32" Nullable="false" />
+    <Property Name="Name" Type="String" Nullable="false" MaxLength="50" FixedLength="false" Unicode="true" />
+    <NavigationProperty Name="AccessoryStock" Relationship="TextileProductionModel.FK_AccessoryStock_Unit" FromRole="Unit" ToRole="AccessoryStock" />
+    <NavigationProperty Name="FabricStock" Relationship="TextileProductionModel.FK_FabricStock_Unit" FromRole="Unit" ToRole="FabricStock" />
+    <NavigationProperty Name="OrderItem" Relationship="TextileProductionModel.FK_OrderItem_Unit" FromRole="Unit" ToRole="OrderItem" />
+    <NavigationProperty Name="Product" Relationship="TextileProductionModel.FK_Product_Unit" FromRole="Unit" ToRole="Product" />
+  </EntityType>
   <EntityType Name="User">
     <Key>
       <PropertyRef Name="Id" />
@@ -327,7 +363,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Accessory">
-    <End Type="TextileProductionModel.Accessory" Role="Accessory" Multiplicity="1" />
+    <End Type="TextileProductionModel.Accessory" Role="Accessory" Multiplicity="0..1" />
     <End Type="TextileProductionModel.OrderItem" Role="OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Accessory">
@@ -350,6 +386,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_AccessoryStock_Unit">
+    <End Type="TextileProductionModel.Unit" Role="Unit" Multiplicity="1" />
+    <End Type="TextileProductionModel.AccessoryStock" Role="AccessoryStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccessoryStock">
+        <PropertyRef Name="UnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Fabric_Inventory">
     <End Type="TextileProductionModel.Inventory" Role="Inventory" Multiplicity="0..1" />
     <End Type="TextileProductionModel.Fabric" Role="Fabric" Multiplicity="*" />
@@ -363,7 +411,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Fabric">
-    <End Type="TextileProductionModel.Fabric" Role="Fabric" Multiplicity="1" />
+    <End Type="TextileProductionModel.Fabric" Role="Fabric" Multiplicity="0..1" />
     <End Type="TextileProductionModel.OrderItem" Role="OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Fabric">
@@ -383,6 +431,18 @@
       </Principal>
       <Dependent Role="FabricStock">
         <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FabricStock_Unit">
+    <End Type="TextileProductionModel.Unit" Role="Unit" Multiplicity="1" />
+    <End Type="TextileProductionModel.FabricStock" Role="FabricStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FabricStock">
+        <PropertyRef Name="UnitID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -423,7 +483,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Order">
-    <End Type="TextileProductionModel.Order" Role="Order" Multiplicity="1" />
+    <End Type="TextileProductionModel.Order" Role="Order" Multiplicity="0..1" />
     <End Type="TextileProductionModel.OrderItem" Role="OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Order">
@@ -447,7 +507,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Product">
-    <End Type="TextileProductionModel.Product" Role="Product" Multiplicity="1" />
+    <End Type="TextileProductionModel.Product" Role="Product" Multiplicity="0..1" />
     <End Type="TextileProductionModel.OrderItem" Role="OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
@@ -455,6 +515,18 @@
       </Principal>
       <Dependent Role="OrderItem">
         <PropertyRef Name="IdProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Unit">
+    <End Type="TextileProductionModel.Unit" Role="Unit" Multiplicity="1" />
+    <End Type="TextileProductionModel.OrderItem" Role="OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="UnitID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -467,6 +539,18 @@
       </Principal>
       <Dependent Role="ProductAccessories">
         <PropertyRef Name="ProductID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Unit">
+    <End Type="TextileProductionModel.Unit" Role="Unit" Multiplicity="1" />
+    <End Type="TextileProductionModel.Product" Role="Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="UnitID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>

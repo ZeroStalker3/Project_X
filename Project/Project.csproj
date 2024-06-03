@@ -132,6 +132,9 @@
     <Compile Include="Class\Database\sysdiagrams.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>
+    <Compile Include="Class\Database\Unit.cs">
+      <DependentUpon>Model1.tt</DependentUpon>
+    </Compile>
     <Compile Include="Class\Database\User.cs">
       <DependentUpon>Model1.tt</DependentUpon>
     </Compile>

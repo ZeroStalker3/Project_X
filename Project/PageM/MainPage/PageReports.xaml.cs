@@ -43,5 +43,96 @@ namespace Project.PageM.MainPage
         {
             PrintHelper.PrintDataGrid(materialMovementDataGrid, "Отчет по движению материалов");
         }
+
+        private void search1_Click(object sender, RoutedEventArgs e)
+        {
+            int z;
+            if (int.TryParse(txt.Text, out z))
+            {
+                var results = OdbConectHelper.entObj.Order.Where(x => x.OrderNumber == z).ToList();
+                if (results.Any())
+                {
+                    materialStockDataGrid1.ItemsSource = results;
+                }
+                else
+                {
+                    MessageBox.Show("Не найдено.",
+                                    "Уведоление",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Information);
+                    materialStockDataGrid1.ItemsSource = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите действительный номер заказа.",
+                                "Уведоление",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+            }
+        }
+        private void search2_Click(object sender, RoutedEventArgs e)
+        {
+            string orderNumber = txt.Text;
+            if (!string.IsNullOrWhiteSpace(orderNumber))
+            {
+                var results = OdbConectHelper.entObj.MaterialMovement
+                                .Where(x => x.Name.Contains(orderNumber))
+                                .ToList();
+
+                if (results.Any())
+                {
+                    materialMovementDataGrid.ItemsSource = results;
+                }
+                else
+                {
+                    MessageBox.Show("Не найдено.",
+                                    "Уведоление",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Information);
+                    materialMovementDataGrid.ItemsSource = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите действительный номер заказа.",
+                                "Уведоление",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+            }
+        }
+
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            string orderNumber = txt.Text;
+            if (!string.IsNullOrWhiteSpace(orderNumber))
+            {
+                var results = OdbConectHelper.entObj.Product
+                                .Where(x => x.ProductID.Contains(orderNumber))
+                                .ToList();
+
+                if (results.Any())
+                {
+                    materialStockDataGrid.ItemsSource = results;
+                }
+                else
+                {
+                    MessageBox.Show("Не найдено.",
+                                    "Уведоление",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Information);
+                    materialStockDataGrid.ItemsSource = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите действительный номер заказа.",
+                                "Уведоление",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+            }
+        }
+
+
     }
 }

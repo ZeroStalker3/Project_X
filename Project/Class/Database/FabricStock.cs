@@ -25,8 +25,10 @@ namespace Project.Class.Database
         public decimal Width { get; set; }
         public decimal Length { get; set; }
         public Nullable<int> SupplierID { get; set; }
+        public int UnitID { get; set; }
     
         public virtual Supplier Supplier { get; set; }
+        public virtual Unit Unit { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<Inventory> Inventory { get; set; }
     }

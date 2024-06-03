@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.ConstructorPage">
+    <ContentPage.Content>
+        <StackLayout Padding="10">
+            <Entry Placeholder="Ширина изделия" Keyboard="Numeric" x:Name="WidthEntry" />
+            <Entry Placeholder="Высота изделия" Keyboard="Numeric" x:Name="HeightEntry" />
+            <Picker Title="Выберите ткань" x:Name="FabricPicker">
+                <!-- Добавьте варианты ткани -->
+            </Picker>
+            <Picker Title="Выберите окантовку" x:Name="BorderPicker">
+                <!-- Добавьте варианты окантовки -->
+            </Picker>
+            <Picker Title="Выберите фурнитуру" x:Name="FittingsPicker">
+                <!-- Добавьте варианты фурнитуры -->
+            </Picker>
+            <Button Text="Добавить свою ткань" Clicked="OnAddFabricButtonClicked" />
+            <Image x:Name="PreviewImage" HeightRequest="200" />
+            <Button Text="Предварительный просмотр" Clicked="Button_Clicked" />
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

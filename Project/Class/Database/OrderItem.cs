@@ -15,7 +15,7 @@ namespace Project.Class.Database
     public partial class OrderItem
     {
         public int id { get; set; }
-        public int IdOreder { get; set; }
+        public Nullable<int> IdOreder { get; set; }
         public string IdProduct { get; set; }
         public string IdFabric { get; set; }
         public string IdAccessory { get; set; }
@@ -24,10 +24,12 @@ namespace Project.Class.Database
         public decimal Price { get; set; }
         public int RorarionAngle { get; set; }
         public int Amount { get; set; }
+        public int UnitID { get; set; }
     
         public virtual Accessory Accessory { get; set; }
         public virtual Fabric Fabric { get; set; }
         public virtual Order Order { get; set; }
         public virtual Product Product { get; set; }
+        public virtual Unit Unit { get; set; }
     }
 }

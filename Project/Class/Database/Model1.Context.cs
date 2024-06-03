@@ -40,6 +40,7 @@ namespace Project.Class.Database
         public virtual DbSet<Role> Role { get; set; }
         public virtual DbSet<Supplier> Supplier { get; set; }
         public virtual DbSet<sysdiagrams> sysdiagrams { get; set; }
+        public virtual DbSet<Unit> Unit { get; set; }
         public virtual DbSet<User> User { get; set; }
     }
 }

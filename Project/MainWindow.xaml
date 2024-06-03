@@ -6,8 +6,6 @@
         xmlns:local="clr-namespace:Project"
         mc:Ignorable="d"
         Title="Швейная фабрика" Height="1080" Width="1920"
-        ResizeMode="NoResize"
-        WindowStyle="None"
         WindowState="Maximized"
         >
     <Grid>
@@ -30,13 +28,13 @@
             <TextBlock 
             HorizontalAlignment="Left"
             VerticalAlignment="Center"
-            FontSize="30pt"
+            FontSize="18pt"
                 Text="Швейная фабрика"
             />
         </DockPanel>
 
         <!--Начало разметки приложения-->
-        <StackPanel 
+        <!--<StackPanel 
              VerticalAlignment="Top"
              Orientation="Horizontal">
             <Button
@@ -52,6 +50,18 @@
                 </Button.Template>
             </Button>
             <Button 
+                 Name="Resize"
+                 Click="Resize_Click"
+                 Style="{StaticResource windowsPanel}">
+                <Button.Template>
+                    <ControlTemplate>
+                        <Border
+                     CornerRadius="10"
+                     Background="Green"/>
+                    </ControlTemplate>
+                </Button.Template>
+            </Button>
+            <Button 
                  Name="Min"
                  Click="Min_Click"
                  Style="{StaticResource windowsPanel}">
@@ -63,7 +73,7 @@
                     </ControlTemplate>
                 </Button.Template>
             </Button>
-        </StackPanel>
+        </StackPanel>-->
         <Frame 
             NavigationUIVisibility="Hidden"
             Name="FrmMain"
@@ -75,7 +85,7 @@
             FontSize="14pt"
             Width="70"
             Name="Back"
-            Content="Назад"
+            Content="Back"
             HorizontalAlignment="Right"
             Background="Transparent"
             VerticalAlignment="Bottom"

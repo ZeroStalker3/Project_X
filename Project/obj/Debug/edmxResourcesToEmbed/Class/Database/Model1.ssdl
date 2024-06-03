@@ -21,6 +21,7 @@
     <Property Name="AccessoryID" Type="nvarchar" MaxLength="50" Nullable="false" />
     <Property Name="Quantity" Type="int" Nullable="false" />
     <Property Name="SuppleirID" Type="int" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Fabric">
     <Key>
@@ -46,6 +47,7 @@
     <Property Name="Width" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Length" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="SupplierID" Type="int" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Inventory">
     <Key>
@@ -96,15 +98,16 @@
       <PropertyRef Name="id" />
     </Key>
     <Property Name="id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
-    <Property Name="IdOreder" Type="int" Nullable="false" />
-    <Property Name="IdProduct" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="IdFabric" Type="nvarchar" MaxLength="50" Nullable="false" />
-    <Property Name="IdAccessory" Type="nvarchar" MaxLength="50" Nullable="false" />
+    <Property Name="IdOreder" Type="int" />
+    <Property Name="IdProduct" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdFabric" Type="nvarchar" MaxLength="50" />
+    <Property Name="IdAccessory" Type="nvarchar" MaxLength="50" />
     <Property Name="Width" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Height" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Price" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="RorarionAngle" Type="int" Nullable="false" />
     <Property Name="Amount" Type="int" Nullable="false" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="Product">
     <Key>
@@ -116,6 +119,7 @@
     <Property Name="Length" Type="decimal" Precision="10" Scale="2" Nullable="false" />
     <Property Name="Image" Type="varbinary(max)" />
     <Property Name="Comment" Type="nvarchar" MaxLength="255" />
+    <Property Name="UnitID" Type="int" Nullable="false" />
   </EntityType>
   <EntityType Name="ProductAccessories">
     <Key>
@@ -173,6 +177,13 @@
     <Property Name="diagram_id" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="version" Type="int" />
     <Property Name="definition" Type="varbinary(max)" />
+  </EntityType>
+  <EntityType Name="Unit">
+    <Key>
+      <PropertyRef Name="Id" />
+    </Key>
+    <Property Name="Id" Type="int" Nullable="false" />
+    <Property Name="Name" Type="nvarchar" MaxLength="50" Nullable="false" />
   </EntityType>
   <EntityType Name="User">
     <Key>
@@ -280,6 +291,18 @@
       </Dependent>
     </ReferentialConstraint>
   </Association>
+  <Association Name="FK_AccessoryStock_Unit">
+    <End Role="Unit" Type="Self.Unit" Multiplicity="1" />
+    <End Role="AccessoryStock" Type="Self.AccessoryStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="AccessoryStock">
+        <PropertyRef Name="UnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <Association Name="FK_Fabric_Inventory">
     <End Role="Inventory" Type="Self.Inventory" Multiplicity="0..1" />
     <End Role="Fabric" Type="Self.Fabric" Multiplicity="*" />
@@ -301,6 +324,18 @@
       </Principal>
       <Dependent Role="FabricStock">
         <PropertyRef Name="SupplierID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_FabricStock_Unit">
+    <End Role="Unit" Type="Self.Unit" Multiplicity="1" />
+    <End Role="FabricStock" Type="Self.FabricStock" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="FabricStock">
+        <PropertyRef Name="UnitID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -329,7 +364,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Accessory">
-    <End Role="Accessory" Type="Self.Accessory" Multiplicity="1" />
+    <End Role="Accessory" Type="Self.Accessory" Multiplicity="0..1" />
     <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Accessory">
@@ -341,7 +376,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Fabric">
-    <End Role="Fabric" Type="Self.Fabric" Multiplicity="1" />
+    <End Role="Fabric" Type="Self.Fabric" Multiplicity="0..1" />
     <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Fabric">
@@ -353,7 +388,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Order">
-    <End Role="Order" Type="Self.Order" Multiplicity="1" />
+    <End Role="Order" Type="Self.Order" Multiplicity="0..1" />
     <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Order">
@@ -365,7 +400,7 @@
     </ReferentialConstraint>
   </Association>
   <Association Name="FK_OrderItem_Product">
-    <End Role="Product" Type="Self.Product" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="0..1" />
     <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
     <ReferentialConstraint>
       <Principal Role="Product">
@@ -373,6 +408,30 @@
       </Principal>
       <Dependent Role="OrderItem">
         <PropertyRef Name="IdProduct" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_OrderItem_Unit">
+    <End Role="Unit" Type="Self.Unit" Multiplicity="1" />
+    <End Role="OrderItem" Type="Self.OrderItem" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="OrderItem">
+        <PropertyRef Name="UnitID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
+  <Association Name="FK_Product_Unit">
+    <End Role="Unit" Type="Self.Unit" Multiplicity="1" />
+    <End Role="Product" Type="Self.Product" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Unit">
+        <PropertyRef Name="Id" />
+      </Principal>
+      <Dependent Role="Product">
+        <PropertyRef Name="UnitID" />
       </Dependent>
     </ReferentialConstraint>
   </Association>
@@ -429,6 +488,7 @@
     <EntitySet Name="Role" EntityType="Self.Role" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Supplier" EntityType="Self.Supplier" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="sysdiagrams" EntityType="Self.sysdiagrams" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Unit" EntityType="Self.Unit" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="User" EntityType="Self.User" Schema="dbo" store:Type="Tables" />
     <AssociationSet Name="FK__Accessory__Acces__47DBAE45" Association="Self.FK__Accessory__Acces__47DBAE45">
       <End Role="Accessory" EntitySet="Accessory" />
@@ -462,12 +522,20 @@
       <End Role="Supplier" EntitySet="Supplier" />
       <End Role="AccessoryStock" EntitySet="AccessoryStock" />
     </AssociationSet>
+    <AssociationSet Name="FK_AccessoryStock_Unit" Association="Self.FK_AccessoryStock_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="AccessoryStock" EntitySet="AccessoryStock" />
+    </AssociationSet>
     <AssociationSet Name="FK_Fabric_Inventory" Association="Self.FK_Fabric_Inventory">
       <End Role="Inventory" EntitySet="Inventory" />
       <End Role="Fabric" EntitySet="Fabric" />
     </AssociationSet>
     <AssociationSet Name="FK_FabricStock_Supplier" Association="Self.FK_FabricStock_Supplier">
       <End Role="Supplier" EntitySet="Supplier" />
+      <End Role="FabricStock" EntitySet="FabricStock" />
+    </AssociationSet>
+    <AssociationSet Name="FK_FabricStock_Unit" Association="Self.FK_FabricStock_Unit">
+      <End Role="Unit" EntitySet="Unit" />
       <End Role="FabricStock" EntitySet="FabricStock" />
     </AssociationSet>
     <AssociationSet Name="FK_Inventory_FabricStock" Association="Self.FK_Inventory_FabricStock">
@@ -493,6 +561,14 @@
     <AssociationSet Name="FK_OrderItem_Product" Association="Self.FK_OrderItem_Product">
       <End Role="Product" EntitySet="Product" />
       <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_OrderItem_Unit" Association="Self.FK_OrderItem_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="OrderItem" EntitySet="OrderItem" />
+    </AssociationSet>
+    <AssociationSet Name="FK_Product_Unit" Association="Self.FK_Product_Unit">
+      <End Role="Unit" EntitySet="Unit" />
+      <End Role="Product" EntitySet="Product" />
     </AssociationSet>
     <AssociationSet Name="FK_ProductAccessories_Supplier" Association="Self.FK_ProductAccessories_Supplier">
       <End Role="Supplier" EntitySet="Supplier" />

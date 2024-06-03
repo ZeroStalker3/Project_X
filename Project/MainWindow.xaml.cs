@@ -22,6 +22,7 @@ namespace Project
     /// </summary>
     public partial class MainWindow : Window
     {
+        bool size = false;
         public MainWindow()
         {
             InitializeComponent();
@@ -35,24 +36,38 @@ namespace Project
         {
             FrameApp.frmObj.Navigate(new PageAuth());
         }
-        private void Exit_Click(object sender, RoutedEventArgs e)
-        {
-            this.Close();
-        }
+        //private void Exit_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.Close();
+        //}
 
-        private void Min_Click(object sender, RoutedEventArgs e)
-        {
-            this.WindowState = WindowState.Minimized;
-        }
+        //private void Min_Click(object sender, RoutedEventArgs e)
+        //{
+        //    this.WindowState = WindowState.Minimized;
+        //}
 
-        private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
-        {
-            this.DragMove();
-        }
+        //private void Window_MouseLeftButtonDown(object sender, MouseButtonEventArgs e)
+        //{
+        //    this.DragMove();
+        //}
 
         private void Back_Click(object sender, RoutedEventArgs e)
         {
             FrameApp.frmObj.GoBack();
         }
+
+        //private void Resize_Click(object sender, RoutedEventArgs e)
+        //{
+        //    if (size == false)
+        //    {
+        //        this.WindowState = WindowState.Maximized;
+        //        size = true;
+        //    }
+        //    else
+        //    {
+        //        this.WindowState = WindowState.Normal;
+        //        size = false;
+        //    }
+        //}
     }
 }

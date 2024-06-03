@@ -21,9 +21,11 @@
                     <DataGridTextColumn Header="Наименование" Binding="{Binding Name}"/>
                     <DataGridTextColumn Header="Ширина" Binding="{Binding Width}"/>
                     <DataGridTextColumn Header="Длина" Binding="{Binding Length}"/>
+                    <DataGridTextColumn Header="ед" Binding="{Binding Unit.Name}"/>
                     <DataGridTemplateColumn Header="Изображение"
                                             Width="*"
                                             >
+                        
                         <DataGridTemplateColumn.CellTemplate>
                             <DataTemplate>
                                 <Image Name="imagelist" Width="100" Height="100" 

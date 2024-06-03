@@ -27,7 +27,7 @@
             
          <!--Верхняя часть страницы с изображением и инструментами--> 
         
-            <!--<Grid Grid.Row="0" Grid.ColumnSpan="2">
+            <Grid Grid.Row="0" Grid.ColumnSpan="2">
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="*"/>
                     <ColumnDefinition Width="Auto"/>
@@ -48,7 +48,7 @@
                         </TransformGroup>
                     </Image.RenderTransform>
                 </Image>
-            </Grid>-->
+            </Grid>
             
             
 
@@ -103,7 +103,7 @@
             <StackPanel HorizontalAlignment="Center">
                 <TextBlock Text="Изделие: " FontSize="16pt"
                            Margin="0 0 0 10"/>
-                <ComboBox Name="cmbProduct"
+                <TextBox Name="cmbProduct"
                           Width="170"/>
             </StackPanel>
 

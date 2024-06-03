@@ -16,7 +16,11 @@
             <!-- Tab for Fabrics -->
             <TabItem Header="Ткани">
                 <Grid>
-                    <DataGrid x:Name="FabricDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="200" VerticalAlignment="Top" Width="760">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="23*"/>
+                        <ColumnDefinition Width="167*"/>
+                    </Grid.ColumnDefinitions>
+                    <DataGrid x:Name="FabricDataGrid" AutoGenerateColumns="False" HorizontalAlignment="Left" Height="200" VerticalAlignment="Center" Width="760" Grid.ColumnSpan="2">
                         <DataGrid.Columns>
                             <DataGridTextColumn Header="Название" Binding="{Binding Name}"/>
                             <DataGridTextColumn Header="Длинна" Binding="{Binding Width}"/>
@@ -25,16 +29,16 @@
                         </DataGrid.Columns>
                     </DataGrid>
                     <StackPanel 
-                        Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10 10 10 10">
+                        Orientation="Horizontal" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,10" Grid.ColumnSpan="2">
                         <ComboBox x:Name="FabricUnitComboBox" Width="100" Margin="5"/>
                         <TextBox x:Name="FabricQuantityTextBox" Width="100" Margin="5"/>
                         <Button Content="Пересчитать" Name="FabricRecalcяulate" Click="FabricRecalculate_Click" Margin="5"/>
                     </StackPanel>
-                    <Label x:Name="FabricResultLabel" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="10"/>
+                    <Label x:Name="FabricResultLabel" HorizontalAlignment="Right" VerticalAlignment="Bottom" Margin="0,0,10,10" Grid.Column="1"/>
                     <ComboBox 
                         SelectionChanged="CmbFabric_SelectionChanged"
                         VerticalAlignment="Top" HorizontalAlignment="Right"
-                        Width="200" Name="CmbFabric"/>
+                        Width="200" Name="CmbFabric" Grid.Column="1"/>
                 </Grid>
             </TabItem>
 

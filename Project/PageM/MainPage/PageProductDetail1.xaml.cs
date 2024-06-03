@@ -47,6 +47,36 @@ namespace Project.PageM.MainPage
                 => x.ProductID == select).ToList();
             DataGridList.SelectedIndex = 0;
         }
+        private void search_Click(object sender, RoutedEventArgs e)
+        {
+            string orderNumber = txt.Text;
+            if (!string.IsNullOrWhiteSpace(orderNumber))
+            {
+                var results = OdbConectHelper.entObj.Product
+                                .Where(x => x.ProductID.Contains(orderNumber))
+                                .ToList();
+
+                if (results.Any())
+                {
+                    DataGridList.ItemsSource = results;
+                }
+                else
+                {
+                    MessageBox.Show("Заказов с указанным номером не найдено.",
+                                    "Уведоление",
+                                    MessageBoxButton.OK,
+                                    MessageBoxImage.Information);
+                    DataGridList.ItemsSource = null;
+                }
+            }
+            else
+            {
+                MessageBox.Show("Пожалуйста, введите действительный номер заказа.",
+                                "Уведоление",
+                                MessageBoxButton.OK,
+                                MessageBoxImage.Information);
+            }
+        }
     }
 }
     

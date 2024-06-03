@@ -30,6 +30,7 @@ namespace Project.Class.Database
         public decimal Length { get; set; }
         public byte[] Image { get; set; }
         public string Comment { get; set; }
+        public int UnitID { get; set; }
     
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<OrderedProducts> OrderedProducts { get; set; }
@@ -37,6 +38,7 @@ namespace Project.Class.Database
         public virtual ICollection<OrderItem> OrderItem { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductAccessories> ProductAccessories { get; set; }
+        public virtual Unit Unit { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]
         public virtual ICollection<ProductSpecificationHistory> ProductSpecificationHistory { get; set; }
         [System.Diagnostics.CodeAnalysis.SuppressMessage("Microsoft.Usage", "CA2227:CollectionPropertiesShouldBeReadOnly")]

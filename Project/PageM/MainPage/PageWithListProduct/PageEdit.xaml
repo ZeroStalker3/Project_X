@@ -24,7 +24,11 @@
             <DockPanel Margin="0 5 0 5">                
                 <TextBlock Text="Коментарий" FontSize="14pt"/>
                 <TextBox Name="textBoxComment" HorizontalAlignment="Right" Width="200"/>
-            </DockPanel> 
+            </DockPanel>
+            <DockPanel>
+                <TextBlock  Text="Коментарий" FontSize="14pt"/>
+                <ComboBox Name="cmbselection" Width="200" HorizontalAlignment="Right"/>
+            </DockPanel>
             <DockPanel
                    Margin="0 10 0 10">
                 <TextBlock

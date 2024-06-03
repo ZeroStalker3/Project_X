@@ -4,6 +4,7 @@ using Project.Class.Database;
 using System;
 using System.Data.Odbc;
 using System.IO;
+using System.Linq;
 using System.Windows;
 using System.Windows.Controls;
 using System.Windows.Media.Imaging;
@@ -19,6 +20,10 @@ namespace Project.PageM.MainPage.PageWithListProduct
         public PageEdit(Product theProduct)
         {
             InitializeComponent();
+
+            cmbselection.DisplayMemberPath = "Name";
+            cmbselection.SelectedValuePath = "Id";
+            cmbselection.ItemsSource = OdbConectHelper.entObj.Unit.ToList();
 
             _product = theProduct;
 
@@ -77,7 +82,7 @@ namespace Project.PageM.MainPage.PageWithListProduct
                 _product.Width = decimal.Parse(textBoxWidth.Text);
                 _product.Comment = textBoxComment.Text;
                 _product.Image = ImageToByteArray((BitmapImage)ProductImage.Source);
-
+                _product.UnitID = Convert.ToInt32(cmbselection.SelectedValue);
                 OdbConectHelper.entObj.SaveChanges();
 
                 MessageBox.Show("Данные успешно изменены.",

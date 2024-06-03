@@ -1,0 +1,13 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MobileApp.MainPage">
+
+    <StackLayout Padding="10">
+        <Image  HeightRequest="150" />
+        <Label Text="Швейная фабрика" FontSize="24" HorizontalOptions="Center" />
+        <Button Text="Каталог изделий" Clicked="OnCatalogButtonClicked" />
+        <Button Text="Конструктор изделий" Clicked="OnConstructorButtonClicked" />
+    </StackLayout>
+
+</ContentPage>

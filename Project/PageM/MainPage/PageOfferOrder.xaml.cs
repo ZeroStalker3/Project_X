@@ -1,5 +1,6 @@
 ﻿using Project.Class;
 using Project.Class.Database;
+using Project.PageM.MainPage.SecondPage;
 using System;
 using System.Linq;
 using System.Windows;
@@ -15,46 +16,58 @@ namespace Project.PageM.MainPage
         public PageOfferOrder()
         {
             InitializeComponent();
-            orderItemsDataGrid.ItemsSource = OdbConectHelper.entObj.OrderedProducts.ToList();
+            LoadData();
         }
 
-        private void SaveOrder(object sender, RoutedEventArgs e)
+        private void LoadData()
         {
+            cmbCustomer.ItemsSource = OdbConectHelper.entObj.Order.ToList();
+            cmbCustomer.SelectedValuePath = "OrderNumber";
+            cmbCustomer.DisplayMemberPath = "Customer";
 
-            // Предположим, что у вас есть ListBox с именем orderListBox
-            var selectedOrder = orderItemsDataGrid.SelectedItem as Order;
+            cmbManager.ItemsSource = OdbConectHelper.entObj.Order.ToList();
+            cmbManager.SelectedValuePath = "OrderNumber";
+            cmbManager.DisplayMemberPath = "Manager";
+        }
 
-            if (selectedOrder != null)
+        //private void SaveOrder(object sender, RoutedEventArgs e)
+        //{
+        //    //Просто добавление заказа
+        //}
+
+        private void AddProduct_Click(object sender, RoutedEventArgs e)
+        {
+            FrameApp.frmObj.Navigate(new PageAddProduct());
+
+        }
+
+        private void Save_Click(object sender, RoutedEventArgs e)
+        {
+            int Number1 = Convert.ToInt32(txtnumber.Text);
+            string Customer = Convert.ToString(cmbCustomer.SelectedValue);
+            string Manager = Convert.ToString(cmbManager.SelectedValue);
+            int price = Convert.ToInt32(txtCost.Text);
+
+            Order order = new Order()
             {
-                var customer = customerTextBox.Text;
-                var manager = managerTextBox.Text;
+                OrderNumber = Number1, 
+                Customer = Customer, 
+                Manager = Manager,
+                OrderDate = DateTime.Now,
+                Status = "New",
+                Cost = price
+            };
+            OdbConectHelper.entObj.Order.Add(order);
+            OdbConectHelper.entObj.SaveChanges();
+            MessageBox.Show("Заказ Успешно добавлен",
+                "Уведомление",
+                MessageBoxButton.OK,
+                MessageBoxImage.Information);
+        }
 
-                // Здесь используется только выделенный заказ
-                var orderCost = selectedOrder.Cost;
-                var orderQuantity = selectedOrder.OrderedProducts.Sum(item => item.Quantity);
-                var totalOrderCost = orderCost * orderQuantity;
-
-                MessageBox.Show($"Заказ сохранен.\nЗаказчик: {customer}\nМенеджер: {manager}\nОбщая стоимость: {totalOrderCost}");
-
-                // Создаем новый заказ с использованием данных выделенного заказа
-                Order order = new Order()
-                {
-                    OrderNumber = selectedOrder.OrderNumber, // Используем номер выделенного заказа
-                    Status = "New",
-                    Customer = customer,
-                    Manager = manager,
-                    Cost = totalOrderCost,
-                    OrderDate = DateTime.Now
-                };
-
-                // Добавляем новый заказ в контекст и сохраняем изменения
-                OdbConectHelper.entObj.Order.Add(order);
-                OdbConectHelper.entObj.SaveChanges();
-            }
-            else
-            {
-                MessageBox.Show("Пожалуйста, выберите заказ для сохранения.");
-            }
+        private void txtnumber_PreviewTextInput(object sender, System.Windows.Input.TextCompositionEventArgs e)
+        {
+            e.Handled = "1234567890".IndexOf(e.Text) < 0;
         }
     }
 }

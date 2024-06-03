@@ -4,41 +4,51 @@
   <edmx:Designer xmlns="http://schemas.microsoft.com/ado/2009/11/edmx">
     <!-- Diagram content (shape and connector positions) -->
     <edmx:Diagrams>
-      <Diagram DiagramId="0aeb92c94a0c41ab8aea7df9253c853a" Name="Diagram1" ZoomLevel="94">
-        <EntityTypeShape EntityType="TextileProductionModel.Accessory" Width="1.5" PointX="0.75" PointY="4.25" />
-        <EntityTypeShape EntityType="TextileProductionModel.AccessoryStock" Width="1.5" PointX="3" PointY="7.75" />
-        <EntityTypeShape EntityType="TextileProductionModel.Fabric" Width="1.5" PointX="7.5" PointY="11" />
-        <EntityTypeShape EntityType="TextileProductionModel.FabricStock" Width="1.5" PointX="3" PointY="11.625" />
-        <EntityTypeShape EntityType="TextileProductionModel.Inventory" Width="1.5" PointX="5.25" PointY="11.125" />
-        <EntityTypeShape EntityType="TextileProductionModel.MaterialMovement" Width="1.5" PointX="3" PointY="15.625" />
-        <EntityTypeShape EntityType="TextileProductionModel.Order" Width="1.5" PointX="9.75" PointY="11.625" />
-        <EntityTypeShape EntityType="TextileProductionModel.OrderedProducts" Width="1.5" PointX="12" PointY="18.25" />
-        <EntityTypeShape EntityType="TextileProductionModel.OrderItem" Width="1.5" PointX="12" PointY="13" />
-        <EntityTypeShape EntityType="TextileProductionModel.Product" Width="1.5" PointX="9.75" PointY="15.625" />
-        <EntityTypeShape EntityType="TextileProductionModel.ProductAccessories" Width="1.5" PointX="15" PointY="12.25" />
-        <EntityTypeShape EntityType="TextileProductionModel.ProductSpecificationHistory" Width="1.5" PointX="12" PointY="22.625" />
-        <EntityTypeShape EntityType="TextileProductionModel.Role" Width="1.5" PointX="0.75" PointY="1.25" />
-        <EntityTypeShape EntityType="TextileProductionModel.Supplier" Width="1.5" PointX="0.75" PointY="8.875" />
-        <EntityTypeShape EntityType="TextileProductionModel.sysdiagrams" Width="1.5" PointX="2.75" PointY="4.75" />
-        <EntityTypeShape EntityType="TextileProductionModel.User" Width="1.5" PointX="3" PointY="0.875" />
+      <Diagram DiagramId="0aeb92c94a0c41ab8aea7df9253c853a" Name="Diagram1" ZoomLevel="88">
+        <EntityTypeShape EntityType="TextileProductionModel.Accessory" Width="1.5" PointX="4.125" PointY="12.125" />
+        <EntityTypeShape EntityType="TextileProductionModel.AccessoryStock" Width="1.5" PointX="6" PointY="9" />
+        <EntityTypeShape EntityType="TextileProductionModel.Fabric" Width="1.5" PointX="10.5" PointY="8.5" />
+        <EntityTypeShape EntityType="TextileProductionModel.FabricStock" Width="1.5" PointX="3" PointY="8.875" />
+        <EntityTypeShape EntityType="TextileProductionModel.Inventory" Width="1.5" PointX="8.25" PointY="8.625" />
+        <EntityTypeShape EntityType="TextileProductionModel.MaterialMovement" Width="1.5" PointX="3.125" PointY="4.875" />
+        <EntityTypeShape EntityType="TextileProductionModel.Order" Width="1.5" PointX="10.125" PointY="4.75" />
+        <EntityTypeShape EntityType="TextileProductionModel.OrderedProducts" Width="1.5" PointX="16" PointY="6" />
+        <EntityTypeShape EntityType="TextileProductionModel.OrderItem" Width="1.5" PointX="15.125" PointY="9.375" />
+        <EntityTypeShape EntityType="TextileProductionModel.Product" Width="1.5" PointX="12.75" PointY="8.5" />
+        <EntityTypeShape EntityType="TextileProductionModel.ProductAccessories" Width="1.5" PointX="13.75" PointY="4.75" />
+        <EntityTypeShape EntityType="TextileProductionModel.ProductSpecificationHistory" Width="1.5" PointX="10.5" PointY="12.625" />
+        <EntityTypeShape EntityType="TextileProductionModel.Role" Width="1.5" PointX="5.625" PointY="4.75" />
+        <EntityTypeShape EntityType="TextileProductionModel.Supplier" Width="1.5" PointX="0.875" PointY="5.125" />
+        <EntityTypeShape EntityType="TextileProductionModel.sysdiagrams" Width="1.5" PointX="30.75" PointY="2.625" />
+        <EntityTypeShape EntityType="TextileProductionModel.Unit" Width="1.5" PointX="0.75" PointY="9.125" />
+        <EntityTypeShape EntityType="TextileProductionModel.User" Width="1.5" PointX="7.875" PointY="5" />
         <AssociationConnector Association="TextileProductionModel.FK__Accessory__Acces__47DBAE45" />
         <AssociationConnector Association="TextileProductionModel.FK__ProductAc__Acces__440B1D61" />
         <AssociationConnector Association="TextileProductionModel.FK_OrderItem_Accessory" />
         <AssociationConnector Association="TextileProductionModel.FK_AccessoryStock_Supplier" />
+        <AssociationConnector Association="TextileProductionModel.FK_AccessoryStock_Unit" />
         <AssociationConnector Association="TextileProductionModel.FK_Fabric_Inventory" />
         <AssociationConnector Association="TextileProductionModel.FK_OrderItem_Fabric" />
         <AssociationConnector Association="TextileProductionModel.FK_FabricStock_Supplier" />
+        <AssociationConnector Association="TextileProductionModel.FK_FabricStock_Unit" />
         <AssociationConnector Association="TextileProductionModel.FK_Inventory_FabricStock" />
         <AssociationConnector Association="TextileProductionModel.FK_Inventory_MaterialMovement" />
         <AssociationConnector Association="TextileProductionModel.FK__OrderedPr__Order__571DF1D5" />
         <AssociationConnector Association="TextileProductionModel.FK_OrderItem_Order" />
         <AssociationConnector Association="TextileProductionModel.FK__OrderedPr__Produ__5812160E" />
         <AssociationConnector Association="TextileProductionModel.FK_OrderItem_Product" />
+        <AssociationConnector Association="TextileProductionModel.FK_OrderItem_Unit" />
         <AssociationConnector Association="TextileProductionModel.FK__ProductAc__Produ__44FF419A" />
+        <AssociationConnector Association="TextileProductionModel.FK_Product_Unit" />
         <AssociationConnector Association="TextileProductionModel.FK_ProductSpecificationHistory_Product" />
         <AssociationConnector Association="TextileProductionModel.FK_ProductAccessories_Supplier" />
         <AssociationConnector Association="TextileProductionModel.FK_User_Role" />
-        <AssociationConnector Association="TextileProductionModel.ProductFabrics" />
+        <AssociationConnector Association="TextileProductionModel.ProductFabrics" ManuallyRouted="true" >
+          <ConnectorPoint PointX="12" PointY="12.018697916666666" />
+          <ConnectorPoint PointX="12.375" PointY="14.120984426373607" />
+          <ConnectorPoint PointX="12.75" PointY="14.120984426373607" />
+          <ConnectorPoint PointX="12.75" PointY="12.018697916666666" />
+        </AssociationConnector>
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

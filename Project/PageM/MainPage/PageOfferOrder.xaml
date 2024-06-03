@@ -8,17 +8,84 @@
       Title="Оформление заказа">
 
     <Grid>
-        <StackPanel>
-            <TextBox Name="customerTextBox" Text="Заказчик" Width="300"/>
-            <TextBox Name="managerTextBox" Text="Менеджер" Width="300" Margin="10"/>
-            <DataGrid Name="orderItemsDataGrid" AutoGenerateColumns="False" CanUserAddRows="True">
-                <DataGrid.Columns>
-                    <DataGridTextColumn Header="Изделие" Binding="{Binding Product.Name}" />
-                    <DataGridTextColumn Header="Количество" Binding="{Binding Quantity}"/>
-                    <DataGridTextColumn Header="Цена" Binding="{Binding Order.Cost}"/>
-                </DataGrid.Columns>
-            </DataGrid>
-            <Button Content="Сохранить заказ" HorizontalAlignment="Right" Width="150" Margin="10" Height="30" Click="SaveOrder"/>
+        <StackPanel
+            HorizontalAlignment="Center"
+            VerticalAlignment="Center">
+            <StackPanel
+                VerticalAlignment="Center"
+                HorizontalAlignment="Center"
+                Margin="40 0 0 0">
+                <TextBlock
+                HorizontalAlignment="Center"
+                Margin="10 45 10 10"
+                FontSize="16pt"
+       Text="Добавление Нового Заказа"/>
+                <StackPanel>
+                    <DockPanel
+                    Margin="5">
+                        <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Text="Номер заказа: "/>
+                        <TextBox
+                            PreviewTextInput="txtnumber_PreviewTextInput"
+                        x:Name="txtnumber"
+                            HorizontalAlignment="Right" Margin="10 0 0 0"
+                        Height="30"
+                        Width="250"/>
+                    </DockPanel>
+                    <DockPanel
+                    Margin="5">
+                        <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Text="Заказчик: "/>
+                        <ComboBox
+                        x:Name="cmbCustomer"
+                        Height="30"
+                            HorizontalAlignment="Right"
+                        Width="250"/>
+                    </DockPanel>
+                    <DockPanel
+                    Margin="5">
+                        <TextBlock 
+                        HorizontalAlignment="Center"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Margin="0 0 58.5 0"
+                        Text="Менеджер: "/>
+                        <ComboBox
+                        x:Name="cmbManager"
+                        Height="30"
+                            HorizontalAlignment="Right"
+                        Width="250"/>
+                    </DockPanel>
+                    <DockPanel
+                    Margin="5">
+                        <TextBlock 
+                        HorizontalAlignment="Left"
+                        VerticalAlignment="Center"
+                        FontSize="14pt"
+                        Text="Цена: "/>
+                        <TextBox
+                        x:Name="txtCost"
+                        Height="30" Margin="10 0 0 0"
+                           HorizontalAlignment="Right"
+                        Width="250"/>
+                    </DockPanel>
+                </StackPanel>
+            </StackPanel>
+            <DockPanel Margin="0 10 0 0">
+                <Button
+                    Content="Save"
+                    Height="30"
+                    Margin="0 0 0 150"
+                    Width="300"
+                    Name="Save"
+                    Click="Save_Click"/>
+            </DockPanel>
         </StackPanel>
     </Grid>
 </Page>
